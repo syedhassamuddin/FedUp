@@ -48,9 +48,15 @@
             			</a>
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="sendpackage.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
+            			</a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="create-account.html">
+              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Create Account</span>
             			</a>
 					</li>
 
@@ -301,29 +307,29 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h1 class="h3 mb-3"><strong>Send</strong> Package</h1>
-					<form action="">
 
+					<h1 class="h3 mb-3"><strong>Create</strong> Accounts</h1>
+
+					<form action="">
 						<div class="row">
-							<div class="col-6">
+							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">From</h5>
+										<h5 class="card-title mb-0">First Name</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi">
+										<input type="text" class="form-control" placeholder="Adam">
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-6">
 
+							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">To</h5>
+										<h5 class="card-title mb-0">Last Name</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore">
+										<input type="text" class="form-control" placeholder="Sandler">
 									</div>
 								</div>
 							</div>
@@ -333,53 +339,57 @@
 							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">Special</h5>
+										<h5 class="card-title mb-0">Email</h5>
 									</div>
 									<div class="card-body">
-										<div>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="option1" name="radios-example" checked>
-												<span class="form-check-label">
-													Standard Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="option2" name="radios-example">
-												<span class="form-check-label">
-													Express Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="option3" name="radios-example">
-												<span class="form-check-label">
-												Overnight Delivery
-												</span>
-												</label>
-											  <label class="form-check">
-												<input class="form-check-input" type="radio" value="option3" name="radios-example">
-												<span class="form-check-label">
-													Fragile Delivery
-												</span>
-											</label>
-										</div>
+										<input type="text" class="form-control" placeholder="user@fedup.com">
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-6">
-							  <div class="card">
-								  <div class="card-header">
-									  <h5 class="card-title mb-0">Special Instructions</h5>
-								  </div>
-								  <div class="card-body">
-									  <textarea class="form-control" rows="2" placeholder="Please keep upright"></textarea>
-								  </div>
-							  </div>
-							</div>
 
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Phone Number</h5>
+									</div>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="Phone Number">
+									</div>
+								</div>
+							</div>
 						</div>
 
-						<button class="btn btn-primary btn-lg">Schedule Package Delivery</button>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Password</h5>
+									</div>
+									<div class="card-body">
+										<input type="password" class="form-control" placeholder="letmein123">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Account Type</h5>
+									</div>
+									<div class="card-body">
+										<select class="form-select mb-3">
+											<option selected disabled>Select Account Type</option>
+											<option>Admin</option>
+											<option>Agent</option>
+											<option>Customer</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="btn btn-primary btn-lg">Create Account</button>
+
 					</form>
 
 				</div>
