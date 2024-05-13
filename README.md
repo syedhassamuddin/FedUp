@@ -18,3 +18,13 @@ Eproject For Semester Two, a satirical website of FedEx courier service
 4. Creation of database and tables
 5. 
 
+# Database queries
+
+1) CREATE DATABASE fedupdb;
+2) CREATE TABLE packages(
+	package_id INT PRIMARY KEY AUTO_INCREMENT,
+    from_address VARCHAR(225),
+    to_address VARCHAR(225),
+  	delivery_type VARCHAR(225),
+    special_instructions VARCHAR(225)
+);
