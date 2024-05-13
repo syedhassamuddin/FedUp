@@ -35,3 +35,30 @@ Eproject For Semester Two, a satirical website of FedEx courier service
   	Contact VARCHAR(225),
     Password VARCHAR(225)
 );
+4) CREATE TABLE Admin(
+	  id INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(225),
+    LastName VARCHAR(225),
+  	Email VARCHAR(225),
+    Phone VARCHAR(50),
+    Password VARCHAR(100),
+    Account_type VARCHAR(50)
+);
+5) CREATE TABLE Agent(
+	  id INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(225),
+    LastName VARCHAR(225),
+  	Email VARCHAR(225),
+    Phone VARCHAR(50),
+    Password VARCHAR(100),
+    Account_type VARCHAR(50)
+);
+6) CREATE TABLE Customer(
+	  id INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(225),
+    LastName VARCHAR(225),
+  	Email VARCHAR(225),
+    Phone VARCHAR(50),
+    Password VARCHAR(100),
+    Account_type VARCHAR(50)
+);
