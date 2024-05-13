@@ -28,3 +28,10 @@ Eproject For Semester Two, a satirical website of FedEx courier service
   	delivery_type VARCHAR(225),
     special_instructions VARCHAR(225)
 );
+3) CREATE TABLE users(
+	  id INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(225),
+    Email VARCHAR(225),
+  	Contact VARCHAR(225),
+    Password VARCHAR(225)
+);
