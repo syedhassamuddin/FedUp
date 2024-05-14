@@ -36,21 +36,15 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item">
+					<li class="sidebar-item active">
 						<a class="sidebar-link" href="index.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item">
+					<li class="sidebar-item active">
 						<a class="sidebar-link" href="packages.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="sendpackage.html">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
@@ -301,86 +295,79 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h1 class="h3 mb-3"><strong>Send</strong> Package</h1>
-					<form action="">
 
-						<div class="row">
-							<div class="col-6">
-								<div class="card">
-									<div class="card-header">
-										<h5 class="card-title mb-0">From</h5>
-									</div>
-									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi">
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-6">
+					<h1 class="h3 mb-3"><strong>Packages</strong> Dashboard</h1>
 
-								<div class="card">
-									<div class="card-header">
-										<h5 class="card-title mb-0">To</h5>
-									</div>
-									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore">
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">View Student</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-12">
+                            <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Package Id</th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th>Delivery Type</th>
+                                                <th>Special Instructions</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        
+										<?php
+										
+										include("conn.php");
 
-						<div class="row">
-							<div class="col-12 col-md-6">
-								<div class="card">
-									<div class="card-header">
-										<h5 class="card-title mb-0">Special</h5>
-									</div>
-									<div class="card-body">
-										<div>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="option1" name="radios-example" checked>
-												<span class="form-check-label">
-													Standard Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="option2" name="radios-example">
-												<span class="form-check-label">
-													Express Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="option3" name="radios-example">
-												<span class="form-check-label">
-												Overnight Delivery
-												</span>
-												</label>
-											  <label class="form-check">
-												<input class="form-check-input" type="radio" value="option3" name="radios-example">
-												<span class="form-check-label">
-													Fragile Delivery
-												</span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-6">
-							  <div class="card">
-								  <div class="card-header">
-									  <h5 class="card-title mb-0">Special Instructions</h5>
-								  </div>
-								  <div class="card-body">
-									  <textarea class="form-control" rows="2" placeholder="Please keep upright"></textarea>
-								  </div>
-							  </div>
-							</div>
+										$selectQuery= "SELECT * FROM packages";
+										$res= mysqli_query($conn,$selectQuery);
 
-						</div>
+										while ($row=mysqli_fetch_array($res)){
+											?>
 
-						<button class="btn btn-primary btn-lg">Schedule Package Delivery</button>
-					</form>
+										<tr>
+											<td>
+											<?php echo $row['package_id'] ?>
+											</td>
+											<td>
+											<?php echo $row['from_address'] ?>
+											</td>
+											<td>
+											<?php echo $row['to_address'] ?>
+											</td>
+											<td>
+											<?php echo $row['delivery_type'] ?>
+											</td>
+											<td>
+											<?php echo $row['special_instructions'] ?>
+											</td>
+											<td>
+                                                <a href="insertstd.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
+                                                <a href="viewstd.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a>
+                                            </td>
+										</tr>
+
+											<?php
+										}
+										?>
+
+
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+					
 
 				</div>
 			</main>

@@ -36,15 +36,21 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="index.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="packages.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
+            			</a>
+					</li>
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="sendpackage.html">
+              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
@@ -292,22 +298,115 @@
 				</div>
 			</nav>
 			<!-- Top Navigation Bar End -->
+			
+			<?php
+			
+			include('conn.php');
+
+			if(isset($_POST['submit'])){
+				$from_address = $_POST['from'];
+				$to_address = $_POST['to'];
+				$delivery_type = $_POST['special'];
+				$special_instructions = $_POST['spcins'];
+
+				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions)VALUES('$from_address','$to_address','$delivery_type','$special_instructions')";
+
+				$isInsert = mysqli_query($conn, $insertQuery);
+
+				if ($isInsert) {
+					echo '<script>alert("Data inserted successfully")</script>';
+				} else {
+					echo '<script>alert("Something went wrong")</script>';
+				}
+
+			}
+
+
+
+			?>
 
 			<main class="content">
 				<div class="container-fluid p-0">
+					<h1 class="h3 mb-3"><strong>Send</strong> Package</h1>
+					<form action="sendpackage.php" method="post">
 
-					<h1 class="h3 mb-3"><strong>Packages</strong> Dashboard</h1>
+						<div class="row">
+							<div class="col-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">From</h5>
+									</div>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="Karachi" name="from">
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-6">
 
-					<table>
-						<thead>
-							<tr>
-								<th>Package Number</th>
-								<th></th>
-							</tr>
-						</thead>
-					</table>
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">To</h5>
+									</div>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="Lahore" name="to">
+									</div>
+								</div>
+							</div>
+						</div>
 
-					
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Special</h5>
+									</div>
+									<div class="card-body">
+										<div>
+											<label class="form-check">
+												<input class="form-check-input" type="radio" value="standard" name="special" checked>
+												<span class="form-check-label">
+													Standard Delivery
+												</span>
+											</label>
+											<label class="form-check">
+												<input class="form-check-input" type="radio" value="express" name="special">
+												<span class="form-check-label">
+													Express Delivery
+												</span>
+											</label>
+											<label class="form-check">
+												<input class="form-check-input" type="radio" value="overnight" name="special">
+												<span class="form-check-label">
+												Overnight Delivery
+												</span>
+												</label>
+											  <label class="form-check">
+												<input class="form-check-input" type="radio" value="fragile" name="special">
+												<span class="form-check-label">
+													Fragile Delivery
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-6">
+							  <div class="card">
+								  <div class="card-header">
+									  <h5 class="card-title mb-0">Special Instructions</h5>
+								  </div>
+								  <div class="card-body">
+									  <textarea class="form-control" rows="2" name="spcins" placeholder="Please keep upright"></textarea>
+								  </div>
+							  </div>
+							</div>
+
+						</div>
+
+						<button class="btn btn-primary btn-lg" type="submit" name="submit">Schedule Package Delivery</button>
+					</form>
 
 				</div>
 			</main>
