@@ -20,11 +20,38 @@ Eproject For Semester Two, a satirical website of FedEx courier service
 
 # Database queries
 
-1) CREATE DATABASE fedupdb;
-2) CREATE TABLE packages(
+1. CREATE DATABASE fedupdb;
+2. CREATE TABLE packages(
 	package_id INT PRIMARY KEY AUTO_INCREMENT,
     from_address VARCHAR(225),
     to_address VARCHAR(225),
   	delivery_type VARCHAR(225),
     special_instructions VARCHAR(225)
+);
+3. CREATE TABLE admin(
+	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(225),
+    last_name VARCHAR(225),
+  	email VARCHAR(225),
+    phone VARCHAR(50),
+    password VARCHAR(100),
+    account_type VARCHAR(50)
+);
+5. CREATE TABLE agent(
+	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(225),
+    last_name VARCHAR(225),
+  	email VARCHAR(225),
+    phone VARCHAR(50),
+    password VARCHAR(100),
+    account_type VARCHAR(50)
+);
+6. CREATE TABLE customer(
+	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(225),
+    last_name VARCHAR(225),
+  	email VARCHAR(225),
+    phone_number VARCHAR(50),
+    password VARCHAR(100),
+    account_type VARCHAR(50)
 );
