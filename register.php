@@ -17,7 +17,7 @@
 
 
         $verify_query = mysqli_query($con,"SELECT email FROM users WHERE  email= '$email'");
-        if(mysqli_num_rows($verify_query) !=0);
+        if(mysqli_num_rows($verify_query) !=0)
         {
             echo
              "<div class='message'>
@@ -27,17 +27,15 @@
            
         }
         else{
-            mysqli_query($con,"INSERT INTO users(username,email,contact,password) VALUES('$username','$email','$contact','$password',)")
+            mysqli_query($con,"INSERT INTO users(username,email,contact,password) VALUES('$username','$email','$contact','$password',)");
             echo
             "<div class='message'>
             <p>Registration Successfully!</p>
-           </div><br>" ;
+           </div><br>";
            echo "<a href='index.php'> <button class='btn'>Login Now</button>";
           
        }
         }
-        
-    }
 
  
     ?>
@@ -68,11 +66,10 @@
                 </div>
                 
             <div class="link">
-                Already a member <a href="index.html">Sign In</a>
+                Already a member <a href="login.php">Sign In</a>
             </div>
         </div>
     </div>
-    <?php?>
     
 </body>
 </html>

@@ -24,7 +24,7 @@
                 </div>
                 
             <div class="link">
-                Don't have account? <a href="register.html">Sign Up Now</a>
+                Don't have account? <a href="register.php">Sign Up Now</a>
             </div>
         </div>
     </div>
