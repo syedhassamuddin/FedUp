@@ -28,37 +28,30 @@ Eproject For Semester Two, a satirical website of FedEx courier service
   	delivery_type VARCHAR(225),
     special_instructions VARCHAR(225)
 );
-3. CREATE TABLE users(
-	  id INT PRIMARY KEY AUTO_INCREMENT,
-    Username VARCHAR(225),
-    Email VARCHAR(225),
-  	Contact VARCHAR(225),
-    Password VARCHAR(225)
+3. CREATE TABLE admin(
+	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(225),
+    last_name VARCHAR(225),
+  	email VARCHAR(225),
+    phone VARCHAR(50),
+    password VARCHAR(100),
+    account_type VARCHAR(50)
 );
-4. CREATE TABLE Admin(
-	  id INT PRIMARY KEY AUTO_INCREMENT,
-    FirstName VARCHAR(225),
-    LastName VARCHAR(225),
-  	Email VARCHAR(225),
-    Phone VARCHAR(50),
-    Password VARCHAR(100),
-    Account_type VARCHAR(50)
+5. CREATE TABLE agent(
+	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(225),
+    last_name VARCHAR(225),
+  	email VARCHAR(225),
+    phone VARCHAR(50),
+    password VARCHAR(100),
+    account_type VARCHAR(50)
 );
-5. CREATE TABLE Agent(
-	  id INT PRIMARY KEY AUTO_INCREMENT,
-    FirstName VARCHAR(225),
-    LastName VARCHAR(225),
-  	Email VARCHAR(225),
-    Phone VARCHAR(50),
-    Password VARCHAR(100),
-    Account_type VARCHAR(50)
-);
-6. CREATE TABLE Customer(
-	  id INT PRIMARY KEY AUTO_INCREMENT,
-    FirstName VARCHAR(225),
-    LastName VARCHAR(225),
-  	Email VARCHAR(225),
-    Phone VARCHAR(50),
-    Password VARCHAR(100),
-    Account_type VARCHAR(50)
+6. CREATE TABLE customer(
+	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(225),
+    last_name VARCHAR(225),
+  	email VARCHAR(225),
+    phone_number VARCHAR(50),
+    password VARCHAR(100),
+    account_type VARCHAR(50)
 );

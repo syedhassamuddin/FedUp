@@ -1,4 +1,4 @@
 <?php
 
-    $con= mysqli_connect("localhost","root","","fedupdb");
+    $conn = mysqli_connect("localhost","root","","fedupdb");
 ?>
