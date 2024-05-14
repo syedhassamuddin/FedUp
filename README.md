@@ -22,13 +22,13 @@ Eproject For Semester Two, a satirical website of FedEx courier service
 
 1. CREATE DATABASE fedupdb;
 2. CREATE TABLE packages(
-	package_id INT PRIMARY KEY AUTO_INCREMENT,
+	  package_id INT PRIMARY KEY AUTO_INCREMENT,
     from_address VARCHAR(225),
     to_address VARCHAR(225),
   	delivery_type VARCHAR(225),
     special_instructions VARCHAR(225)
 );
-3. CREATE TABLE admin(
+3. CREATE TABLE admins(
 	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
@@ -37,7 +37,7 @@ Eproject For Semester Two, a satirical website of FedEx courier service
     password VARCHAR(100),
     account_type VARCHAR(50)
 );
-5. CREATE TABLE agent(
+4. CREATE TABLE agents(
 	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
@@ -46,7 +46,7 @@ Eproject For Semester Two, a satirical website of FedEx courier service
     password VARCHAR(100),
     account_type VARCHAR(50)
 );
-6. CREATE TABLE customer(
+5. CREATE TABLE customer(
 	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),

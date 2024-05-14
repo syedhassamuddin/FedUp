@@ -12,18 +12,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-buttons.html" />
 
-	<title>Fed Up Admin</title>
+	<title>Buttons | AdminKit Demo</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
 	<div class="wrapper">
-
 		<!-- Side Navigation Bar Start -->
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
@@ -150,14 +148,11 @@
 		</nav>
 		<!-- Sidebar Navigation Bar End -->
 
-		
 		<div class="main">
-
-			<!-- Top Navigation Bar Start -->
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle">
-          			<i class="hamburger align-self-center"></i>
-        		</a>
+          <i class="hamburger align-self-center"></i>
+        </a>
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
@@ -295,13 +290,12 @@
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                				<i class="align-middle" data-feather="settings"></i>
-              				</a>
+                <i class="align-middle" data-feather="settings"></i>
+              </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                				<img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
-              				</a>
-
+                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+              </a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
@@ -315,83 +309,129 @@
 					</ul>
 				</div>
 			</nav>
-			<!-- Top Navigation Bar End -->
 
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3"><strong>Packages</strong> Dashboard</h1>
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Buttons</h1>
+						<a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
+      Get more button examples
+  </a>
+					</div>
+					<div class="row">
+						<div class="col-12 col-lg-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Basic Buttons</h5>
+									<h6 class="card-subtitle text-muted">Default Bootstrap buttons style.</h6>
+								</div>
+								<div class="card-body text-center">
+									<div class="mb-3">
+										<button class="btn btn-primary">Primary</button>
+										<button class="btn btn-secondary">Secondary</button>
+										<button class="btn btn-success">Success</button>
+										<button class="btn btn-danger">Danger</button>
+										<button class="btn btn-warning">Warning</button>
+										<button class="btn btn-info">Info</button>
+									</div>
+									<div>
+										<button class="btn btn-primary" disabled>Primary</button>
+										<button class="btn btn-secondary" disabled>Secondary</button>
+										<button class="btn btn-success" disabled>Success</button>
+										<button class="btn btn-danger" disabled>Danger</button>
+										<button class="btn btn-warning" disabled>Warning</button>
+										<button class="btn btn-info" disabled>Info</button>
+									</div>
+								</div>
+							</div>
 
-					<div class="main-content">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="overview-wrap">
-                                    <h2 class="title-1">View Student</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col-md-12">
-                            <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Package Id</th>
-                                                <th>From</th>
-                                                <th>To</th>
-                                                <th>Delivery Type</th>
-                                                <th>Special Instructions</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        
-										<?php
-										
-										include("conn.php");
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Button Sizes</h5>
+									<h6 class="card-subtitle text-muted">Fancy larger or smaller buttons.</h6>
+								</div>
+								<div class="card-body text-center">
+									<div class="mb-3">
+										<button class="btn btn-primary btn-sm">Small</button>
+										<button class="btn btn-primary">Medium</button>
+										<button class="btn btn-primary btn-lg">Large</button>
+									</div>
+								</div>
+							</div>
+						</div>
 
-										$selectQuery= "SELECT * FROM packages";
-										$res= mysqli_query($conn,$selectQuery);
+						<div class="col-12 col-lg-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Button Group</h5>
+									<h6 class="card-subtitle text-muted">Button group components.</h6>
+								</div>
+								<div class="card-body">
+									<h6 class="card-subtitle mb-2 text-muted">Horizontal button group</h6>
+									<div class="btn-group btn-group-lg mb-3" role="group" aria-label="Large button group">
+										<button type="button" class="btn btn-secondary">Left</button>
+										<button type="button" class="btn btn-secondary">Middle</button>
+										<button type="button" class="btn btn-secondary">Right</button>
+									</div>
+									<br>
+									<div class="btn-group mb-3" role="group" aria-label="Default button group">
+										<button type="button" class="btn btn-secondary">Left</button>
+										<button type="button" class="btn btn-secondary">Middle</button>
+										<button type="button" class="btn btn-secondary">Right</button>
+									</div>
+									<br>
+									<div class="btn-group btn-group-sm mb-4" role="group" aria-label="Small button group">
+										<button type="button" class="btn btn-secondary">Left</button>
+										<button type="button" class="btn btn-secondary">Middle</button>
+										<button type="button" class="btn btn-secondary">Right</button>
+									</div>
 
-										while ($row=mysqli_fetch_array($res)){
-											?>
+									<h6 class="card-subtitle mb-2 text-muted">Button toolbar</h6>
+									<div class="btn-toolbar mb-4" role="toolbar" aria-label="Toolbar with button groups">
+										<div class="btn-group me-2" role="group" aria-label="First group">
+											<button type="button" class="btn btn-secondary">1</button>
+											<button type="button" class="btn btn-secondary">2</button>
+											<button type="button" class="btn btn-secondary">3</button>
+											<button type="button" class="btn btn-secondary">4</button>
+										</div>
+										<div class="btn-group me-2" role="group" aria-label="Second group">
+											<button type="button" class="btn btn-secondary">5</button>
+											<button type="button" class="btn btn-secondary">6</button>
+											<button type="button" class="btn btn-secondary">7</button>
+										</div>
+										<div class="btn-group" role="group" aria-label="Third group">
+											<button type="button" class="btn btn-secondary">8</button>
+										</div>
+									</div>
 
-										<tr>
-											<td>
-											<?php echo $row['package_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['from_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['to_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['delivery_type'] ?>
-											</td>
-											<td>
-											<?php echo $row['special_instructions'] ?>
-											</td>
-											<td>
-                                                <a href="insertstd.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href="viewstd.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a>
-                                            </td>
-										</tr>
-
-											<?php
-										}
-										?>
-
-
-                                    </table>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-					
+									<h6 class="card-subtitle mb-2 text-muted">Vertical button group</h6>
+									<div class="btn-toolbar">
+										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
+											<button type="button" class="btn btn-primary">Button</button>
+											<button type="button" class="btn btn-primary">Button</button>
+											<button type="button" class="btn btn-primary">Button</button>
+										</div>
+										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
+											<button type="button" class="btn btn-success">Button</button>
+											<button type="button" class="btn btn-success">Button</button>
+											<button type="button" class="btn btn-success">Button</button>
+										</div>
+										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
+											<button type="button" class="btn btn-warning">Button</button>
+											<button type="button" class="btn btn-warning">Button</button>
+											<button type="button" class="btn btn-warning">Button</button>
+										</div>
+										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
+											<button type="button" class="btn btn-danger">Button</button>
+											<button type="button" class="btn btn-danger">Button</button>
+											<button type="button" class="btn btn-danger">Button</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</main>
@@ -427,228 +467,6 @@
 	</div>
 
 	<script src="js/app.js"></script>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
-			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
-			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
-			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
-			// Line chart
-			new Chart(document.getElementById("chartjs-dashboard-line"), {
-				type: "line",
-				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-					datasets: [{
-						label: "Sales ($)",
-						fill: true,
-						backgroundColor: gradient,
-						borderColor: window.theme.primary,
-						data: [
-							2115,
-							1562,
-							1584,
-							1892,
-							1587,
-							1923,
-							2566,
-							2448,
-							2805,
-							3438,
-							2917,
-							3327
-						]
-					}]
-				},
-				options: {
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					tooltips: {
-						intersect: false
-					},
-					hover: {
-						intersect: true
-					},
-					plugins: {
-						filler: {
-							propagate: false
-						}
-					},
-					scales: {
-						xAxes: [{
-							reverse: true,
-							gridLines: {
-								color: "rgba(0,0,0,0.0)"
-							}
-						}],
-						yAxes: [{
-							ticks: {
-								stepSize: 1000
-							},
-							display: true,
-							borderDash: [3, 3],
-							gridLines: {
-								color: "rgba(0,0,0,0.0)"
-							}
-						}]
-					}
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Pie chart
-			new Chart(document.getElementById("chartjs-dashboard-pie"), {
-				type: "pie",
-				data: {
-					labels: ["Chrome", "Firefox", "IE"],
-					datasets: [{
-						data: [4306, 3801, 1689],
-						backgroundColor: [
-							window.theme.primary,
-							window.theme.warning,
-							window.theme.danger
-						],
-						borderWidth: 5
-					}]
-				},
-				options: {
-					responsive: !window.MSInputMethodContext,
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					cutoutPercentage: 75
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Bar chart
-			new Chart(document.getElementById("chartjs-dashboard-bar"), {
-				type: "bar",
-				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-					datasets: [{
-						label: "This year",
-						backgroundColor: window.theme.primary,
-						borderColor: window.theme.primary,
-						hoverBackgroundColor: window.theme.primary,
-						hoverBorderColor: window.theme.primary,
-						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-						barPercentage: .75,
-						categoryPercentage: .5
-					}]
-				},
-				options: {
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					scales: {
-						yAxes: [{
-							gridLines: {
-								display: false
-							},
-							stacked: false,
-							ticks: {
-								stepSize: 20
-							}
-						}],
-						xAxes: [{
-							stacked: false,
-							gridLines: {
-								color: "transparent"
-							}
-						}]
-					}
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var markers = [{
-					coords: [31.230391, 121.473701],
-					name: "Shanghai"
-				},
-				{
-					coords: [28.704060, 77.102493],
-					name: "Delhi"
-				},
-				{
-					coords: [6.524379, 3.379206],
-					name: "Lagos"
-				},
-				{
-					coords: [35.689487, 139.691711],
-					name: "Tokyo"
-				},
-				{
-					coords: [23.129110, 113.264381],
-					name: "Guangzhou"
-				},
-				{
-					coords: [40.7127837, -74.0059413],
-					name: "New York"
-				},
-				{
-					coords: [34.052235, -118.243683],
-					name: "Los Angeles"
-				},
-				{
-					coords: [41.878113, -87.629799],
-					name: "Chicago"
-				},
-				{
-					coords: [51.507351, -0.127758],
-					name: "London"
-				},
-				{
-					coords: [40.416775, -3.703790],
-					name: "Madrid "
-				}
-			];
-			var map = new jsVectorMap({
-				map: "world",
-				selector: "#world_map",
-				zoomButtons: true,
-				markers: markers,
-				markerStyle: {
-					initial: {
-						r: 9,
-						strokeWidth: 7,
-						stokeOpacity: .4,
-						fill: window.theme.primary
-					},
-					hover: {
-						fill: window.theme.primary,
-						stroke: window.theme.primary
-					}
-				},
-				zoomOnScroll: false
-			});
-			window.addEventListener("resize", () => {
-				map.updateSize();
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
-			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
-			document.getElementById("datetimepicker-dashboard").flatpickr({
-				inline: true,
-				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
-				nextArrow: "<span title=\"Next month\">&raquo;</span>",
-				defaultDate: defaultDate
-			});
-		});
-	</script>
 
 </body>
 

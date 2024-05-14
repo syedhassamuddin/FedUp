@@ -61,7 +61,7 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a class="get-a-quote" href="login.php">Login</a></li>
           <li><a class="get-a-quote" href="register.php">Register</a></li>
-          <li><a class="get-a-quote" href="admin.html">Admin</a></li>
+          <li><a class="get-a-quote" href="admin.php">Admin</a></li>
         </ul>
       </nav>
       <!-- .navbar -->

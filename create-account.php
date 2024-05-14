@@ -12,20 +12,22 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-forms.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>Forms | AdminKit Demo</title>
+	<title>Fed Up Admin</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
 	<div class="wrapper">
+
 		<!-- Side Navigation Bar Start -->
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
+				<a class="sidebar-brand" href="index.php">
           			<span class="align-middle">FedUp Admin</span>
         		</a>
 
@@ -34,8 +36,8 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="admin.html">
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="admin.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
@@ -47,49 +49,49 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="packages.html">
+						<a class="sidebar-link" href="packages.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="sendpackage.html">
+						<a class="sidebar-link" href="sendpackage.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="create-account.html">
+						<a class="sidebar-link" href="create-account.php">
 							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Create Account</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="add-agent.html">
+						<a class="sidebar-link" href="add-agent.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="pages-profile.php">
               				<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.html">
+						<a class="sidebar-link" href="pages-sign-in.php">
               				<i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.html">
+						<a class="sidebar-link" href="pages-sign-up.php">
               				<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
+						<a class="sidebar-link" href="pages-blank.php">
               				<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
             			</a>
 					</li>
@@ -99,31 +101,31 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-buttons.html">
+						<a class="sidebar-link" href="ui-buttons.php">
               				<i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="ui-forms.html">
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-forms.php">
               				<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-cards.html">
+						<a class="sidebar-link" href="ui-cards.php">
               				<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-typography.html">
+						<a class="sidebar-link" href="ui-typography.php">
               				<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="icons-feather.html">
+						<a class="sidebar-link" href="icons-feather.php">
               				<i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
             			</a>
 					</li>
@@ -133,13 +135,13 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="charts-chartjs.html">
+						<a class="sidebar-link" href="charts-chartjs.php">
               				<i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="maps-google.html">
+						<a class="sidebar-link" href="maps-google.php">
               				<i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
             			</a>
 					</li>
@@ -148,11 +150,14 @@
 		</nav>
 		<!-- Sidebar Navigation Bar End -->
 
+		
 		<div class="main">
+
+			<!-- Top Navigation Bar Start -->
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle">
-          <i class="hamburger align-self-center"></i>
-        </a>
+          			<i class="hamburger align-self-center"></i>
+        		</a>
 
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
@@ -290,12 +295,13 @@
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-                <i class="align-middle" data-feather="settings"></i>
-              </a>
+                				<i class="align-middle" data-feather="settings"></i>
+              				</a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
-              </a>
+                				<img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+              				</a>
+
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
@@ -309,184 +315,94 @@
 					</ul>
 				</div>
 			</nav>
+			<!-- Top Navigation Bar End -->
 
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<div class="mb-3">
-						<h1 class="h3 d-inline align-middle">Forms</h1>
-						<a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
-      						Get more form examples
-  						</a>
-					</div>
+					<h1 class="h3 mb-3"><strong>Create</strong> Accounts</h1>
 
-					<div class="row">
-						<div class="col-12 col-lg-6">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Input</h5>
-								</div>
-								<div class="card-body">
-									<input type="text" class="form-control" placeholder="Input">
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Textarea</h5>
-								</div>
-								<div class="card-body">
-									<textarea class="form-control" rows="2" placeholder="Textarea"></textarea>
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Checkboxes</h5>
-								</div>
-								<div class="card-body">
-									<div>
-										<label class="form-check">
-            <input class="form-check-input" type="checkbox" value="">
-            <span class="form-check-label">
-              Option one is this and that&mdash;be sure to include why it's great
-            </span>
-          </label>
-										<label class="form-check">
-            <input class="form-check-input" type="checkbox" value="" disabled>
-            <span class="form-check-label">
-              Option two is disabled
-            </span>
-          </label>
+					<form action="">
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">First Name</h5>
 									</div>
-									<div>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="option1">
-            <span class="form-check-label">
-              1
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="option2">
-            <span class="form-check-label">
-              2
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="option3" disabled>
-            <span class="form-check-label">
-              3
-            </span>
-          </label>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="Adam">
 									</div>
 								</div>
 							</div>
 
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Read only</h5>
-								</div>
-								<div class="card-body">
-									<input class="form-control" type="text" placeholder="Readonly input" readonly>
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Last Name</h5>
+									</div>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="Sandler">
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-12 col-lg-6">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Radios</h5>
-								</div>
-								<div class="card-body">
-									<div>
-										<label class="form-check">
-            <input class="form-check-input" type="radio" value="option1" name="radios-example" checked>
-            <span class="form-check-label">
-              Option one is this and that&mdash;be sure to include why it's great
-            </span>
-          </label>
-										<label class="form-check">
-            <input class="form-check-input" type="radio" value="option2" name="radios-example">
-            <span class="form-check-label">
-              Option two can be something else and selecting it will deselect option one
-            </span>
-          </label>
-										<label class="form-check">
-            <input class="form-check-input" type="radio" value="option3" name="radios-example" disabled>
-            <span class="form-check-label">
-              Option three is disabled
-            </span>
-          </label>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Email</h5>
 									</div>
-									<div>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inline-radios-example" value="option1">
-            <span class="form-check-label">
-              1
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inline-radios-example" value="option2">
-            <span class="form-check-label">
-              2
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inline-radios-example" value="option3" disabled>
-            <span class="form-check-label">
-              3
-            </span>
-          </label>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="user@fedup.com">
 									</div>
 								</div>
 							</div>
 
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Selects</h5>
-								</div>
-								<div class="card-body">
-									<select class="form-select mb-3">
-          <option selected>Open this select menu</option>
-          <option>One</option>
-          <option>Two</option>
-          <option>Three</option>
-        </select>
-
-									<select multiple class="form-control">
-          <option>One</option>
-          <option>Two</option>
-          <option>Three</option>
-          <option>Four</option>
-        </select>
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Disabled</h5>
-								</div>
-								<div class="card-body">
-									<div class="mb-3">
-										<label class="form-label">Disabled input</label>
-										<input type="text" class="form-control" placeholder="Disabled input" disabled>
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Phone Number</h5>
 									</div>
-									<div class="mb-3">
-										<label class="form-label">Disabled select menu</label>
-										<select class="form-control" disabled>
-            <option>Disabled select</option>
-          </select>
+									<div class="card-body">
+										<input type="text" class="form-control" placeholder="Phone Number">
 									</div>
-									<label class="form-check">
-          <input class="form-check-input" type="checkbox" value="" disabled>
-          <span class="form-check-label">
-            Can't check this
-          </span>
-        </label>
 								</div>
 							</div>
 						</div>
-					</div>
+
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Password</h5>
+									</div>
+									<div class="card-body">
+										<input type="password" class="form-control" placeholder="letmein123">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Account Type</h5>
+									</div>
+									<div class="card-body">
+										<select class="form-select mb-3">
+											<option selected disabled>Select Account Type</option>
+											<option>Admin</option>
+											<option>Agent</option>
+											<option>Customer</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="btn btn-primary btn-lg">Create Account</button>
+
+					</form>
 
 				</div>
 			</main>
@@ -522,6 +438,228 @@
 	</div>
 
 	<script src="js/app.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
+			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
+			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
+			gradient.addColorStop(1, "rgba(215, 227, 244, 0)");
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: "line",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "Sales ($)",
+						fill: true,
+						backgroundColor: gradient,
+						borderColor: window.theme.primary,
+						data: [
+							2115,
+							1562,
+							1584,
+							1892,
+							1587,
+							1923,
+							2566,
+							2448,
+							2805,
+							3438,
+							2917,
+							3327
+						]
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 1000
+							},
+							display: true,
+							borderDash: [3, 3],
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: "pie",
+				data: {
+					labels: ["Chrome", "Firefox", "IE"],
+					datasets: [{
+						data: [4306, 3801, 1689],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger
+						],
+						borderWidth: 5
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: "bar",
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var markers = [{
+					coords: [31.230391, 121.473701],
+					name: "Shanghai"
+				},
+				{
+					coords: [28.704060, 77.102493],
+					name: "Delhi"
+				},
+				{
+					coords: [6.524379, 3.379206],
+					name: "Lagos"
+				},
+				{
+					coords: [35.689487, 139.691711],
+					name: "Tokyo"
+				},
+				{
+					coords: [23.129110, 113.264381],
+					name: "Guangzhou"
+				},
+				{
+					coords: [40.7127837, -74.0059413],
+					name: "New York"
+				},
+				{
+					coords: [34.052235, -118.243683],
+					name: "Los Angeles"
+				},
+				{
+					coords: [41.878113, -87.629799],
+					name: "Chicago"
+				},
+				{
+					coords: [51.507351, -0.127758],
+					name: "London"
+				},
+				{
+					coords: [40.416775, -3.703790],
+					name: "Madrid "
+				}
+			];
+			var map = new jsVectorMap({
+				map: "world",
+				selector: "#world_map",
+				zoomButtons: true,
+				markers: markers,
+				markerStyle: {
+					initial: {
+						r: 9,
+						strokeWidth: 7,
+						stokeOpacity: .4,
+						fill: window.theme.primary
+					},
+					hover: {
+						fill: window.theme.primary,
+						stroke: window.theme.primary
+					}
+				},
+				zoomOnScroll: false
+			});
+			window.addEventListener("resize", () => {
+				map.updateSize();
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
 
 </body>
 
