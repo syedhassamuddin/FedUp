@@ -1,22 +1,81 @@
 # FedUp
 Eproject For Semester Two, a satirical website of FedEx courier service
 
-# How to get started
+# System Module
 
-1. Everyone needs to have GIT installed
-2. Everyone needs to have a GitHub account
-3. Send your GitHub Email address to Hassam via Whatsapp
-4. Hassam will send invites to Repository that you'll accept via Email
-5. Clone repository to your computers
-6. Begin working on delegated tasks
+## Admin
 
-# Delegated Tasks
+•	Login
+•	New courier
+•	View all courier details
+•	Send SMS – From to
+•	Send delivery SMS
+•	Update/ delete courier
+•	Create agent
+•	Manage agent
+•	Manage customer details
+•	Status count
+•	Download report for shipment
 
-1. Creation of Home-Page
-2. Creation of Sign Up and Login Pages
-3. Creation of Admin panel
-4. Creation of database and tables
-5. 
+## Agent
+
+•	Login
+•	New courier
+•	View all courier details
+•	Send SMS From to
+•	Send delivery SMS
+•	Status of branch
+•	Download report from branch
+
+## User
+
+•	Register
+•	Login
+•	Track consignment number
+•	View status
+•	Print status
+
+# Module Description
+
+•	Admin Login
+o	Admin will have his/her own login details (username, password) to access the system
+•	Create Bill – Admin , Agent
+o	Admin can create a Courier Bill after logging in. Bills contain the details of sender, receiver, courier type, delivery date and Courier Company.
+•	Update bill– Admin , Agent
+o	They can also update the Bill with the entries and if there is any modification. Agent can view the list of details of his location only.
+•	Manage Customer details
+o	Admin can manage all the Customer Details in a separate and secured Database
+•	Reporting
+o	Reports of all the Bill can be viewed by the admin of the system
+•	Logout
+o	At last they can logout if they have done with their actions on the database.
+•	Admin & Agent Dashboard
+o	Status Counts
+	View total status count for shipment, in progress, delivered.
+	Admin will view all location status counts.
+	Agent can view only from or to location of his branch.
+o	Add  Shipment
+	New Courier
+o	Manage Shipment
+o	Print Shipment
+	User can print tracking details
+o	Download Report (XLSX)
+	Date Wise
+	City Wise
+•	Admin Dashboard
+o	Add Agent
+	Can view only “from or to” location
+o	Create Agent city wise login
+o	Manage Customer
+	Search
+•	User Login
+o	Track Shipment
+	User can search using consignment tracking details
+o	Shipment status
+o	Print
+User can print tracking details
+
+
 
 # Database queries
 
@@ -52,6 +111,6 @@ Eproject For Semester Two, a satirical website of FedEx courier service
     phone_number VARCHAR(50),
     password VARCHAR(100),
 );
-
-# Notes for Hassam
-1. When you add image path for account types, be sure to update php in create account page
+6. INSERT INTO admins VALUES (NULL, "admin", "admin", "admin", "123456789","admin");
+INSERT INTO agents VALUES (NULL, "agent", "agent", "agent", "123456789","agent");
+INSERT INTO admins VALUES (NULL, "customer", "customer", "customer", "123456789","customer");
