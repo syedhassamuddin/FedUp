@@ -348,19 +348,46 @@
 						if(in_array($fileActualExt,$allowedExt)){
 							//Remember to Check if user already exists
 							if($account_type == 'admin'){
-								mysqli_query($conn,"INSERT INTO admins VALUES(NULL, '$first_name','$last_name','$email','$phone_number', '$password')");
+								$stmt = $conn->prepare("INSERT INTO admins VALUES(NULL, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+								$stmt->execute();
+								if ($stmt->errno) {
+									// Handle the error
+									echo "Error: " . $stmt->error;
+								} else {
+									// Insertion successful
+									echo "<div class='alert-success'>Admin Account Creation Successful</div>";
+								}
+								$stmt->close();
 								move_uploaded_file($fileTmpName,"img/users/admins/".$fileNewName);
-								echo "<div class='alert-success'>Admin Account Creation Successful</div>";
 							}
 							elseif($account_type == 'agent'){
-								mysqli_query($conn,"INSERT INTO agents VALUES(NULL, '$first_name','$last_name','$email','$phone_number', '$password')");
+								$stmt = $conn->prepare("INSERT INTO agents VALUES(NULL, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+								$stmt->execute();
+								if ($stmt->errno) {
+									// Handle the error
+									echo "Error: " . $stmt->error;
+								} else {
+									// Insertion successful
+									echo "<div class='alert-success'>Agent Account Creation Successful</div>";
+								}
+								$stmt->close();
 								move_uploaded_file($fileTmpName,"img/users/agents/".$fileNewName);
-								echo "<div class='alert-success'>Agent Account Creation Successful</div>";
 							}
 							elseif($account_type == 'customer'){
-								mysqli_query($conn,"INSERT INTO customers VALUES(NULL, '$first_name','$last_name','$email','$phone_number', '$password')");
+								$stmt = $conn->prepare("INSERT INTO customers VALUES(NULL, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+								$stmt->execute();
+								if ($stmt->errno) {
+									// Handle the error
+									echo "Error: " . $stmt->error;
+								} else {
+									// Insertion successful
+									echo "<div class='alert-success'>Customer Account Creation Successful</div>";
+								}
+								$stmt->close();
 								move_uploaded_file($fileTmpName,"img/users/customers/".$fileNewName);
-								echo "<div class='alert-success'>Customer Account Creation Successful</div>";
 							}
 							else{
 								echo "<div class='alert-failure'>Account Creation Failure</div>";
