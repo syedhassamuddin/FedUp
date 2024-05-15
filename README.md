@@ -5,17 +5,17 @@ Eproject For Semester Two, a satirical website of FedEx courier service
 
 ## Admin
 
-•	Login
-•	New courier
-•	View all courier details
-•	Send SMS – From to
-•	Send delivery SMS
-•	Update/ delete courier
-•	Create agent
-•	Manage agent
-•	Manage customer details
-•	Status count
-•	Download report for shipment
+1. Login
+2. New courier
+3. View all courier details
+4. Send SMS – From to
+5. Send delivery SMS
+6. Update/ delete courier
+7. Create agent
+8. Manage agent
+9. Manage customer details
+10. Status count
+11. Download report for shipment
 
 ## Agent
 

@@ -23,36 +23,31 @@
 <body>
 
 	<?php
-    include ("conn.php");
-    if(isset($_POST['submit'])){
-        $firstname =$_POST['first_name'];
-		$lastname =$_POST['last_name'];
-        $email =$_POST['email'];
-        $phone_number =$_POST['phone_number'];
-        $password =$_POST['password'];
+		include ("conn.php");
+		if(isset($_POST['submit'])){
+			$first_name = $_POST['first_name'];
+			$last_name = $_POST['last_name'];
+			$email = $_POST['email'];
+			$phone_number = $_POST['phone_number'];
+			$password = $_POST['password'];
 
 
-        $verify_query = mysqli_query($con,"SELECT email FROM users WHERE  email= '$email'");
-        if(mysqli_num_rows($verify_query) !=0)
-        {
-            echo
-             "<div class='message'>
-             <p>This email is used, Try another One Please!</p>
-            </div><br>" ;
-            echo "<a href='javascript:self.history.back()'> <button class='btn'>Go Back</button>";
-           
-        }
-        else{
-            mysqli_query($con,"INSERT INTO users(username,email,contact,password) VALUES('$username','$email','$contact','$password',)");
-            echo
-            "<div class='message'>
-            <p>Registration Successfully!</p>
-           </div><br>" ;
-           echo "<a href='index.php'> <button class='btn'>Login Now</button>";
-          
-       }
-        }
-    ?>
+			$stmt = $conn->prepare("INSERT INTO customers VALUES (NULL, ?, ?, ?, ?, ?)");
+			$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+			$stmt->execute();
+			if($stmt->errno){
+				echo "Error";
+			}
+			else{
+				echo
+				"<div class='message'>
+				<p>Customer Registration Successful!</p>
+			</div><br>";    
+		}
+		$stmt->close();
+		}
+
+		?>
 	
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
@@ -92,14 +87,14 @@
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" />
 										</div>
 										<div class="d-grid gap-2 mt-3">
-											<a href="index.html" class="btn btn-lg btn-primary">Sign up</a>
+											<input class="btn btn-primary" type="submit" name="submit">
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 						<div class="text-center mb-3">
-							Already have account? <a href="pages-sign-in.html">Log In</a>
+							Already have account? <a href="sign-in.html">Log In</a>
 						</div>
 					</div>
 				</div>

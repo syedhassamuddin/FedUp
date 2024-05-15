@@ -17,14 +17,20 @@
         $password = $_POST['password'];
 
 
-            mysqli_query ($conn,"INSERT INTO customers (first_name, last_name, email, phone_number, password, account_type) VALUES('$first_name','$last_name','$email','$phone_number', '$password', 'Customer')");
+        $stmt = $conn->prepare("INSERT INTO customers (first_name, last_name, email, phone_number, password, account_type) VALUES(?,?,?,?,?, 'Customer')");
+        $stmt->bind_param("ssssss", $first_name, $last_name, $email, $phone_number, $password);
+        $stmt->execute();
+        if($stmt->errno){
+            echo "Error";
+        }
+        else{
             echo
             "<div class='message'>
-            <p>Registration Successfully!</p>
-           </div><br>";
-    
-          
+            <p>Customer Registration Successful!</p>
+           </div><br>";    
        }
+       $stmt->close();
+    }
 
     ?>
 

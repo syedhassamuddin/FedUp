@@ -21,6 +21,35 @@
 </head>
 
 <body>
+
+	<?php
+		include ("conn.php");
+		if(isset($_POST['submit'])){
+
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+
+			$stmt = $conn->prepare("SELECT * FROM customers WHERE email = ? AND password = ?");
+			$stmt->bind_param("ss", $email, $password);
+			$result = $stmt->execute();
+			if($stmt->errno){
+				echo "Error";
+			}
+			else{
+				$something = mysqli_num_rows($stmt->get_result());
+				echo $something;
+				echo "<br>";
+				echo
+				"<div class='message'>
+				<p>Done</p>
+			</div><br>";    
+		}
+		$stmt->close();
+		}
+		else{
+
+		}
+	?>
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
 			<div class="row vh-100">
@@ -37,7 +66,7 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-3">
-									<form>
+									<form action="sign-in.php" method="post">
 										<div class="mb-3">
 											<label class="form-label">Email</label>
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
@@ -53,14 +82,14 @@
 											</div>
 										</div>
 										<div class="d-grid gap-2 mt-3">
-											<a href="index.html" class="btn btn-lg btn-primary">Sign in</a>
+											<input class="btn btn-primary" type="submit" name="submit">
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 						<div class="text-center mb-3">
-							Don't have an account? <a href="pages-sign-up.html">Sign up</a>
+							Don't have an account? <a href="sign-up.html">Sign up</a>
 						</div>
 					</div>
 				</div>

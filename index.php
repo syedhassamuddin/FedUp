@@ -59,8 +59,8 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a class="get-a-quote" href="login.php">Login</a></li>
-          <li><a class="get-a-quote" href="register.php">Register</a></li>
+          <li><a class="get-a-quote" href="sign-in.php">Login</a></li>
+          <li><a class="get-a-quote" href="sign-up.php">Register</a></li>
           <li><a class="get-a-quote" href="admin.php">Admin</a></li>
         </ul>
       </nav>
