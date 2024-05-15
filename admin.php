@@ -1,3 +1,14 @@
+<?php
+	session_start();
+
+	if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && $_SESSION['account_type'] == "Customer"){
+
+	}
+	else{
+		header("location:sign-in.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,12 +52,6 @@
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
-					
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="index.php">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Home</span>
-            			</a>
-					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="packages.php">
@@ -75,18 +80,6 @@
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="pages-profile.php">
               				<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.php">
-              				<i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.php">
-              				<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
             			</a>
 					</li>
 
@@ -309,7 +302,7 @@
 								<a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
 								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Log out</a>
+								<a class="dropdown-item" href="logout.php">Log out</a>
 							</div>
 						</li>
 					</ul>

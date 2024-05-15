@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +40,23 @@
 				echo "Error";
 			}
 			else{
-				$something = mysqli_num_rows($stmt->get_result());
-				echo $something;
-				echo "<br>";
-				echo
-				"<div class='message'>
-				<p>Done</p>
-			</div><br>";    
+				$result = $stmt->get_result();
+				if(mysqli_num_rows($result) != 0){
+					$retreivedData = mysqli_fetch_assoc($result);
+					$_SESSION['first_name'] = $retreivedData['first_name'];
+					$_SESSION['last_name'] = $retreivedData['last_name'];
+					$_SESSION['email'] = $retreivedData['email'];
+					$_SESSION['password'] = $retreivedData['password'];
+					$_SESSION['phone_number'] = $retreivedData['phone_number'];
+					$_SESSION['account_type'] = "Customer";
+					echo "
+						<script>
+							window.location.href = 'admin.php'; 
+						</script>";
+				}
+				else{
+					echo "Something happened";
+				}    
 		}
 		$stmt->close();
 		}
@@ -50,6 +64,7 @@
 
 		}
 	?>
+
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
 			<div class="row vh-100">
