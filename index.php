@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,9 +63,16 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a class="get-a-quote" href="sign-in.php">Login</a></li>
-          <li><a class="get-a-quote" href="sign-up.php">Register</a></li>
-          <li><a class="get-a-quote" href="admin.php">Admin</a></li>
+          <?php
+            if(isset($_SESSION["account_type"])){
+              echo "<li><a class='get-a-quote' href='admin.php'>Go To Dashboard</a></li>";
+            }
+            else{
+              echo "
+                <li><a class='get-a-quote' href='sign-in.php'>Login</a></li>
+                <li><a class='get-a-quote' href='sign-up.php'>Register</a></li>";
+            }
+          ?>
         </ul>
       </nav>
       <!-- .navbar -->

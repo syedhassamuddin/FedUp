@@ -48,7 +48,7 @@
 					$_SESSION['email'] = $retreivedData['email'];
 					$_SESSION['password'] = $retreivedData['password'];
 					$_SESSION['phone_number'] = $retreivedData['phone_number'];
-					$_SESSION['account_type'] = "Customer";
+					$_SESSION['account_type'] = "customer";
 					echo "
 						<script>
 							window.location.href = 'admin.php'; 

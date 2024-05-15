@@ -10,7 +10,7 @@ Eproject For Semester Two, a satirical website of FedEx courier service
 3. View all courier details
 4. Send SMS – From to
 5. Send delivery SMS
-6. Update/ delete courier
+6. Update / delete courier
 7. Create agent
 8. Manage agent
 9. Manage customer details
@@ -111,6 +111,6 @@ User can print tracking details
     phone_number VARCHAR(50),
     password VARCHAR(100),
 );
-6. INSERT INTO admins VALUES (NULL, "admin", "admin", "admin", "123456789","admin");
-INSERT INTO agents VALUES (NULL, "agent", "agent", "agent", "123456789","agent");
-INSERT INTO admins VALUES (NULL, "customer", "customer", "customer", "123456789","customer");
+6. INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
+INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent");
+INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer");
