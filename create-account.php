@@ -18,6 +18,7 @@
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/extra.css">
 </head>
 
 <body>
@@ -317,12 +318,82 @@
 			</nav>
 			<!-- Top Navigation Bar End -->
 
+			<?php
+				include("conn.php");
+
+				if(isset($_POST["create_account"])){
+
+				$first_name = $_POST['first_name'];
+        		$last_name = $_POST['last_name'];
+        		$email = $_POST['email'];
+        		$phone_number = $_POST['phone_number'];
+        		$password = $_POST['password'];
+				$account_type = $_POST['account_type'];
+
+				$file = $_FILES['profile_picture'];
+
+				$fileName = $_FILES['profile_picture']['name'];
+				$fileTmpName = $_FILES['profile_picture']['tmp_name'];
+				$fileSize = $_FILES['profile_picture']['size'];
+				// $fileType = $_FILES['profile_picture']['type'];
+				$fileError = $_FILES['profile_picture']['error'];
+				
+				$fileExt = explode(".",$fileName);
+				$fileActualExt = strtolower(end($fileExt));
+				$allowedExt = array ("jpg","jpeg","png");
+				$fileNewName = $email.".".$fileActualExt;
+
+				if($fileError == 0){
+					if ($fileSize < 100 * 1024 * 1024) {
+						if(in_array($fileActualExt,$allowedExt)){
+							//Remember to Check if user already exists
+							if($account_type == 'admin'){
+								mysqli_query($conn,"INSERT INTO admins VALUES(NULL, '$first_name','$last_name','$email','$phone_number', '$password')");
+								move_uploaded_file($fileTmpName,"img/users/admins/".$fileNewName);
+								echo "<div class='alert-success'>Admin Account Creation Successful</div>";
+							}
+							elseif($account_type == 'agent'){
+								mysqli_query($conn,"INSERT INTO agents VALUES(NULL, '$first_name','$last_name','$email','$phone_number', '$password')");
+								move_uploaded_file($fileTmpName,"img/users/agents/".$fileNewName);
+								echo "<div class='alert-success'>Agent Account Creation Successful</div>";
+							}
+							elseif($account_type == 'customer'){
+								mysqli_query($conn,"INSERT INTO customers VALUES(NULL, '$first_name','$last_name','$email','$phone_number', '$password')");
+								move_uploaded_file($fileTmpName,"img/users/customers/".$fileNewName);
+								echo "<div class='alert-success'>Customer Account Creation Successful</div>";
+							}
+							else{
+								echo "<div class='alert-failure'>Account Creation Failure</div>";
+							}
+							
+
+						echo $fileTmpName;
+						echo "<br>";
+						echo $fileName;
+						}
+						else{
+							"<div class='alert-failure'>File Extension is not supported</div>";
+						}
+					} else {
+						echo "<div class='alert-failure'>File size is too large, please select a file that is smaller than 100 MBs</div>";
+					}
+				}
+				else{
+					echo "<div class='alert-failure'>There was an error with file upload</div>";
+				}
+
+				
+
+
+				}
+			?>
+			
 			<main class="content">
 				<div class="container-fluid p-0">
 
 					<h1 class="h3 mb-3"><strong>Create</strong> Accounts</h1>
 
-					<form action="">
+					<form action="create-account.php" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-12 col-md-6">
 								<div class="card">
@@ -330,7 +401,7 @@
 										<h5 class="card-title mb-0">First Name</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Adam">
+										<input name="first_name" type="text" class="form-control" placeholder="Adam">
 									</div>
 								</div>
 							</div>
@@ -341,7 +412,7 @@
 										<h5 class="card-title mb-0">Last Name</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Sandler">
+										<input name="last_name" type="text" class="form-control" placeholder="Sandler">
 									</div>
 								</div>
 							</div>
@@ -354,7 +425,7 @@
 										<h5 class="card-title mb-0">Email</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="user@fedup.com">
+										<input name="email" type="text" class="form-control" placeholder="user@fedup.com">
 									</div>
 								</div>
 							</div>
@@ -365,7 +436,7 @@
 										<h5 class="card-title mb-0">Phone Number</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Phone Number">
+										<input name="phone_number" type="text" class="form-control" placeholder="Phone Number">
 									</div>
 								</div>
 							</div>
@@ -378,7 +449,7 @@
 										<h5 class="card-title mb-0">Password</h5>
 									</div>
 									<div class="card-body">
-										<input type="password" class="form-control" placeholder="letmein123">
+										<input name="password" type="password" class="form-control" placeholder="letmein123">
 									</div>
 								</div>
 							</div>
@@ -389,18 +460,29 @@
 										<h5 class="card-title mb-0">Account Type</h5>
 									</div>
 									<div class="card-body">
-										<select class="form-select mb-3">
+										<select name="account_type" class="form-select mb-3">
 											<option selected disabled>Select Account Type</option>
-											<option>Admin</option>
-											<option>Agent</option>
-											<option>Customer</option>
+											<option value="admin">Admin</option>
+											<option value="agent">Agent</option>
+											<option value="customer">Customer</option>
 										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Profile Picture Upload</h5>
+									</div>
+									<div class="card-body">
+										<input type="file" name="profile_picture">
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<button class="btn btn-primary btn-lg">Create Account</button>
+						<input type="submit" name="create_account" class="btn btn-primary btn-lg"></input>
 
 					</form>
 

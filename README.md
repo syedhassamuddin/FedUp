@@ -35,7 +35,6 @@ Eproject For Semester Two, a satirical website of FedEx courier service
   	email VARCHAR(225),
     phone VARCHAR(50),
     password VARCHAR(100),
-    account_type VARCHAR(50)
 );
 4. CREATE TABLE agents(
 	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -44,14 +43,15 @@ Eproject For Semester Two, a satirical website of FedEx courier service
   	email VARCHAR(225),
     phone VARCHAR(50),
     password VARCHAR(100),
-    account_type VARCHAR(50)
 );
-5. CREATE TABLE customer(
+5. CREATE TABLE customers(
 	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone_number VARCHAR(50),
     password VARCHAR(100),
-    account_type VARCHAR(50)
 );
+
+# Notes for Hassam
+1. When you add image path for account types, be sure to update php in create account page
