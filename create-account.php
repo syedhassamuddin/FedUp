@@ -365,11 +365,6 @@
 							else{
 								echo "<div class='alert-failure'>Account Creation Failure</div>";
 							}
-							
-
-						echo $fileTmpName;
-						echo "<br>";
-						echo $fileName;
 						}
 						else{
 							"<div class='alert-failure'>File Extension is not supported</div>";
@@ -482,7 +477,7 @@
 							</div>
 						</div>
 
-						<input type="submit" name="create_account" class="btn btn-primary btn-lg"></input>
+						<button type="submit" name="create_account" class="btn btn-primary btn-lg">Create Account</button>
 
 					</form>
 
