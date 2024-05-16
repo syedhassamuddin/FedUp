@@ -12,9 +12,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-buttons.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-cards.html" />
 
-	<title>Buttons | AdminKit Demo</title>
+	<title>Cards | AdminKit Demo</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
 		<!-- Side Navigation Bar Start -->
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
+				<a class="sidebar-brand" href="index.php">
           			<span class="align-middle">FedUp Admin</span>
         		</a>
 
@@ -34,8 +34,8 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="admin.html">
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="admin.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
@@ -47,49 +47,49 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="packages.html">
+						<a class="sidebar-link" href="packages.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="sendpackage.html">
+						<a class="sidebar-link" href="sendpackage.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="create-account.html">
+						<a class="sidebar-link" href="create-account.php">
 							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Create Account</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="add-agent.html">
+						<a class="sidebar-link" href="add-agent.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="pages-profile.php">
               				<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.html">
+						<a class="sidebar-link" href="pages-sign-in.php">
               				<i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.html">
+						<a class="sidebar-link" href="pages-sign-up.php">
               				<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
+						<a class="sidebar-link" href="pages-blank.php">
               				<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
             			</a>
 					</li>
@@ -98,32 +98,32 @@
 						Tools & Components
 					</li>
 
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="ui-buttons.html">
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-buttons.php">
               				<i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-forms.html">
+						<a class="sidebar-link" href="ui-forms.php">
               				<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-cards.html">
+						<a class="sidebar-link" href="ui-cards.php">
               				<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-typography.html">
+						<a class="sidebar-link" href="ui-typography.php">
               				<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="icons-feather.html">
+						<a class="sidebar-link" href="icons-feather.php">
               				<i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
             			</a>
 					</li>
@@ -133,13 +133,13 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="charts-chartjs.html">
+						<a class="sidebar-link" href="charts-chartjs.php">
               				<i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="maps-google.html">
+						<a class="sidebar-link" href="maps-google.php">
               				<i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
             			</a>
 					</li>
@@ -314,120 +314,60 @@
 				<div class="container-fluid p-0">
 
 					<div class="mb-3">
-						<h1 class="h3 d-inline align-middle">Buttons</h1>
+						<h1 class="h3 d-inline align-middle">Cards</h1>
 						<a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
-      Get more button examples
+      Get more card examples
   </a>
 					</div>
 					<div class="row">
-						<div class="col-12 col-lg-6">
+						<div class="col-12 col-md-6">
 							<div class="card">
+								<img class="card-img-top" src="img/photos/unsplash-1.jpg" alt="Unsplash">
 								<div class="card-header">
-									<h5 class="card-title">Basic Buttons</h5>
-									<h6 class="card-subtitle text-muted">Default Bootstrap buttons style.</h6>
+									<h5 class="card-title mb-0">Card with image and links</h5>
 								</div>
-								<div class="card-body text-center">
-									<div class="mb-3">
-										<button class="btn btn-primary">Primary</button>
-										<button class="btn btn-secondary">Secondary</button>
-										<button class="btn btn-success">Success</button>
-										<button class="btn btn-danger">Danger</button>
-										<button class="btn btn-warning">Warning</button>
-										<button class="btn btn-info">Info</button>
-									</div>
-									<div>
-										<button class="btn btn-primary" disabled>Primary</button>
-										<button class="btn btn-secondary" disabled>Secondary</button>
-										<button class="btn btn-success" disabled>Success</button>
-										<button class="btn btn-danger" disabled>Danger</button>
-										<button class="btn btn-warning" disabled>Warning</button>
-										<button class="btn btn-info" disabled>Info</button>
-									</div>
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title">Button Sizes</h5>
-									<h6 class="card-subtitle text-muted">Fancy larger or smaller buttons.</h6>
-								</div>
-								<div class="card-body text-center">
-									<div class="mb-3">
-										<button class="btn btn-primary btn-sm">Small</button>
-										<button class="btn btn-primary">Medium</button>
-										<button class="btn btn-primary btn-lg">Large</button>
-									</div>
+								<div class="card-body">
+									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="card-link">Card link</a>
+									<a href="#" class="card-link">Another link</a>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-12 col-lg-6">
+						<div class="col-12 col-md-6">
 							<div class="card">
+								<img class="card-img-top" src="img/photos/unsplash-2.jpg" alt="Unsplash">
 								<div class="card-header">
-									<h5 class="card-title">Button Group</h5>
-									<h6 class="card-subtitle text-muted">Button group components.</h6>
+									<h5 class="card-title mb-0">Card with image and button</h5>
 								</div>
 								<div class="card-body">
-									<h6 class="card-subtitle mb-2 text-muted">Horizontal button group</h6>
-									<div class="btn-group btn-group-lg mb-3" role="group" aria-label="Large button group">
-										<button type="button" class="btn btn-secondary">Left</button>
-										<button type="button" class="btn btn-secondary">Middle</button>
-										<button type="button" class="btn btn-secondary">Right</button>
-									</div>
-									<br>
-									<div class="btn-group mb-3" role="group" aria-label="Default button group">
-										<button type="button" class="btn btn-secondary">Left</button>
-										<button type="button" class="btn btn-secondary">Middle</button>
-										<button type="button" class="btn btn-secondary">Right</button>
-									</div>
-									<br>
-									<div class="btn-group btn-group-sm mb-4" role="group" aria-label="Small button group">
-										<button type="button" class="btn btn-secondary">Left</button>
-										<button type="button" class="btn btn-secondary">Middle</button>
-										<button type="button" class="btn btn-secondary">Right</button>
-									</div>
+									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
+								</div>
+							</div>
+						</div>
 
-									<h6 class="card-subtitle mb-2 text-muted">Button toolbar</h6>
-									<div class="btn-toolbar mb-4" role="toolbar" aria-label="Toolbar with button groups">
-										<div class="btn-group me-2" role="group" aria-label="First group">
-											<button type="button" class="btn btn-secondary">1</button>
-											<button type="button" class="btn btn-secondary">2</button>
-											<button type="button" class="btn btn-secondary">3</button>
-											<button type="button" class="btn btn-secondary">4</button>
-										</div>
-										<div class="btn-group me-2" role="group" aria-label="Second group">
-											<button type="button" class="btn btn-secondary">5</button>
-											<button type="button" class="btn btn-secondary">6</button>
-											<button type="button" class="btn btn-secondary">7</button>
-										</div>
-										<div class="btn-group" role="group" aria-label="Third group">
-											<button type="button" class="btn btn-secondary">8</button>
-										</div>
-									</div>
+						<div class="col-12 col-md-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Card with links</h5>
+								</div>
+								<div class="card-body">
+									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="card-link">Card link</a>
+									<a href="#" class="card-link">Another link</a>
+								</div>
+							</div>
+						</div>
 
-									<h6 class="card-subtitle mb-2 text-muted">Vertical button group</h6>
-									<div class="btn-toolbar">
-										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-											<button type="button" class="btn btn-primary">Button</button>
-											<button type="button" class="btn btn-primary">Button</button>
-											<button type="button" class="btn btn-primary">Button</button>
-										</div>
-										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-											<button type="button" class="btn btn-success">Button</button>
-											<button type="button" class="btn btn-success">Button</button>
-											<button type="button" class="btn btn-success">Button</button>
-										</div>
-										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-											<button type="button" class="btn btn-warning">Button</button>
-											<button type="button" class="btn btn-warning">Button</button>
-											<button type="button" class="btn btn-warning">Button</button>
-										</div>
-										<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-											<button type="button" class="btn btn-danger">Button</button>
-											<button type="button" class="btn btn-danger">Button</button>
-											<button type="button" class="btn btn-danger">Button</button>
-										</div>
-									</div>
+						<div class="col-12 col-md-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title mb-0">Card with button</h5>
+								</div>
+								<div class="card-body">
+									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<a href="#" class="btn btn-primary">Go somewhere</a>
 								</div>
 							</div>
 						</div>

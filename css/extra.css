@@ -1,0 +1,15 @@
+.alert-success{
+    width: 100%;
+    background-color: #ddf2d1;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 0px;
+}
+
+.alert-failure{
+    width: 100%;
+    background-color: #f2d1da;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 0px;
+}

@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +25,46 @@
 </head>
 
 <body>
+
+	<?php
+		include ("conn.php");
+		if(isset($_POST['submit'])){
+
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+
+			$stmt = $conn->prepare("SELECT * FROM customers WHERE email = ? AND password = ?");
+			$stmt->bind_param("ss", $email, $password);
+			$result = $stmt->execute();
+			if($stmt->errno){
+				echo "Error";
+			}
+			else{
+				$result = $stmt->get_result();
+				if(mysqli_num_rows($result) != 0){
+					$retreivedData = mysqli_fetch_assoc($result);
+					$_SESSION['first_name'] = $retreivedData['first_name'];
+					$_SESSION['last_name'] = $retreivedData['last_name'];
+					$_SESSION['email'] = $retreivedData['email'];
+					$_SESSION['password'] = $retreivedData['password'];
+					$_SESSION['phone_number'] = $retreivedData['phone_number'];
+					$_SESSION['account_type'] = "customer";
+					echo "
+						<script>
+							window.location.href = 'admin.php'; 
+						</script>";
+				}
+				else{
+					echo "Something happened";
+				}    
+		}
+		$stmt->close();
+		}
+		else{
+
+		}
+	?>
+
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
 			<div class="row vh-100">
@@ -37,7 +81,7 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-3">
-									<form>
+									<form action="sign-in.php" method="post">
 										<div class="mb-3">
 											<label class="form-label">Email</label>
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
@@ -53,14 +97,14 @@
 											</div>
 										</div>
 										<div class="d-grid gap-2 mt-3">
-											<a href="index.html" class="btn btn-lg btn-primary">Sign in</a>
+											<input class="btn btn-primary" type="submit" name="submit">
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 						<div class="text-center mb-3">
-							Don't have an account? <a href="pages-sign-up.html">Sign up</a>
+							Don't have an account? <a href="sign-up.html">Sign up</a>
 						</div>
 					</div>
 				</div>

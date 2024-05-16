@@ -14,13 +14,41 @@
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-up.html" />
 
-	<title>Sign Up | AdminKit Demo</title>
+	<title>Sign Up | FedUp</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+	<?php
+		include ("conn.php");
+		if(isset($_POST['submit'])){
+			$first_name = $_POST['first_name'];
+			$last_name = $_POST['last_name'];
+			$email = $_POST['email'];
+			$phone_number = $_POST['phone_number'];
+			$password = $_POST['password'];
+
+
+			$stmt = $conn->prepare("INSERT INTO customers VALUES (NULL, ?, ?, ?, ?, ?)");
+			$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+			$stmt->execute();
+			if($stmt->errno){
+				echo "Error";
+			}
+			else{
+				echo
+				"<div class='message'>
+				<p>Customer Registration Successful!</p>
+			</div><br>";    
+		}
+		$stmt->close();
+		}
+
+		?>
+	
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
 			<div class="row vh-100">
@@ -37,28 +65,36 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-3">
-									<form>
+									<form action="pages-sign-up.php" method="post">
 										<div class="mb-3">
-											<label class="form-label">Full name</label>
-											<input class="form-control form-control-lg" type="text" name="name" placeholder="Enter your name" />
+											<label class="form-label">First name</label>
+											<input class="form-control form-control-lg" type="text" name="first_name" placeholder="Enter your first name" />
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Last name</label>
+											<input class="form-control form-control-lg" type="text" name="last_name" placeholder="Enter your last name" />
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Email</label>
 											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
 										</div>
 										<div class="mb-3">
+											<label class="form-label">Phone</label>
+											<input class="form-control form-control-lg" type="text" name="phone_number" placeholder="Enter your phone number" />
+										</div>
+										<div class="mb-3">
 											<label class="form-label">Password</label>
 											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" />
 										</div>
 										<div class="d-grid gap-2 mt-3">
-											<a href="index.html" class="btn btn-lg btn-primary">Sign up</a>
+											<input class="btn btn-primary" type="submit" name="submit">
 										</div>
 									</form>
 								</div>
 							</div>
 						</div>
 						<div class="text-center mb-3">
-							Already have account? <a href="pages-sign-in.html">Log In</a>
+							Already have account? <a href="sign-in.html">Log In</a>
 						</div>
 					</div>
 				</div>

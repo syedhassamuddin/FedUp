@@ -18,6 +18,7 @@
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/extra.css">
 </head>
 
 <body>
@@ -25,112 +26,134 @@
 	<div class="wrapper">
 
 	<?php
-		$activePage = "sendpackage";
+		$activePage = "create-account";
 		include "page-components/sidebar.php";	
 	?>
 
+		
 		<div class="main">
 
 		<?php
 			include "page-components/topnavbar.php";	
 		?>
-			
+
 			<?php
-			
-			include('conn.php');
+				include("conn.php");
 
-			if(isset($_POST['submit'])){
-				$from_address = $_POST['from'];
-				$to_address = $_POST['to'];
-				$delivery_type = $_POST['special'];
-				$special_instructions = $_POST['spcins'];
-				$current_location = $_POST[''];
-				$p_price = $_POST[''];
-				$p_cost = $_POST[''];
+				if(isset($_POST["create_account"])){
 
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,p_price,p_cost)VALUES('$from_address','$to_address','$delivery_type','$special_instructions','$current_location,'$p_price','$p_cost')";
+				$first_name = $_POST['first_name'];
+        		$last_name = $_POST['last_name'];
+        		$email = $_POST['email'];
+        		$phone_number = $_POST['phone_number'];
+        		$password = $_POST['password'];
+				$account_type = $_POST['account_type'];
 
-				$isInsert = mysqli_query($conn, $insertQuery);
+				$file = $_FILES['profile_picture'];
 
-				if ($isInsert) {
-					echo '<script>alert("Data inserted successfully")</script>';
-				} else {
-					echo '<script>alert("Something went wrong")</script>';
+				$fileName = $_FILES['profile_picture']['name'];
+				$fileTmpName = $_FILES['profile_picture']['tmp_name'];
+				$fileSize = $_FILES['profile_picture']['size'];
+				// $fileType = $_FILES['profile_picture']['type'];
+				$fileError = $_FILES['profile_picture']['error'];
+				
+				$fileExt = explode(".",$fileName);
+				$fileActualExt = strtolower(end($fileExt));
+				$allowedExt = array ("jpg","jpeg","png");
+				$fileNewName = $email.".".$fileActualExt;
+
+				if($fileError == 0){
+					if ($fileSize < 100 * 1024 * 1024) {
+						if(in_array($fileActualExt,$allowedExt)){
+							//Remember to Check if user already exists
+							if($account_type == 'admin'){
+								$stmt = $conn->prepare("INSERT INTO admins VALUES(NULL, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+								$stmt->execute();
+								if ($stmt->errno) {
+									// Handle the error
+									echo "Error: " . $stmt->error;
+								} else {
+									// Insertion successful
+									echo "<div class='alert-success'>Admin Account Creation Successful</div>";
+								}
+								$stmt->close();
+								move_uploaded_file($fileTmpName,"img/users/admins/".$fileNewName);
+							}
+							elseif($account_type == 'agent'){
+								$stmt = $conn->prepare("INSERT INTO agents VALUES(NULL, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+								$stmt->execute();
+								if ($stmt->errno) {
+									// Handle the error
+									echo "Error: " . $stmt->error;
+								} else {
+									// Insertion successful
+									echo "<div class='alert-success'>Agent Account Creation Successful</div>";
+								}
+								$stmt->close();
+								move_uploaded_file($fileTmpName,"img/users/agents/".$fileNewName);
+							}
+							elseif($account_type == 'customer'){
+								$stmt = $conn->prepare("INSERT INTO customers VALUES(NULL, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sssss", $first_name, $last_name, $email, $phone_number, $password);
+								$stmt->execute();
+								if ($stmt->errno) {
+									// Handle the error
+									echo "Error: " . $stmt->error;
+								} else {
+									// Insertion successful
+									echo "<div class='alert-success'>Customer Account Creation Successful</div>";
+								}
+								$stmt->close();
+								move_uploaded_file($fileTmpName,"img/users/customers/".$fileNewName);
+							}
+							else{
+								echo "<div class='alert-failure'>Account Creation Failure</div>";
+							}
+						}
+						else{
+							"<div class='alert-failure'>File Extension is not supported</div>";
+						}
+					} else {
+						echo "<div class='alert-failure'>File size is too large, please select a file that is smaller than 100 MBs</div>";
+					}
+				}
+				else{
+					echo "<div class='alert-failure'>There was an error with file upload</div>";
 				}
 
-			}
-
-			// edit work
-
-			if(isset($_GET['EditedId']))
-			{
-				$id = $_GET['EditedId'];
-				$editQuery = "SELECT * FROM packages WHERE package_id = '$id'";
-				$res = mysqli_query($conn,$editQuery);
-				$row = mysqli_fetch_array($res);
-
-				if(isset($_POST['update']))
-                        {
-                            $ufrom_address = $_POST['from'];
-				            $uto_address = $_POST['to'];
-				            $udelivery_type = $_POST['special'];
-				            $uspecial_instructions = $_POST['spcins'];
-				            $ucurrent_location = $_POST[''];
-				            $up_price = $_POST[''];
-				            $up_cost = $_POST[''];
-						}
-
-                            if(move_uploaded_file($_FILES))
-                            {
-                                $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            }
-                            else{
-                                $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            }
-
-                            $isUpdate = mysqli_query($conn, $updateQuery);
-
-                            if ($isUpdate) {
-                                echo '<script>
-                                window.location.href = "packages.php";</script>';
-                            } else {
-                                echo '<script>alert("Something went wrong")</script>';
-                            }
-						}
-			
-		
-
-			// edit work
+				
 
 
-
+				}
 			?>
-
+			
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h1 class="h3 mb-3"><strong>Send</strong> Package</h1>
-					<form action="sendpackage.php" method="post">
 
+					<h1 class="h3 mb-3"><strong>Create</strong> Accounts</h1>
+
+					<form action="create-account.php" method="post" enctype="multipart/form-data">
 						<div class="row">
-							<div class="col-6">
+							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">From</h5>
+										<h5 class="card-title mb-0">First Name</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi" name="from">
+										<input name="first_name" type="text" class="form-control" placeholder="Adam">
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-6">
 
+							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">To</h5>
+										<h5 class="card-title mb-0">Last Name</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore" name="to">
+										<input name="last_name" type="text" class="form-control" placeholder="Sandler">
 									</div>
 								</div>
 							</div>
@@ -140,53 +163,68 @@
 							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">Special</h5>
+										<h5 class="card-title mb-0">Email</h5>
 									</div>
 									<div class="card-body">
-										<div>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="standard" name="special" checked>
-												<span class="form-check-label">
-													Standard Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="express" name="special">
-												<span class="form-check-label">
-													Express Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="overnight" name="special">
-												<span class="form-check-label">
-												Overnight Delivery
-												</span>
-												</label>
-											  <label class="form-check">
-												<input class="form-check-input" type="radio" value="fragile" name="special">
-												<span class="form-check-label">
-													Fragile Delivery
-												</span>
-											</label>
-										</div>
+										<input name="email" type="text" class="form-control" placeholder="user@fedup.com">
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-6">
-							  <div class="card">
-								  <div class="card-header">
-									  <h5 class="card-title mb-0">Special Instructions</h5>
-								  </div>
-								  <div class="card-body">
-									  <textarea class="form-control" rows="2" name="spcins" placeholder="Please keep upright"></textarea>
-								  </div>
-							  </div>
-							</div>
 
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Phone Number</h5>
+									</div>
+									<div class="card-body">
+										<input name="phone_number" type="text" class="form-control" placeholder="Phone Number">
+									</div>
+								</div>
+							</div>
 						</div>
 
-						<button class="btn btn-primary btn-lg" type="submit" name="submit">Schedule Package Delivery</button>
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Password</h5>
+									</div>
+									<div class="card-body">
+										<input name="password" type="password" class="form-control" placeholder="letmein123">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Account Type</h5>
+									</div>
+									<div class="card-body">
+										<select name="account_type" class="form-select mb-3">
+											<option selected disabled>Select Account Type</option>
+											<option value="admin">Admin</option>
+											<option value="agent">Agent</option>
+											<option value="customer">Customer</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-12 col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Profile Picture Upload</h5>
+									</div>
+									<div class="card-body">
+										<input type="file" name="profile_picture">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button type="submit" name="create_account" class="btn btn-primary btn-lg">Create Account</button>
+
 					</form>
 
 				</div>

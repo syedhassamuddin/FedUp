@@ -12,9 +12,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-forms.html" />
+	<link rel="canonical" href="https://demo-basic.adminkit.io/ui-typography.html" />
 
-	<title>Forms | AdminKit Demo</title>
+	<title>Typography | AdminKit Demo</title>
 
 	<link href="css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
 		<!-- Side Navigation Bar Start -->
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
+				<a class="sidebar-brand" href="index.php">
           			<span class="align-middle">FedUp Admin</span>
         		</a>
 
@@ -34,8 +34,8 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="admin.html">
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="admin.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
@@ -47,49 +47,49 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="packages.html">
+						<a class="sidebar-link" href="packages.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="sendpackage.html">
+						<a class="sidebar-link" href="sendpackage.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="create-account.html">
+						<a class="sidebar-link" href="create-account.php">
 							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Create Account</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="add-agent.html">
+						<a class="sidebar-link" href="add-agent.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
+						<a class="sidebar-link" href="pages-profile.php">
               				<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.html">
+						<a class="sidebar-link" href="pages-sign-in.php">
               				<i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.html">
+						<a class="sidebar-link" href="pages-sign-up.php">
               				<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
+						<a class="sidebar-link" href="pages-blank.php">
               				<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
             			</a>
 					</li>
@@ -99,31 +99,31 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-buttons.html">
+						<a class="sidebar-link" href="ui-buttons.php">
               				<i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="ui-forms.html">
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="ui-forms.php">
               				<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-cards.html">
+						<a class="sidebar-link" href="ui-cards.php">
               				<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-typography.html">
+						<a class="sidebar-link" href="ui-typography.php">
               				<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="icons-feather.html">
+						<a class="sidebar-link" href="icons-feather.php">
               				<i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
             			</a>
 					</li>
@@ -133,13 +133,13 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="charts-chartjs.html">
+						<a class="sidebar-link" href="charts-chartjs.php">
               				<i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="maps-google.html">
+						<a class="sidebar-link" href="maps-google.php">
               				<i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
             			</a>
 					</li>
@@ -314,175 +314,143 @@
 				<div class="container-fluid p-0">
 
 					<div class="mb-3">
-						<h1 class="h3 d-inline align-middle">Forms</h1>
+						<h1 class="h3 d-inline align-middle">Typography</h1>
 						<a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
-      						Get more form examples
-  						</a>
+      Get more typography examples
+  </a>
 					</div>
-
 					<div class="row">
 						<div class="col-12 col-lg-6">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Input</h5>
+									<h5 class="card-title">Headings</h5>
+									<h6 class="card-subtitle text-muted">All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.</h6>
 								</div>
 								<div class="card-body">
-									<input type="text" class="form-control" placeholder="Input">
+									<h1>This is a heading h1</h1>
+									<p class="text-muted">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+										vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero.</p>
+									<h2>This is a heading h2</h2>
+									<p class="text-muted">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+										vel, luctus pulvinar, hendrerit id, lorem.</p>
+									<h3>This is a heading h3</h3>
+									<p class="text-muted">Etiam rhoncus. Maecenas tempus, tellus condimentum rhoncus, sem quam libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, vel.</p>
+									<h4>This is a heading h4</h4>
+									<p class="text-muted">Etiam rhoncus. Maecenas tempus, tellus condimentum rhoncus, sem quam libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, vel.</p>
+									<h5>This is a heading h5</h5>
+									<p class="text-muted">Sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel.</p>
+									<h6>This is a heading h6</h6>
+									<p class="text-muted">Sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel.</p>
 								</div>
 							</div>
 
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Textarea</h5>
+									<h5 class="card-title">Coloured text</h5>
+									<h6 class="card-subtitle text-muted">Contextual text classes.</h6>
 								</div>
 								<div class="card-body">
-									<textarea class="form-control" rows="2" placeholder="Textarea"></textarea>
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Checkboxes</h5>
-								</div>
-								<div class="card-body">
-									<div>
-										<label class="form-check">
-            <input class="form-check-input" type="checkbox" value="">
-            <span class="form-check-label">
-              Option one is this and that&mdash;be sure to include why it's great
-            </span>
-          </label>
-										<label class="form-check">
-            <input class="form-check-input" type="checkbox" value="" disabled>
-            <span class="form-check-label">
-              Option two is disabled
-            </span>
-          </label>
-									</div>
-									<div>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="option1">
-            <span class="form-check-label">
-              1
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="option2">
-            <span class="form-check-label">
-              2
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="option3" disabled>
-            <span class="form-check-label">
-              3
-            </span>
-          </label>
-									</div>
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Read only</h5>
-								</div>
-								<div class="card-body">
-									<input class="form-control" type="text" placeholder="Readonly input" readonly>
+									<p class="text-primary">This line of text contains the text-primary class.</p>
+									<p class="text-secondary">This line of text contains the text-secondary class.</p>
+									<p class="text-success">This line of text contains the text-success class.</p>
+									<p class="text-danger">This line of text contains the text-danger class.</p>
+									<p class="text-warning">This line of text contains the text-warning class.</p>
+									<p class="text-info">This line of text contains the text-info class.</p>
 								</div>
 							</div>
 						</div>
-
 						<div class="col-12 col-lg-6">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Radios</h5>
+									<h5 class="card-title">Inline text</h5>
+									<h6 class="card-subtitle text-muted">Styling for common inline HTML5 elements.</h6>
 								</div>
 								<div class="card-body">
-									<div>
-										<label class="form-check">
-            <input class="form-check-input" type="radio" value="option1" name="radios-example" checked>
-            <span class="form-check-label">
-              Option one is this and that&mdash;be sure to include why it's great
-            </span>
-          </label>
-										<label class="form-check">
-            <input class="form-check-input" type="radio" value="option2" name="radios-example">
-            <span class="form-check-label">
-              Option two can be something else and selecting it will deselect option one
-            </span>
-          </label>
-										<label class="form-check">
-            <input class="form-check-input" type="radio" value="option3" name="radios-example" disabled>
-            <span class="form-check-label">
-              Option three is disabled
-            </span>
-          </label>
-									</div>
-									<div>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inline-radios-example" value="option1">
-            <span class="form-check-label">
-              1
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inline-radios-example" value="option2">
-            <span class="form-check-label">
-              2
-            </span>
-          </label>
-										<label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inline-radios-example" value="option3" disabled>
-            <span class="form-check-label">
-              3
-            </span>
-          </label>
-									</div>
+									<p>You can use the mark-tag to <mark>highlight</mark> text.</p>
+									<p><del>This line of text can be treated as deleted text.</del></p>
+									<p><ins>This line of text can be treated as an addition to the document.</ins></p>
+									<p><strong>Bold text using the strong-tag</strong></p>
+									<p><em>Italicized text using the em-tag</em></p>
 								</div>
 							</div>
 
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Selects</h5>
+									<h5 class="card-title">Blockquotes</h5>
+									<h6 class="card-subtitle text-muted">For quoting blocks of content from another source within your document.</h6>
 								</div>
 								<div class="card-body">
-									<select class="form-select mb-3">
-          <option selected>Open this select menu</option>
-          <option>One</option>
-          <option>Two</option>
-          <option>Three</option>
-        </select>
-
-									<select multiple class="form-control">
-          <option>One</option>
-          <option>Two</option>
-          <option>Three</option>
-          <option>Four</option>
-        </select>
+									<blockquote>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+										</p>
+										<footer>
+											Someone famous in <cite title="Source Title">Source Title</cite>
+										</footer>
+									</blockquote>
+									<p class="text-muted m-b-15 m-t-20">
+										Add <code>.blockquote-reverse</code> for a blockquote with right-aligned content.
+									</p>
+									<blockquote class="blockquote-reverse m-b-0">
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+										</p>
+										<footer>
+											Someone famous in <cite title="Source Title">Source Title</cite>
+										</footer>
+									</blockquote>
 								</div>
 							</div>
 
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Disabled</h5>
+									<h5 class="card-title">List unordered</h5>
+									<h6 class="card-subtitle text-muted">The unordered list items will are marked with bullets.</h6>
 								</div>
 								<div class="card-body">
-									<div class="mb-3">
-										<label class="form-label">Disabled input</label>
-										<input type="text" class="form-control" placeholder="Disabled input" disabled>
-									</div>
-									<div class="mb-3">
-										<label class="form-label">Disabled select menu</label>
-										<select class="form-control" disabled>
-            <option>Disabled select</option>
-          </select>
-									</div>
-									<label class="form-check">
-          <input class="form-check-input" type="checkbox" value="" disabled>
-          <span class="form-check-label">
-            Can't check this
-          </span>
-        </label>
+									<ul>
+										<li>
+											Lorem ipsum dolor sit amet
+										</li>
+										<li>
+											Consectetur adipiscing elit
+										</li>
+										<li>
+											Nulla volutpat aliquam velit
+										</li>
+										<li>
+											Phasellus iaculis neque
+										</li>
+										<li>
+											Eget porttitor lorem
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">List ordered</h5>
+									<h6 class="card-subtitle text-muted">The ordered list items will are marked with numbers.</h6>
+								</div>
+								<div class="card-body">
+									<ol>
+										<li>
+											Lorem ipsum dolor sit amet
+										</li>
+										<li>
+											Consectetur adipiscing elit
+										</li>
+										<li>
+											Nulla volutpat aliquam velit
+										</li>
+										<li>
+											Phasellus iaculis neque
+										</li>
+										<li>
+											Eget porttitor lorem
+										</li>
+									</ol>
 								</div>
 							</div>
 						</div>
