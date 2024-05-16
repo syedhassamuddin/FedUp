@@ -46,12 +46,4 @@ Eproject For Semester Two, a satirical website of FedEx courier service
     password VARCHAR(100),
     account_type VARCHAR(50)
 );
-6. CREATE TABLE customer(
-	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(225),
-    last_name VARCHAR(225),
-  	email VARCHAR(225),
-    phone_number VARCHAR(50),
-    password VARCHAR(100),
-    account_type VARCHAR(50)
-);
+6.  

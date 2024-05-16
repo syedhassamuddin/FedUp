@@ -36,7 +36,7 @@
 						Pages
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="admin.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
@@ -45,23 +45,17 @@
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="index.php">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Home</span>
-						</a>
-					</li>
-							
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="viewallusers.php">
-								<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">View All Users</span>
             			</a>
 					</li>
 
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="packages.php">
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="packages.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
             			</a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="sendpackage.php">
+						<a class="sidebar-link" href="sendpackage.html">
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
             			</a>
 					</li>
@@ -324,274 +318,251 @@
 			<!-- Top Navigation Bar End -->
 
 			<main class="content">
-				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+					<h1 class="h1 mb-3"><strong>All Users</strong></h1>
 
-					<div class="row">
-						<div class="col-xl-6 col-xxl-5 d-flex">
-							<div class="w-100">
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Sales</h5>
-													</div>
+					<div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Admin</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                            <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Admin Id</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>phone</th>
+                                                <th>Password</th>
+                                                <th>Account Type</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        
+										<?php
+										
+										include("conn.php");
 
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="truck"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">2.382</h1>
-												<div class="mb-0">
-													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Visitors</h5>
-													</div>
+										$selectQuery= "SELECT * FROM admin";
+										$res= mysqli_query($conn,$selectQuery);
 
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="users"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">14.212</h1>
-												<div class="mb-0">
-													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Earnings</h5>
-													</div>
+										while ($row=mysqli_fetch_array($res)){
+											?>
 
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="dollar-sign"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">$21.300</h1>
-												<div class="mb-0">
-													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-body">
-												<div class="row">
-													<div class="col mt-0">
-														<h5 class="card-title">Orders</h5>
-													</div>
-
-													<div class="col-auto">
-														<div class="stat text-primary">
-															<i class="align-middle" data-feather="shopping-cart"></i>
-														</div>
-													</div>
-												</div>
-												<h1 class="mt-1 mb-3">64</h1>
-												<div class="mb-0">
-													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
-													<span class="text-muted">Since last week</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-6 col-xxl-7">
-							<div class="card flex-fill w-100">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Recent Movement</h5>
-								</div>
-								<div class="card-body py-3">
-									<div class="chart chart-sm">
-										<canvas id="chartjs-dashboard-line"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
-							<div class="card flex-fill w-100">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Browser Usage</h5>
-								</div>
-								<div class="card-body d-flex">
-									<div class="align-self-center w-100">
-										<div class="py-3">
-											<div class="chart chart-xs">
-												<canvas id="chartjs-dashboard-pie"></canvas>
-											</div>
-										</div>
-
-										<table class="table mb-0">
-											<tbody>
-												<tr>
-													<td>Chrome</td>
-													<td class="text-end">4306</td>
-												</tr>
-												<tr>
-													<td>Firefox</td>
-													<td class="text-end">3801</td>
-												</tr>
-												<tr>
-													<td>IE</td>
-													<td class="text-end">1689</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-							<div class="card flex-fill w-100">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Real-Time</h5>
-								</div>
-								<div class="card-body px-4">
-									<div id="world_map" style="height:350px;"></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
-							<div class="card flex-fill">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Calendar</h5>
-								</div>
-								<div class="card-body d-flex">
-									<div class="align-self-center w-100">
-										<div class="chart">
-											<div id="datetimepicker-dashboard"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-12 col-lg-8 col-xxl-9 d-flex">
-							<div class="card flex-fill">
-								<div class="card-header">
-
-									<h5 class="card-title mb-0">Latest Projects</h5>
-								</div>
-								<table class="table table-hover my-0">
-									<thead>
 										<tr>
-											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Assignee</th>
+											<td>
+											<?php echo $row['admin_id'] ?>
+											</td>
+											<td>
+											<?php echo $row['first_name'] ?>
+											</td>
+											<td>
+											<?php echo $row['last_name'] ?>
+											</td>
+											<td>
+											<?php echo $row['email'] ?>
+											</td>
+											<td>
+											<?php echo $row['phone'] ?>
+											</td>
+                                            <td>
+											<?php echo $row['password'] ?>
+											</td>
+                                            <td>
+											<?php echo $row['account_type'] ?>
+											</td>
+											<td>
+                                                <a href=".php?EditedId=<?php echo $row['admin_id'] ?>" class="btn btn-success">Edit</a>
+                                                <a href=".php?DeletedId=<?php echo $row['admin_id'] ?>" class="btn btn-danger">Delete</a> 
+												
+                                            </td>
 										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Project Apollo</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-										</tr>
-										<tr>
-											<td>Project Fireball</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-danger">Cancelled</span></td>
-											<td class="d-none d-md-table-cell">William Harris</td>
-										</tr>
-										<tr>
-											<td>Project Hades</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Sharon Lessman</td>
-										</tr>
-										<tr>
-											<td>Project Nitro</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-warning">In progress</span></td>
-											<td class="d-none d-md-table-cell">Vanessa Tucker</td>
-										</tr>
-										<tr>
-											<td>Project Phoenix</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">William Harris</td>
-										</tr>
-										<tr>
-											<td>Project X</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Sharon Lessman</td>
-										</tr>
-										<tr>
-											<td>Project Romeo</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-success">Done</span></td>
-											<td class="d-none d-md-table-cell">Christina Mason</td>
-										</tr>
-										<tr>
-											<td>Project Wombat</td>
-											<td class="d-none d-xl-table-cell">01/01/2023</td>
-											<td class="d-none d-xl-table-cell">31/06/2023</td>
-											<td><span class="badge bg-warning">In progress</span></td>
-											<td class="d-none d-md-table-cell">William Harris</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="col-12 col-lg-4 col-xxl-3 d-flex">
-							<div class="card flex-fill w-100">
-								<div class="card-header">
 
-									<h5 class="card-title mb-0">Monthly Sales</h5>
-								</div>
-								<div class="card-body d-flex w-100">
-									<div class="align-self-center chart chart-lg">
-										<canvas id="chartjs-dashboard-bar"></canvas>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+											<?php
+										}
+										?>
 
+
+										
+
+
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 				</div>
+
+                <!-- agent  -->
+
+                <div class="row mt-5">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Agent</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                            <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Agent Id</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>phone</th>
+                                                <th>Password</th>
+                                                <th>Account Type</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        
+										<?php
+										
+										include("conn.php");
+
+										$selectQuery= "SELECT * FROM agent";
+										$res= mysqli_query($conn,$selectQuery);
+
+										while ($row=mysqli_fetch_array($res)){
+											?>
+
+										<tr>
+											<td>
+											<?php echo $row['agent_id'] ?>
+											</td>
+											<td>
+											<?php echo $row['first_name'] ?>
+											</td>
+											<td>
+											<?php echo $row['last_name'] ?>
+											</td>
+											<td>
+											<?php echo $row['email'] ?>
+											</td>
+											<td>
+											<?php echo $row['phone'] ?>
+											</td>
+                                            <td>
+											<?php echo $row['password'] ?>
+											</td>
+                                            <td>
+											<?php echo $row['account_type'] ?>
+											</td>
+											<td>
+                                                <a href=".php?EditedId=<?php echo $row['agent_id'] ?>" class="btn btn-success">Edit</a>
+                                                <a href=".php?DeletedId=<?php echo $row['agent_id'] ?>" class="btn btn-danger">Delete</a> 
+                                            </td>
+										</tr>
+
+											<?php
+										}
+										?>
+
+
+										
+
+
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- agent  -->
+
+                    <!-- customer  -->
+
+                <div class="row mt-5">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">Customer</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                            <div class="table-responsive table--no-card m-b-30">
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Customer Id</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>phone</th>
+                                                <th>Password</th>
+                                                <th>Account Type</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        
+										<?php
+										
+										include("conn.php");
+
+										$selectQuery= "SELECT * FROM customer";
+										$res= mysqli_query($conn,$selectQuery);
+
+										while ($row=mysqli_fetch_array($res)){
+											?>
+
+										<tr>
+											<td>
+											<?php echo $row['customer_id'] ?>
+											</td>
+											<td>
+											<?php echo $row['first_name'] ?>
+											</td>
+											<td>
+											<?php echo $row['last_name'] ?>
+											</td>
+											<td>
+											<?php echo $row['email'] ?>
+											</td>
+											<td>
+											<?php echo $row['phone_number'] ?>
+											</td>
+                                            <td>
+											<?php echo $row['password'] ?>
+											</td>
+                                            <td>
+											<?php echo $row['account_type'] ?>
+											</td>
+											<td>
+                                                <a href=".php?EditedId=<?php echo $row['customer_id'] ?>" class="btn btn-success">Edit</a>
+                                                <a href=".php?DeletedId=<?php echo $row['customer_id'] ?>" class="btn btn-danger">Delete</a> 
+                                            </td>
+										</tr>
+
+											<?php
+										}
+										?>
+
+
+										
+
+
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- customer  -->
+                
+
+                
 			</main>
 
 			<footer class="footer">

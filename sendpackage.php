@@ -326,8 +326,11 @@
 				$to_address = $_POST['to'];
 				$delivery_type = $_POST['special'];
 				$special_instructions = $_POST['spcins'];
+				$current_location = $_POST[''];
+				$p_price = $_POST[''];
+				$p_cost = $_POST[''];
 
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions)VALUES('$from_address','$to_address','$delivery_type','$special_instructions')";
+				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,p_price,p_cost)VALUES('$from_address','$to_address','$delivery_type','$special_instructions','$current_location,'$p_price','$p_cost')";
 
 				$isInsert = mysqli_query($conn, $insertQuery);
 
@@ -338,6 +341,48 @@
 				}
 
 			}
+
+			// edit work
+
+			if(isset($_GET['EditedId']))
+			{
+				$id = $_GET['EditedId'];
+				$editQuery = "SELECT * FROM packages WHERE package_id = '$id'";
+				$res = mysqli_query($conn,$editQuery);
+				$row = mysqli_fetch_array($res);
+
+				if(isset($_POST['update']))
+                        {
+                            $ufrom_address = $_POST['from'];
+				            $uto_address = $_POST['to'];
+				            $udelivery_type = $_POST['special'];
+				            $uspecial_instructions = $_POST['spcins'];
+				            $ucurrent_location = $_POST[''];
+				            $up_price = $_POST[''];
+				            $up_cost = $_POST[''];
+						}
+
+                            if(move_uploaded_file($_FILES))
+                            {
+                                $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
+                            }
+                            else{
+                                $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
+                            }
+
+                            $isUpdate = mysqli_query($conn, $updateQuery);
+
+                            if ($isUpdate) {
+                                echo '<script>
+                                window.location.href = "packages.php";</script>';
+                            } else {
+                                echo '<script>alert("Something went wrong")</script>';
+                            }
+						}
+			
+		
+
+			// edit work
 
 
 

@@ -41,6 +41,11 @@
               				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             			</a>
 					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="viewallusers.php">
+              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">View All Users</span>
+            			</a>
+					</li>
 					
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="index.php">
@@ -343,6 +348,9 @@
                                                 <th>To</th>
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
+                                                <th>Current Location</th>
+                                                <th>Price</th>
+                                                <th>Cost</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -374,14 +382,46 @@
 											<?php echo $row['special_instructions'] ?>
 											</td>
 											<td>
-                                                <a href="insertstd.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href="viewstd.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a>
+											<?php echo "Lahore" ?>
+											</td>
+											<td>
+											<?php echo "Rs.100" ?>
+											</td>
+											<td>
+											<?php echo "Rs.50" ?>
+											</td>
+											<td>
+                                                <a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
+                                                <a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a> 
+												<a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a>
                                             </td>
 										</tr>
 
 											<?php
 										}
 										?>
+
+										<!-- Delete -->
+
+										<?php
+										
+										if(isset($_GET['DeletedId'])){
+											$id= $_GET['DeletedId'];
+											$deleteQuery= "DELETE FROM packages WHERE package_id= $id ";
+											$res= mysqli_query($conn,$deleteQuery);
+											if($res){
+												echo '<script>
+												alert("Record deleted successfully");
+												window.location.href = "packages.php";
+												</script>';
+											}else{
+												echo '<script>alert("Something went wrong")</script>';
+											}
+										}
+
+										?>
+
+										<!-- Delete -->
 
 
                                     </table>
