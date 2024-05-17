@@ -121,17 +121,8 @@ CREATE TABLE customers(
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
-INSERT INTO packages VALUES (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
-INSERT INTO packages VALUES (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
-INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
-INSERT INTO admins VALUES (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam");
-INSERT INTO admins VALUES (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal");
-INSERT INTO admins VALUES (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
-INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent");
-INSERT INTO agents VALUES (NULL, "Hammad", "Tariq", "hammad@gmail.com", "123456789","hammad");
-INSERT INTO agents VALUES (NULL, "Noor", "Something", "noor@gmail.com", "123456789","noor");
-INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer");
-INSERT INTO customers VALUES (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan");
-INSERT INTO customers VALUES (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
+3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL), (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL), (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL);
+INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"), (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
+INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent"), (NULL, "Hammad", "Tariq", "hammad@gmail.com", "123456789","hammad"), (NULL, "Noor", "Something", "noor@gmail.com", "123456789","noor");
+INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer"), (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan"), (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
 
