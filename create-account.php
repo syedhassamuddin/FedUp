@@ -1,3 +1,16 @@
+<?php
+	session_start();
+
+	if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && $_SESSION['account_type'] == "customer"){
+
+	}
+	else{
+		header("location:sign-in.php");
+	}
+
+	include "conn.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +51,6 @@
 		?>
 
 			<?php
-				include("conn.php");
 
 				if(isset($_POST["create_account"])){
 
