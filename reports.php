@@ -36,7 +36,7 @@
 <body>
 	<div class="wrapper">
     <?php
-		$activePage = "sendpackage";
+		$activePage = "reports";
 		include "page-components/sidebar.php";	
 	?>
 
