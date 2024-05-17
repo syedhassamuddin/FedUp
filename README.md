@@ -79,42 +79,62 @@ User can print tracking details
 
 # Database queries
 
+## Creation of Database
+
 1. CREATE DATABASE fedupdb;
+
+## Creation of tables
+
 2. CREATE TABLE packages(
 	  package_id INT PRIMARY KEY AUTO_INCREMENT,
     from_address VARCHAR(225),
     to_address VARCHAR(225),
   	delivery_type VARCHAR(225),
-    special_instructions VARCHAR(225)
+    special_instructions VARCHAR(225),
+    current_location varchar(225),
+    price int (9),
+    cost int (9),
+    assigned_agent INT (9)
 );
-3. CREATE TABLE admins(
+CREATE TABLE admins(
 	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone VARCHAR(50),
-    password VARCHAR(100),
+    password VARCHAR(100)
 );
-4. CREATE TABLE agents(
+CREATE TABLE agents(
 	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone VARCHAR(50),
-    password VARCHAR(100),
+    password VARCHAR(100)
 );
-<<<<<<< HEAD
-6.  
-=======
-5. CREATE TABLE customers(
+CREATE TABLE customers(
 	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone_number VARCHAR(50),
-    password VARCHAR(100),
+    password VARCHAR(100)
 );
-6. INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
+
+## Creation of table Entries
+
+3. 
+INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
+INSERT INTO packages VALUES (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
+INSERT INTO packages VALUES (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
+INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
+INSERT INTO admins VALUES (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam");
+INSERT INTO admins VALUES (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal");
+INSERT INTO admins VALUES (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
 INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent");
+INSERT INTO agents VALUES (NULL, "Hammad", "Tariq", "hammad@gmail.com", "123456789","hammad");
+INSERT INTO agents VALUES (NULL, "Noor", "Something", "noor@gmail.com", "123456789","noor");
 INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer");
->>>>>>> f9bb860b45b4c27c15696ab0f357181b0fa6ac77
+INSERT INTO customers VALUES (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan");
+INSERT INTO customers VALUES (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
+

@@ -33,7 +33,7 @@
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 
-			$stmt = $conn->prepare("SELECT * FROM customers WHERE email = ? AND password = ?");
+			$stmt = $conn->prepare("SELECT * FROM admins WHERE email = ? AND password = ?");
 			$stmt->bind_param("ss", $email, $password);
 			$result = $stmt->execute();
 			if($stmt->errno){
@@ -48,7 +48,7 @@
 					$_SESSION['email'] = $retreivedData['email'];
 					$_SESSION['password'] = $retreivedData['password'];
 					$_SESSION['phone_number'] = $retreivedData['phone_number'];
-					$_SESSION['account_type'] = "customer";
+					// $_SESSION['account_type'] = "admin";
 					echo "
 						<script>
 							window.location.href = 'admin.php'; 
@@ -104,7 +104,7 @@
 							</div>
 						</div>
 						<div class="text-center mb-3">
-							Don't have an account? <a href="sign-up.html">Sign up</a>
+							Don't have an account? <a href="sign-up.php">Sign up</a>
 						</div>
 					</div>
 				</div>

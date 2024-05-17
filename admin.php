@@ -1,12 +1,14 @@
 <?php
 	session_start();
 
-	if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && $_SESSION['account_type'] == "customer"){
+	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
 
 	}
 	else{
 		header("location:sign-in.php");
 	}
+
+	include "conn.php";
 ?>
 
 <!DOCTYPE html>
@@ -35,156 +37,38 @@
 
 	<div class="wrapper">
 
-<<<<<<< HEAD:admin.html
-		<!-- Side Navigation Bar Start -->
-		<nav id="sidebar" class="sidebar js-sidebar">
-			<div class="sidebar-content js-simplebar">
-				<a class="sidebar-brand" href="index.html">
-          			<span class="align-middle">FedUp Admin</span>
-        		</a>
-
-				<ul class="sidebar-nav">
-					<li class="sidebar-header">
-						Pages
-					</li>
-
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="admin.html">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-            			</a>
-					</li>
-					
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="index.php">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Home</span>
-						</a>
-					</li>
-							
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="viewallusers.php">
-								<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">View All Users</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="packages.php">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Packages</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="sendpackage.php">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="create-account.html">
-							<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Create Account</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="add-agent.html">
-              				<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Send Package</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
-              				<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-in.html">
-              				<i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.html">
-              				<i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-blank.html">
-              				<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-header">
-						Tools & Components
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-buttons.html">
-              				<i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-forms.html">
-              				<i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-cards.html">
-              				<i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="ui-typography.html">
-              				<i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="icons-feather.html">
-              				<i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-header">
-						Plugins & Addons
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="charts-chartjs.html">
-              				<i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
-            			</a>
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="maps-google.html">
-              				<i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
-            			</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- Sidebar Navigation Bar End -->
-
-=======
 		<?php
 			$activePage = "dashboard";
-			include "page-components/sidebar.php";	
+			if($_SESSION['account_type'] == "admin"){
+				include "page-components/admin-sidebar.php";	
+			}
+			else if($_SESSION['account_type'] == "agent"){
+				include "page-components/agent-sidebar.php";
+			}
+			else{
+				include "page-components/customer-sidebar.php";
+			}
+			
 		?>
->>>>>>> f9bb860b45b4c27c15696ab0f357181b0fa6ac77:admin.php
 		
 		<div class="main">
 
 		<?php
-			include "page-components/topnavbar.php";	
+			if($_SESSION['account_type'] == "admin"){
+				include "page-components/admin-navbar.php";	
+			}
+			else if($_SESSION['account_type'] == "agent"){
+				include "page-components/agent-navbar.php";
+			}
+			else{
+				include "page-components/customer-navbar.php";
+			}	
 		?>
 
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+					<h1 class="h3 mb-3"><strong class="d-none">Analytics</strong> Dashboard</h1>
 
 					<div class="row">
 						<div class="col-xl-6 col-xxl-5 d-flex">
@@ -195,7 +79,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Sales</h5>
+														<h5 class="card-title">Total Packages In Transit</h5>
 													</div>
 
 													<div class="col-auto">
@@ -204,7 +88,12 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">2.382</h1>
+												<h1 class="mt-1 mb-3">
+													<?php
+														$test = mysqli_query($conn, "SELECT * FROM packages");
+														echo mysqli_num_rows($test);
+													?>
+												</h1>
 												<div class="mb-0">
 													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
 													<span class="text-muted">Since last week</span>
@@ -215,7 +104,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Visitors</h5>
+														<h5 class="card-title">Admins</h5>
 													</div>
 
 													<div class="col-auto">
@@ -224,7 +113,12 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">14.212</h1>
+												<h1 class="mt-1 mb-3">
+													<?php
+													$fariyal = mysqli_query($conn, "SELECT * FROM admins");
+													echo mysqli_num_rows($fariyal);
+													?>
+												</h1>
 												<div class="mb-0">
 													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
 													<span class="text-muted">Since last week</span>
@@ -237,7 +131,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Earnings</h5>
+														<h5 class="card-title">Customers</h5>
 													</div>
 
 													<div class="col-auto">
@@ -246,7 +140,10 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">$21.300</h1>
+												<h1 class="mt-1 mb-3"><?php
+												 $customers= mysqli_query($conn,"SELECT * FROM customers");
+												 echo mysqli_num_rows($customers);
+												?></h1>
 												<div class="mb-0">
 													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
 													<span class="text-muted">Since last week</span>
@@ -266,7 +163,12 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">64</h1>
+												<h1 class="mt-1 mb-3">
+													<?php
+													$agents= mysqli_query($conn,"SELECT * FROM agents");
+													echo mysqli_num_rows($agents);
+													?>
+												</h1>
 												<div class="mb-0">
 													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
 													<span class="text-muted">Since last week</span>
