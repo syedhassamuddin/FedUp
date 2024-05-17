@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && $_SESSION['account_type'] == "customer"){
+	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
 
 	}
 	else{
@@ -91,13 +91,14 @@
 				            $up_cost = $_POST[''];
 						}
 
-                            if(move_uploaded_file($_FILES))
-                            {
-                                $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            }
-                            else{
-                                $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            }
+							// Absolutely no idea what this is - Hassam will ask Usama until then commenting
+                            // if(move_uploaded_file($_FILES))
+                            // {
+                            //     $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
+                            // }
+                            // else{
+                            //     $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
+                            // }
 
                             $isUpdate = mysqli_query($conn, $updateQuery);
 

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && $_SESSION['account_type'] == "customer"){
+	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
 
 	}
 	else{

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && $_SESSION['account_type'] == "customer"){
+	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
 
 	}
 	else{
@@ -39,19 +39,36 @@
 
 		<?php
 			$activePage = "dashboard";
-			include "page-components/sidebar.php";	
+			if($_SESSION['account_type'] == "admin"){
+				include "page-components/admin-sidebar.php";	
+			}
+			else if($_SESSION['account_type'] == "agent"){
+				include "page-components/agent-sidebar.php";
+			}
+			else{
+				include "page-components/customer-sidebar.php";
+			}
+			
 		?>
 		
 		<div class="main">
 
 		<?php
-			include "page-components/topnavbar.php";	
+			if($_SESSION['account_type'] == "admin"){
+				include "page-components/admin-navbar.php";	
+			}
+			else if($_SESSION['account_type'] == "agent"){
+				include "page-components/agent-navbar.php";
+			}
+			else{
+				include "page-components/customer-navbar.php";
+			}	
 		?>
 
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+					<h1 class="h3 mb-3"><strong class="d-none">Analytics</strong> Dashboard</h1>
 
 					<div class="row">
 						<div class="col-xl-6 col-xxl-5 d-flex">
