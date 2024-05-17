@@ -94,7 +94,7 @@
 							</div>
 						</div>
 						<div class="text-center mb-3">
-							Already have account? <a href="sign-in.html">Log In</a>
+							Already have account? <a href="sign-in.php">Log In</a>
 						</div>
 					</div>
 				</div>

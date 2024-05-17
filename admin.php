@@ -7,6 +7,8 @@
 	else{
 		header("location:sign-in.php");
 	}
+
+	include "conn.php";
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +62,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Sales</h5>
+														<h5 class="card-title">Total Packages In Transit</h5>
 													</div>
 
 													<div class="col-auto">
@@ -69,7 +71,12 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">2.382</h1>
+												<h1 class="mt-1 mb-3">
+													<?php
+														$test = mysqli_query($conn, "SELECT * FROM packages");
+														echo mysqli_num_rows($test);
+													?>
+												</h1>
 												<div class="mb-0">
 													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
 													<span class="text-muted">Since last week</span>
@@ -80,7 +87,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Visitors</h5>
+														<h5 class="card-title">Admins</h5>
 													</div>
 
 													<div class="col-auto">
@@ -89,7 +96,12 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">14.212</h1>
+												<h1 class="mt-1 mb-3">
+													<?php
+													$fariyal = mysqli_query($conn, "SELECT * FROM admins");
+													echo mysqli_num_rows($fariyal);
+													?>
+												</h1>
 												<div class="mb-0">
 													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.25% </span>
 													<span class="text-muted">Since last week</span>
@@ -102,7 +114,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Earnings</h5>
+														<h5 class="card-title">Customers</h5>
 													</div>
 
 													<div class="col-auto">
@@ -111,7 +123,10 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">$21.300</h1>
+												<h1 class="mt-1 mb-3"><?php
+												 $customers= mysqli_query($conn,"SELECT * FROM customers");
+												 echo mysqli_num_rows($customers);
+												?></h1>
 												<div class="mb-0">
 													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 6.65% </span>
 													<span class="text-muted">Since last week</span>
@@ -131,7 +146,12 @@
 														</div>
 													</div>
 												</div>
-												<h1 class="mt-1 mb-3">64</h1>
+												<h1 class="mt-1 mb-3">
+													<?php
+													$agents= mysqli_query($conn,"SELECT * FROM agents");
+													echo mysqli_num_rows($agents);
+													?>
+												</h1>
 												<div class="mb-0">
 													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
 													<span class="text-muted">Since last week</span>
