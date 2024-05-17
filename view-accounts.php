@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Admin</h2>
+                                    <h2 class="title-1">Admins</h2>
                                 </div>
                             </div>
                         </div>
@@ -73,59 +73,29 @@
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
-                                                <th>phone</th>
-                                                <th>Password</th>
-                                                <th>Account Type</th>
+                                                <th>Phone</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
+										<tbody>
                                         
 										<?php
-										
-										include("conn.php");
 
-										$selectQuery= "SELECT * FROM admin";
-										$res= mysqli_query($conn,$selectQuery);
+										$resObjectAdmins = mysqli_query($conn,"SELECT * FROM admins");
+										$adminCount = mysqli_num_rows($resObjectAdmins);
 
-										while ($row=mysqli_fetch_array($res)){
-											?>
-
-										<tr>
-											<td>
-											<?php echo $row['admin_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['first_name'] ?>
-											</td>
-											<td>
-											<?php echo $row['last_name'] ?>
-											</td>
-											<td>
-											<?php echo $row['email'] ?>
-											</td>
-											<td>
-											<?php echo $row['phone'] ?>
-											</td>
-                                            <td>
-											<?php echo $row['password'] ?>
-											</td>
-                                            <td>
-											<?php echo $row['account_type'] ?>
-											</td>
-											<td>
-                                                <a href=".php?EditedId=<?php echo $row['admin_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href=".php?DeletedId=<?php echo $row['admin_id'] ?>" class="btn btn-danger">Delete</a> 
-												
-                                            </td>
-										</tr>
-
-											<?php
+										foreach($resObjectAdmins as $row){
+											echo "<tr>";
+											echo "<td>{$row['admin_id']}</td>";
+											echo "<td>{$row['first_name']}</td>";
+											echo "<td>{$row['last_name']}</td>";
+											echo "<td>{$row['email']}</td>";
+											echo "<td>{$row['phone']}</td>";
+											echo "</tr>";
 										}
+
 										?>
-
-
-										
-
+										</tbody>
 
                                     </table>
                                 </div>
@@ -140,72 +110,43 @@
                 <div class="row mt-5">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Agent</h2>
+                                    <h2 class="title-1">Agents</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
+							<table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
                                                 <th>Agent Id</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
-                                                <th>phone</th>
-                                                <th>Password</th>
-                                                <th>Account Type</th>
+                                                <th>Phone</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
+										<tbody>
                                         
 										<?php
-										
-										include("conn.php");
 
-										$selectQuery= "SELECT * FROM agent";
-										$res= mysqli_query($conn,$selectQuery);
+										$resObjectAgents = mysqli_query($conn,"SELECT * FROM agents");
+										$agentCount = mysqli_num_rows($resObjectAgents);
 
-										while ($row=mysqli_fetch_array($res)){
-											?>
-
-										<tr>
-											<td>
-											<?php echo $row['agent_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['first_name'] ?>
-											</td>
-											<td>
-											<?php echo $row['last_name'] ?>
-											</td>
-											<td>
-											<?php echo $row['email'] ?>
-											</td>
-											<td>
-											<?php echo $row['phone'] ?>
-											</td>
-                                            <td>
-											<?php echo $row['password'] ?>
-											</td>
-                                            <td>
-											<?php echo $row['account_type'] ?>
-											</td>
-											<td>
-                                                <a href=".php?EditedId=<?php echo $row['agent_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href=".php?DeletedId=<?php echo $row['agent_id'] ?>" class="btn btn-danger">Delete</a> 
-                                            </td>
-										</tr>
-
-											<?php
+										foreach($resObjectAgents as $row){
+											echo "<tr>";
+											echo "<td>{$row['agent_id']}</td>";
+											echo "<td>{$row['first_name']}</td>";
+											echo "<td>{$row['last_name']}</td>";
+											echo "<td>{$row['email']}</td>";
+											echo "<td>{$row['phone']}</td>";
+											echo "</tr>";
 										}
+
 										?>
-
-
-										
-
+										</tbody>
 
                                     </table>
                                 </div>
@@ -219,72 +160,43 @@
                 <div class="row mt-5">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">Customer</h2>
+                                    <h2 class="title-1">Customers</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
+							<table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
                                                 <th>Customer Id</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
                                                 <th>Email</th>
-                                                <th>phone</th>
-                                                <th>Password</th>
-                                                <th>Account Type</th>
+                                                <th>Phone</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
+										<tbody>
                                         
 										<?php
-										
-										include("conn.php");
 
-										$selectQuery= "SELECT * FROM customer";
-										$res= mysqli_query($conn,$selectQuery);
+										$resObjectCustomers = mysqli_query($conn,"SELECT * FROM customers");
+										$customerCount = mysqli_num_rows($resObjectCustomers);
 
-										while ($row=mysqli_fetch_array($res)){
-											?>
-
-										<tr>
-											<td>
-											<?php echo $row['customer_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['first_name'] ?>
-											</td>
-											<td>
-											<?php echo $row['last_name'] ?>
-											</td>
-											<td>
-											<?php echo $row['email'] ?>
-											</td>
-											<td>
-											<?php echo $row['phone_number'] ?>
-											</td>
-                                            <td>
-											<?php echo $row['password'] ?>
-											</td>
-                                            <td>
-											<?php echo $row['account_type'] ?>
-											</td>
-											<td>
-                                                <a href=".php?EditedId=<?php echo $row['customer_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href=".php?DeletedId=<?php echo $row['customer_id'] ?>" class="btn btn-danger">Delete</a> 
-                                            </td>
-										</tr>
-
-											<?php
+										foreach($resObjectCustomers as $row){
+											echo "<tr>";
+											echo "<td>{$row['customer_id']}</td>";
+											echo "<td>{$row['first_name']}</td>";
+											echo "<td>{$row['last_name']}</td>";
+											echo "<td>{$row['email']}</td>";
+											echo "<td>{$row['phone_number']}</td>";
+											echo "</tr>";
 										}
+
 										?>
-
-
-										
-
+										</tbody>
 
                                     </table>
                                 </div>

@@ -6,9 +6,9 @@
         		</a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">
+					<!-- <li class="sidebar-header">
 						Pages
-					</li>
+					</li> -->
 
 					<li class="sidebar-item <?php if($activePage == 'dashboard'){echo'active';}?>">
 						<a class="sidebar-link" href="admin.php">
