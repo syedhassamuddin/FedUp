@@ -19,61 +19,59 @@ Eproject For Semester Two, a satirical website of FedEx courier service
 
 ## Agent
 
-•	Login
-•	New courier
-•	View all courier details
-•	Send SMS From to
-•	Send delivery SMS
-•	Status of branch
-•	Download report from branch
+1. Login
+2. New courier
+3. View all courier details
+4. Send SMS From to
+5. Send delivery SMS
+6. Status of branch
+7. Download report from branch
 
 ## User
 
-•	Register
-•	Login
-•	Track consignment number
-•	View status
-•	Print status
+1. Register
+2. Login
+3. Track consignment number
+4. View status
+5. Print status
 
 # Module Description
 
-•	Admin Login
-o	Admin will have his/her own login details (username, password) to access the system
-•	Create Bill – Admin , Agent
-o	Admin can create a Courier Bill after logging in. Bills contain the details of sender, receiver, courier type, delivery date and Courier Company.
-•	Update bill– Admin , Agent
-o	They can also update the Bill with the entries and if there is any modification. Agent can view the list of details of his location only.
-•	Manage Customer details
-o	Admin can manage all the Customer Details in a separate and secured Database
-•	Reporting
-o	Reports of all the Bill can be viewed by the admin of the system
-•	Logout
-o	At last they can logout if they have done with their actions on the database.
-•	Admin & Agent Dashboard
-o	Status Counts
-	View total status count for shipment, in progress, delivered.
-	Admin will view all location status counts.
-	Agent can view only from or to location of his branch.
-o	Add  Shipment
-	New Courier
-o	Manage Shipment
-o	Print Shipment
-	User can print tracking details
-o	Download Report (XLSX)
-	Date Wise
-	City Wise
-•	Admin Dashboard
-o	Add Agent
-	Can view only “from or to” location
-o	Create Agent city wise login
-o	Manage Customer
-	Search
-•	User Login
-o	Track Shipment
-	User can search using consignment tracking details
-o	Shipment status
-o	Print
-User can print tracking details
+###	Admin Login
+Admin will have his/her own login details (username, password) to access the system
+###	Create Bill – Admin , Agent
+ Admin can create a Courier Bill after logging in. Bills contain the details of sender, receiver, courier type, delivery date and Courier Company.
+###	Update bill – Admin , Agent
+They can also update the Bill with the entries and if there is any modification. Agent can view the list of details of his location only.
+###	Manage Customer details
+Admin can manage all the Customer Details in a separate and secured Database
+###	Reporting
+Reports of all the Bill can be viewed by the admin of the system
+###	Logout
+At last they can logout if they have done with their actions on the database.
+### Admin & Agent Dashboard
+Status Counts
+1. View total status count for shipment, in progress, delivered.
+2. Admin will view all location status counts.
+3. Agent can view only from or to location of his branch.
+4. Add  Shipment
+5. New Courier
+6. Manage Shipment
+7. Print Shipment
+8. User can print tracking details
+9.	Download Report (XLSX) Date Wise and City Wise
+###	Admin Dashboard
+1. Add Agent
+2.	Can view only “from or to” location
+3.	Create Agent city wise login
+4.	Manage Customer
+5.	Search
+6. User Login
+7.	Track Shipment
+8. User can search using consignment tracking details
+9. Shipment status
+10.	Print
+11. User can print tracking details
 
 
 
@@ -123,8 +121,7 @@ CREATE TABLE customers(
 
 ## Creation of table Entries
 
-3. 
-INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
+3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
 INSERT INTO packages VALUES (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
 INSERT INTO packages VALUES (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
