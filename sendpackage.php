@@ -44,17 +44,17 @@
 				$to_address = $_POST['to'];
 				$delivery_type = $_POST['special'];
 				$special_instructions = $_POST['spcins'];
-				$current_location = $_POST[''];
-				$p_price = $_POST[''];
-				$p_cost = $_POST[''];
+				$current_location = $_POST['current_location'];
+				$price = $_POST['price'];
+				$cost = $_POST['cost'];
 
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,p_price,p_cost)VALUES('$from_address','$to_address','$delivery_type','$special_instructions','$current_location,'$p_price','$p_cost')";
+				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL)";
 
 				$isInsert = mysqli_query($conn, $insertQuery);
 
-				if ($isInsert) {
+				if($isInsert) {
 					echo '<script>alert("Data inserted successfully")</script>';
-				} else {
+				} else{
 					echo '<script>alert("Something went wrong")</script>';
 				}
 

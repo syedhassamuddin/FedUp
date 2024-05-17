@@ -85,7 +85,10 @@ User can print tracking details
     from_address VARCHAR(225),
     to_address VARCHAR(225),
   	delivery_type VARCHAR(225),
-    special_instructions VARCHAR(225)
+    special_instructions VARCHAR(225),
+    current_location varchar(225),
+    price int (9),
+    cost int (9)
 );
 3. CREATE TABLE admins(
 	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -93,7 +96,7 @@ User can print tracking details
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone VARCHAR(50),
-    password VARCHAR(100),
+    password VARCHAR(100)
 );
 4. CREATE TABLE agents(
 	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -101,20 +104,16 @@ User can print tracking details
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone VARCHAR(50),
-    password VARCHAR(100),
+    password VARCHAR(100)
 );
-<<<<<<< HEAD
-6.  
-=======
 5. CREATE TABLE customers(
 	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
     phone_number VARCHAR(50),
-    password VARCHAR(100),
+    password VARCHAR(100)
 );
 6. INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
 INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent");
 INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer");
->>>>>>> f9bb860b45b4c27c15696ab0f357181b0fa6ac77
