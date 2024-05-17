@@ -58,11 +58,11 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.php" class="active">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="services.php">Services</a></li>
+          <li><a href="pricing.php">Pricing</a></li>
+          <li><a href="contact.php">Contact</a></li>
           <?php
             if(isset($_SESSION["account_type"])){
               echo "<li><a class='get-a-quote' href='admin.php'>Go To Dashboard</a></li>";
@@ -388,8 +388,8 @@
       </div>
     </section><!-- End Features Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing pt-0">
+<!-- ======= Pricing Section ======= -->
+    <section id=    "pricing" class="pricing pt-0">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
