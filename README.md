@@ -121,9 +121,7 @@ CREATE TABLE customers(
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
-INSERT INTO packages VALUES (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
-INSERT INTO packages VALUES (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL),
+3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL), (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL), (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL);
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
 INSERT INTO admins VALUES (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam");
 INSERT INTO admins VALUES (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal");
