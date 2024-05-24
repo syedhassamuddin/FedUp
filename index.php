@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-          <img src="img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
+          <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
         </div>
 
       </div>
@@ -174,7 +174,7 @@
 
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-            <img src="img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
@@ -253,7 +253,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
               <div class="card-img">
-                <img src="img/storage-service.jpg" alt="" class="img-fluid">
+                <img src="assets/img/storage-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
               <p>Maximize efficiency with our comprehensive storage solutions tailored to fit your needs. From short-term warehousing to long-term storage, we offer secure facilities equipped with state-of-the-art inventory management systems.</p>
@@ -263,7 +263,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
               <div class="card-img">
-                <img src="img/logistics-service.jpg" alt="" class="img-fluid">
+                <img src="assets/img/logistics-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Logistics</a></h3>
               <p>Streamline your supply chain with our expert logistics solutions. From warehousing to distribution, we ensure efficient management of your goods. With advanced technology and a dedicated team, we deliver reliability and precision to meet your business needs.
@@ -280,7 +280,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
               <div class="card-img">
-                <img src="img/cargo-service.jpg" alt="" class="img-fluid">
+                <img src="assets/img/cargo-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Cargo</a></h3>
               <p>Deliver excellence with our tailored cargo solutions. From logistics planning to secure transportation, we ensure your cargo arrives on time and intact. Trust our dedicated team and robust network for seamless global shipping.
@@ -297,7 +297,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="card">
               <div class="card-img">
-                <img src="img/trucking-service.jpg" alt="" class="img-fluid">
+                <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
               <p>Depend on our trusted trucking services for seamless transportation solutions. From local deliveries to nationwide logistics, we prioritize efficiency and reliability. With a commitment to safety and precision, we ensure your goods reach their destination on schedule, every time.
@@ -316,7 +316,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
               <div class="card-img">
-                <img src="img/packaging-service.jpg" alt="" class="img-fluid">
+                <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
               <p>Discover our cutting-edge packaging solutions designed to elevate your brand. From custom designs to eco-friendly materials, we ensure your products stand out with style and sustainability. Trust our expertise to enhance your packaging strategy and leave a lasting impression on your customers.
@@ -333,7 +333,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="card">
               <div class="card-img">
-                <img src="img/warehousing-service.jpg" alt="" class="img-fluid">
+                <img src="assets/img/warehousing-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
               <p>Optimize your storage and distribution with our state-of-the-art warehousing facilities. From inventory management to order fulfillment, we provide flexible solutions tailored to your business needs. Trust our secure facilities and efficient processes to streamline your supply chain and support your business growth.
@@ -381,7 +381,7 @@
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
 
           <div class="col-md-5">
-            <img src="img/features-1.jpg" class="img-fluid" alt="">
+            <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
             <h3>Your Present from FedUp Courier.</h3>
@@ -408,7 +408,7 @@
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="img/features-2.jpg" class="img-fluid" alt="">
+            <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
             <h3>Enjoy Free Delivery</h3>
@@ -426,7 +426,7 @@
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="img/features-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
             <h3>Mc Cafe Delivered</h3>
@@ -443,7 +443,7 @@
 
         <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
           <div class="col-md-5 order-1 order-md-2">
-            <img src="img/features-4.jpg" class="img-fluid" alt="">
+            <img src="assets/img/features-4.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
             <h3>Global Shipping Solutions</h3>
@@ -531,7 +531,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <div class="stars">
@@ -549,7 +549,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <div class="stars">
@@ -565,7 +565,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
                 <div class="stars">
@@ -581,7 +581,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
                 <div class="stars">
@@ -597,7 +597,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
                 <div class="stars">
@@ -793,15 +793,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="vendor/aos/aos.js"></script>
-  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
