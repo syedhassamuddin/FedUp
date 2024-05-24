@@ -27,6 +27,16 @@
 							  <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Packages</span>
 						</a>
 					</li>
+					<li class="sidebar-item <?php if($activePage == 'agentpkg'){echo'active';}?>">
+						<a class="sidebar-link" href="agentpkg.php">
+							  <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Agent Package</span>
+						</a>
+					</li>
+					<li class="sidebar-item <?php if($activePage == 'custmpkg'){echo'active';}?>">
+						<a class="sidebar-link" href="custmpkg.php">
+							  <i class="align-middle" data-feather="layers"></i> <span class="align-middle">Customer Package</span>
+						</a>
+					</li>
 					
 					<li class="sidebar-item <?php if($activePage == 'create-account'){echo'active';}?>">
 						<a class="sidebar-link" href="create-account.php">

@@ -51,7 +51,7 @@
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3"><strong>Packages</strong> Dashboard</h1>
+					<h1 class="h3 mb-3"><strong>Agent Packages</strong> Dashboard</h1>
 
 					<div class="main-content">
                 <div class="section__content section__content--p30">
@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">View Packages</h2>
+                                    <h2 class="title-1">View Packages </h2>
                                 </div>
                             </div>
                         </div>
@@ -77,6 +77,7 @@
                                                 <th>Current Location</th>
                                                 <th>Price</th>
                                                 <th>Cost</th>
+                                                <th>Assigned Agent</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -115,8 +116,9 @@
 											<?php echo "Rs.50" ?>
 											</td>
 											<td>
-                                                <a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a> 
+											<?php echo "Agent1234" ?>
+                                            </td>
+											<td>
 												<a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a>
                                             </td>
 										</tr>
