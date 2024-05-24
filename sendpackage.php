@@ -55,11 +55,8 @@
 				$to_address = $_POST['to'];
 				$delivery_type = $_POST['special'];
 				$special_instructions = $_POST['spcins'];
-				$current_location = $_POST['current_location'];
-				$price = $_POST['price'];
-				$cost = $_POST['cost'];
 
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL)";
+				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost, assigned_agent)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL, NULL)";
 
 				$isInsert = mysqli_query($conn, $insertQuery);
 
@@ -86,9 +83,6 @@
 				            $uto_address = $_POST['to'];
 				            $udelivery_type = $_POST['special'];
 				            $uspecial_instructions = $_POST['spcins'];
-				            $ucurrent_location = $_POST[''];
-				            $up_price = $_POST[''];
-				            $up_cost = $_POST[''];
 						}
 
 							// Absolutely no idea what this is - Hassam will ask Usama until then commenting
