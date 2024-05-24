@@ -23,13 +23,13 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="assets/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 	<title>Fed Up Admin</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -39,13 +39,13 @@
 
 	<?php
 		$activePage = "sendpackage";
-		include "page-components/sidebar.php";	
+		include "assets/page-components/sidebar.php";	
 	?>
 
 		<div class="main">
 
 		<?php
-			include "page-components/topnavbar.php";	
+			include "assets/page-components/topnavbar.php";	
 		?>
 			
 			<?php
@@ -55,11 +55,8 @@
 				$to_address = $_POST['to'];
 				$delivery_type = $_POST['special'];
 				$special_instructions = $_POST['spcins'];
-				$current_location = $_POST['current_location'];
-				$price = $_POST['price'];
-				$cost = $_POST['cost'];
 
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL)";
+				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost, assigned_agent)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL, NULL)";
 
 				$isInsert = mysqli_query($conn, $insertQuery);
 
@@ -86,9 +83,6 @@
 				            $uto_address = $_POST['to'];
 				            $udelivery_type = $_POST['special'];
 				            $uspecial_instructions = $_POST['spcins'];
-				            $ucurrent_location = $_POST[''];
-				            $up_price = $_POST[''];
-				            $up_cost = $_POST[''];
 						}
 
 							// Absolutely no idea what this is - Hassam will ask Usama until then commenting
@@ -234,7 +228,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="assets/js/app.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {

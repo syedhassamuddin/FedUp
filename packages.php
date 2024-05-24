@@ -23,13 +23,13 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="assets/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 	<title>Fed Up Admin</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -39,13 +39,13 @@
 
 	<?php
 		$activePage = "packages";
-		include "page-components/sidebar.php";	
+		include "assets/page-components/sidebar.php";	
 	?>
 		
 		<div class="main">
 
 		<?php
-			include "page-components/topnavbar.php";	
+			include "assets/page-components/topnavbar.php";	
 		?>
 
 			<main class="content">
@@ -77,7 +77,10 @@
                                                 <th>Current Location</th>
                                                 <th>Price</th>
                                                 <th>Cost</th>
-                                                <th>Actions</th>
+												<th>Agent Assigned</th>
+                                                <th></th>
+												<th></th>
+												<th></th>
                                             </tr>
                                         </thead>
                                         
@@ -90,35 +93,18 @@
 											?>
 
 										<tr>
-											<td>
-											<?php echo $row['package_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['from_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['to_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['delivery_type'] ?>
-											</td>
-											<td>
-											<?php echo $row['special_instructions'] ?>
-											</td>
-											<td>
-											<?php echo "Lahore" ?>
-											</td>
-											<td>
-											<?php echo "Rs.100" ?>
-											</td>
-											<td>
-											<?php echo "Rs.50" ?>
-											</td>
-											<td>
-                                                <a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a> 
-												<a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a>
-                                            </td>
+											<td><?php echo $row['package_id']; ?></td>
+											<td><?php echo $row['from_address']; ?></td>
+											<td><?php echo $row['to_address']; ?></td>
+											<td><?php echo $row['delivery_type']; ?></td>
+											<td><?php echo $row['special_instructions']; ?></td>
+											<td><?php echo $row['current_location']; ?></td>
+											<td><?php echo $row['price']; ?></td>
+											<td><?php echo $row['cost']; ?></td>
+											<td><?php echo $row['assigned_agent']; ?></td>
+											<td><a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a></td>
+                                            <td><a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
+											<td><a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
 										</tr>
 
 											<?php
@@ -190,7 +176,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="assets/js/app.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {

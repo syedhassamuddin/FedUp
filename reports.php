@@ -23,13 +23,13 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="assets/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" />
 
 	<title>Blank Page | AdminKit Demo</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -37,13 +37,13 @@
 	<div class="wrapper">
     <?php
 		$activePage = "reports";
-		include "page-components/sidebar.php";	
+		include "assets/page-components/sidebar.php";	
 	?>
 
 		<div class="main">
         
         <?php
-			include "page-components/topnavbar.php";
+			include "assets/page-components/topnavbar.php";
 		?>
 
 			<main class="content">
@@ -55,9 +55,11 @@
 						<div class="col-12">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
+									<h5 class="card-title mb-0">Things to do</h5>
 								</div>
 								<div class="card-body">
+									1. Osama, the edit button doesn't work in packages Page
+									2. Fariyal, make a button to download database, please
 								</div>
 							</div>
 						</div>
@@ -96,7 +98,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="assets/js/app.js"></script>
 
 </body>
 
