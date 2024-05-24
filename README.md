@@ -119,6 +119,13 @@ CREATE TABLE customers(
     phone_number VARCHAR(50),
     password VARCHAR(100)
 );
+CREATE table contactus(
+	message_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(225),
+    email VARCHAR(225),
+    subject VARCHAR(65535),
+    message VARCHAR(65535)
+);
 
 ## Creation of table Entries
 

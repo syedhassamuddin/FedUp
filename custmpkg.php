@@ -23,13 +23,13 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
+	<link rel="shortcut icon" href="assets/img/icons/icon-48x48.png" />
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
 	<title>Fed Up Admin</title>
 
-	<link href="css/app.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -38,14 +38,14 @@
 	<div class="wrapper">
 
 	<?php
-		$activePage = "packages";
-		include "page-components/sidebar.php";	
+		$activePage = "custmpkg";
+		include "assets/page-components/sidebar.php";	
 	?>
 		
 		<div class="main">
 
 		<?php
-			include "page-components/topnavbar.php";	
+			include "assets/page-components/topnavbar.php";	
 		?>
 
 			<main class="content">
@@ -192,7 +192,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.js"></script>
+	<script src="assets/js/app.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
