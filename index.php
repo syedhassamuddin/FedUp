@@ -56,7 +56,9 @@
       <div class="row gy-4 d-flex justify-content-between">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+          <p data-aos="fade-up" data-aos-delay="100">Welcome to FedUp, your trusted partner in delivering packages swiftly and safely. Our commitment to excellence ensures your parcels reach their destination on time, every time. Experience unparalleled courier services designed to meet all your shipping needs.
+
+</p>
 
           <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
             <input type="text" class="form-control" placeholder="ZIP code or CitY">
@@ -115,8 +117,15 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
             <div>
-              <h4 class="title">Lorem Ipsum</h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4 class="title">Prestige</h4>
+              <p class="description">Elevate your brand with packaging that speaks volumes in simplicity and sophistication. Our meticulous attention to detail ensures every product is presented with elegance and care. Stand out on shelves and in deliveries with packaging solutions designed to enhance your brand's image and leave a lasting impression.
+
+
+
+
+
+
+</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -125,8 +134,15 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
             <div>
-              <h4 class="title">Dolor Sitema</h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title">Efficient</h4>
+              <p class="description">Streamline your logistics with our reliable delivery services tailored to meet your needs. From swift local deliveries to efficient nationwide distribution, we ensure your packages arrive on time, every time. Trust our dedicated team to handle your shipments with precision and professionalism, so you can focus on what matters most—growing your business.
+
+
+
+
+
+
+</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -134,8 +150,15 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
             <div>
-              <h4 class="title">Sed ut perspiciatis</h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title">Convenience</h4>
+              <p class="description">Experience unparalleled convenience with doorstep delivery services designed for your comfort. Whether it's groceries, packages, or essentials, we bring it straight to your door with care and efficiency. Enjoy peace of mind knowing your deliveries are handled seamlessly, allowing you to save time and effortlessly manage your day.
+
+
+
+
+
+
+</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -157,28 +180,55 @@
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3>About Us</h3>
             <p>
-              Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
-            </p>
+            At FedUp, we're dedicated to revolutionizing the logistics industry with our commitment to reliability and innovation. With years of experience, we specialize in seamless delivery solutions that prioritize customer satisfaction above all else. Our mission is to simplify your logistics challenges while enhancing your brand's reputation through exceptional service and personalized care. Join us in shaping the future of delivery, one satisfied customer at a time.
+
+
+
+
+
+
+</p>
             <ul>
               <li data-aos="fade-up" data-aos-delay="100">
                 <i class="bi bi-diagram-3"></i>
                 <div>
-                  <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                  <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                  <h5>Courier Link</h5>
+                  <p>Connecting packages to destinations seamlessly. Reliable, global shipping solutions at your fingertips.
+
+
+
+
+
+
+</p>
                 </div>
               </li>
               <li data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-fullscreen-exit"></i>
                 <div>
-                  <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                  <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                  <h5>Courier Border</h5>
+                  <p>Securing seamless borders for your deliveries. Trustworthy, global shipping solutions at your service.
+
+
+
+
+
+
+</p>
                 </div>
               </li>
               <li data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-broadcast"></i>
                 <div>
-                  <h5>Voluptatem et qui exercitationem</h5>
-                  <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+                  <h5>Courier Signal</h5>
+                  <p>Strengthening connections in global shipping. Reliable, responsive logistics solutions tailored for you.
+
+
+
+
+
+
+</p>
                 </div>
               </li>
             </ul>
@@ -206,7 +256,7 @@
                 <img src="img/storage-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
-              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
+              <p>Maximize efficiency with our comprehensive storage solutions tailored to fit your needs. From short-term warehousing to long-term storage, we offer secure facilities equipped with state-of-the-art inventory management systems.</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -216,7 +266,14 @@
                 <img src="img/logistics-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Logistics</a></h3>
-              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
+              <p>Streamline your supply chain with our expert logistics solutions. From warehousing to distribution, we ensure efficient management of your goods. With advanced technology and a dedicated team, we deliver reliability and precision to meet your business needs.
+
+
+
+
+
+
+</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -226,7 +283,14 @@
                 <img src="img/cargo-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Cargo</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <p>Deliver excellence with our tailored cargo solutions. From logistics planning to secure transportation, we ensure your cargo arrives on time and intact. Trust our dedicated team and robust network for seamless global shipping.
+
+
+
+
+
+
+</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -236,7 +300,16 @@
                 <img src="img/trucking-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <p>Depend on our trusted trucking services for seamless transportation solutions. From local deliveries to nationwide logistics, we prioritize efficiency and reliability. With a commitment to safety and precision, we ensure your goods reach their destination on schedule, every time.
+
+
+
+
+
+
+
+
+</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -246,7 +319,14 @@
                 <img src="img/packaging-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
-              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
+              <p>Discover our cutting-edge packaging solutions designed to elevate your brand. From custom designs to eco-friendly materials, we ensure your products stand out with style and sustainability. Trust our expertise to enhance your packaging strategy and leave a lasting impression on your customers.
+
+
+
+
+
+
+</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -256,7 +336,14 @@
                 <img src="img/warehousing-service.jpg" alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
-              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+              <p>Optimize your storage and distribution with our state-of-the-art warehousing facilities. From inventory management to order fulfillment, we provide flexible solutions tailored to your business needs. Trust our secure facilities and efficient processes to streamline your supply chain and support your business growth.
+
+
+
+
+
+
+</p>
             </div>
           </div><!-- End Card Item -->
 
@@ -272,7 +359,14 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
             <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p> Ready to elevate your logistics experience? Contact us now to discover how our tailored solutions can transform your business. Whether you need reliable shipping, efficient storage, or innovative packaging, we're here to help you succeed. Don't wait—let's start optimizing your operations together.
+
+
+
+
+
+
+</p>
             <a class="cta-btn" href="#">Call To Action</a>
           </div>
         </div>
@@ -290,15 +384,24 @@
             <img src="img/features-1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Your Present from FedUp Courier.</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Delivering smiles, one package at a time.
+
+
+
+
+
+
+
             </p>
             <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Ullam est qui quos consequatur eos accusamus.</li>
+              <li><i class="bi bi-check"></i> Swift and secure delivery of your packages with FedUp Courier.</li>
+              <li><i class="bi bi-check"></i> Trustworthy service ensuring your gifts and essentials arrive on time.
+</li>
+              <li><i class="bi bi-check"></i> Bringing joy and reliability straight to your doorstep.
+
+</li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -308,15 +411,15 @@
             <img src="img/features-2.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
-            <h3>Corporis temporibus maiores provident</h3>
+            <h3>Enjoy Free Delivery</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Experience the convenience of free shipping on all orders from our FedUp Courier website.
+
+
+
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+            Enjoy the convenience of free delivery on all orders placed through our FedUp Courier website. We believe in making shipping hassle-free for our customers, ensuring that your packages reach you without any additional cost
             </p>
           </div>
         </div><!-- Features Item -->
@@ -326,12 +429,14 @@
             <img src="img/features-3.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <h3>Mc Cafe Delivered</h3>
+            <p>"Savor the flavors of Mc Cafe delivered straight to your door with FedUp Courier. Enjoy the convenience of having your favorite McDonald's coffee and snacks brought to you with our reliable delivery service. Whether it's a morning pick-me-up or an afternoon treat, trust FedUp Courier to deliver freshness and quality right to your doorstep."
+
+</p>
             <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+              <li><i class="bi bi-check"></i> Ensure timely delivery of Mc Cafe's premium coffee beans sourced from around the world with FedUp Courier's efficient global shipping network.</li>
+              <li><i class="bi bi-check"></i>Navigate international regulations seamlessly with FedUp Courier's expertise in customs clearance, ensuring Mc Cafe's products reach global markets without delay.</li>
+              <li><i class="bi bi-check"></i> Deliver a delightful experience to Mc Cafe's international customers with reliable shipping services that uphold the brand's commitment to quality and freshness.</li>
             </ul>
           </div>
         </div><!-- Features Item -->
@@ -341,15 +446,12 @@
             <img src="img/features-4.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 order-2 order-md-1">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+            <h3>Global Shipping Solutions</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            "Explore seamless international shipping options to expand your reach with FedUp Courier."
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+            Expand your business globally with our comprehensive shipping services tailored to meet international demands. From reliable logistics planning to efficient customs clearance, trust us to navigate the complexities of global shipping seamlessly. Streamline your operations and reach new markets with FedUp Courier's dedicated support.
             </p>
           </div>
         </div><!-- Features Item -->
@@ -374,11 +476,12 @@
               <h3>Free Plan</h3>
               <h4><sup>$</sup>0<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i>Global shipping to major destinations
+</li>
+                <li><i class="bi bi-check"></i> Basic tracking and updates</li>
+                <li><i class="bi bi-check"></i> Standard packaging materials included</li>
+                <li class="na"><i class="bi bi-x"></i> <span>Expedited delivery options</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span> Dedicated customer support</span></li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -389,11 +492,11 @@
               <h3>Business Plan</h3>
               <h4><sup>$</sup>29<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Global shipping to major destinations</li>
+                <li><i class="bi bi-check"></i> Basic tracking and updates</li>
+                <li><i class="bi bi-check"></i>  Expedited delivery options</li>
+                <li><i class="bi bi-check"></i> Enhanced packaging materials included</li>
+                <li><i class="bi bi-check"></i>Dedicated customer support</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -404,11 +507,11 @@
               <h3>Developer Plan</h3>
               <h4><sup>$</sup>49<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Global shipping to major destinations</li>
+                <li><i class="bi bi-check"></i> Advanced tracking and updates</li>
+                <li><i class="bi bi-check"></i>Expedited delivery options</li>
+                <li><i class="bi bi-check"></i> Enhanced packaging materials included</li>
+                <li><i class="bi bi-check"></i> Priority customer support</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -436,7 +539,9 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  FedUp Courier's service is reliable and their deliveries are always on time!
+
+
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -452,7 +557,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  I love the convenience of tracking my packages with FedUp Courier—they make shipping easy.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -468,7 +573,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Great experience with FedUp Courier, their customer support is responsive and helpful.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -484,7 +589,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Using FedUp Courier has streamlined our logistics—efficient and cost-effective.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -500,7 +605,7 @@
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Highly recommend FedUp Courier for their professional handling of international shipments.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -532,12 +637,13 @@
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Non consectetur a erat nam at lectus urna duis?
+                    How can I track my package with FedUp Courier?
                   </button>
                 </h3>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  You can track your package by entering the tracking number provided in the shipment confirmation email on our website's tracking page. Real-time updates are available for all shipments.
+
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -546,12 +652,14 @@
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                    What are your delivery options?
+
                   </button>
                 </h3>
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  We offer standard and expedited delivery options. Standard delivery typically takes [X] days, while expedited options ensure faster delivery within [Y] days, depending on the destination.
+
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -560,12 +668,12 @@
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                    How do you handle international shipments?
                   </button>
                 </h3>
                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  We specialize in international shipping, handling customs clearance and ensuring compliance with all regulations. Our global network ensures timely and secure delivery worldwide.
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -574,13 +682,13 @@
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                    What packaging materials do you use?
                   </button>
                 </h3>
                 <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    We use high-quality packaging materials suitable for various items, ensuring safe transportation. Custom packaging options are available for fragile or specialty items.
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -589,12 +697,12 @@
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
                     <i class="bi bi-question-circle question-icon"></i>
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                    What should I do if I have an issue with my delivery?
                   </button>
                 </h3>
                 <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                  If you encounter any issues with your delivery, please contact our customer support team immediately. We're here to assist you and resolve any concerns promptly.
                   </div>
                 </div>
               </div><!-- # Faq item-->
@@ -618,7 +726,7 @@
           <a href="index.php" class="logo d-flex align-items-center">
             <span>Fedup</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>"© 2024 FedUp Courier. All rights reserved. | Address: [Your Address] | Phone: [Your Phone Number] | Email: [Your Email Address]"</p>
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
