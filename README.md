@@ -92,7 +92,8 @@ Status Counts
     current_location varchar(225),
     price int (9),
     cost int (9),
-    assigned_agent INT (9)
+    assigned_agent INT (9),
+    by_customer INT (9)
 );
 CREATE TABLE admins(
 	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -121,7 +122,7 @@ CREATE TABLE customers(
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL), (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL), (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL);
+3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL, NULL), (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL, NULL), (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL, NULL);
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
 INSERT INTO admins VALUES (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam");
 INSERT INTO admins VALUES (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal");
