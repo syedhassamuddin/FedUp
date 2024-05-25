@@ -46,6 +46,7 @@
 
   <!-- ======= Header ======= -->
   <?php
+    $activePage = "services";
     include "assets/page-components/index-navbar.php";
   ?>
   <!-- End Header -->

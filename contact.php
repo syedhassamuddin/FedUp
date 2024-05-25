@@ -146,6 +146,7 @@
 
   <!-- ======= Footer ======= -->
   <?php
+    $activePage = "contact";
     include "assets/page-components/index-footer.php";
   ?>
   <!-- End Footer -->
