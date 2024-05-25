@@ -1,5 +1,95 @@
 <?php
 	session_start();
+	include ("conn.php");
+	if(isset($_POST['submit'])){
+
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+
+		// Check if login is admin
+		$stmt = $conn->prepare("SELECT * FROM admins WHERE email = ? AND password = ?");
+		$stmt->bind_param("ss", $email, $password);
+		$result = $stmt->execute();
+		if($stmt->errno){
+			echo "<script>alert('Contact Site Administrator');</script>";
+		}
+		else{
+			$result = $stmt->get_result();
+			if(mysqli_num_rows($result) != 0){
+				$retreivedData = mysqli_fetch_assoc($result);
+				$_SESSION['id'] = $retreivedData['id'];
+				$_SESSION['first_name'] = $retreivedData['first_name'];
+				$_SESSION['last_name'] = $retreivedData['last_name'];
+				$_SESSION['email'] = $retreivedData['email'];
+				$_SESSION['password'] = $retreivedData['password'];
+				$_SESSION['phone_number'] = $retreivedData['phone_number'];
+				$_SESSION['account_type'] = "admin";
+				echo "
+					<script>
+						window.location.href = 'admin.php'; 
+					</script>";
+			}
+			
+			else{
+				// Check if login is agent
+				$stmt = $conn->prepare("SELECT * FROM agents WHERE email = ? AND password = ?");
+				$stmt->bind_param("ss", $email, $password);
+				$result = $stmt->execute();
+				if($stmt->errno){
+					echo "<script>alert('Contact Site Administrator');</script>";
+				}
+				else{
+					$result = $stmt->get_result();
+					if(mysqli_num_rows($result) != 0){
+						$retreivedData = mysqli_fetch_assoc($result);
+						$_SESSION['id'] = $retreivedData['id'];
+						$_SESSION['first_name'] = $retreivedData['first_name'];
+						$_SESSION['last_name'] = $retreivedData['last_name'];
+						$_SESSION['email'] = $retreivedData['email'];
+						$_SESSION['password'] = $retreivedData['password'];
+						$_SESSION['phone_number'] = $retreivedData['phone_number'];
+						$_SESSION['account_type'] = "agent";
+						echo "
+							<script>
+								window.location.href = 'admin.php'; 
+							</script>";
+					}
+					else{
+						$stmt = $conn->prepare("SELECT * FROM customers WHERE email = ? AND password = ?");
+						$stmt->bind_param("ss", $email, $password);
+						$result = $stmt->execute();
+						if($stmt->errno){
+							echo "<script>alert('Contact Site Administrator');</script>";
+						}
+						else{
+							$result = $stmt->get_result();
+							if(mysqli_num_rows($result) != 0){
+								$retreivedData = mysqli_fetch_assoc($result);
+								$_SESSION['id'] = $retreivedData['id'];
+								$_SESSION['first_name'] = $retreivedData['first_name'];
+								$_SESSION['last_name'] = $retreivedData['last_name'];
+								$_SESSION['email'] = $retreivedData['email'];
+								$_SESSION['password'] = $retreivedData['password'];
+								$_SESSION['phone_number'] = $retreivedData['phone_number'];
+								$_SESSION['account_type'] = "customer";
+								echo "
+									<script>
+										window.location.href = 'admin.php'; 
+									</script>";
+							}
+							else{
+								echo "<script>alert('Incorrect Credentials');</script>";
+							}
+						}
+					}    
+				}
+			}
+		}
+	$stmt->close();
+	}
+	else{
+
+	}
 ?>
 
 <!DOCTYPE html>
@@ -26,44 +116,6 @@
 
 <body>
 
-	<?php
-		include ("conn.php");
-		if(isset($_POST['submit'])){
-
-			$email = $_POST['email'];
-			$password = $_POST['password'];
-
-			$stmt = $conn->prepare("SELECT * FROM admins WHERE email = ? AND password = ?");
-			$stmt->bind_param("ss", $email, $password);
-			$result = $stmt->execute();
-			if($stmt->errno){
-				echo "<script>alert('Contact Site Administrator');</script>";
-			}
-			else{
-				$result = $stmt->get_result();
-				if(mysqli_num_rows($result) != 0){
-					$retreivedData = mysqli_fetch_assoc($result);
-					$_SESSION['first_name'] = $retreivedData['first_name'];
-					$_SESSION['last_name'] = $retreivedData['last_name'];
-					$_SESSION['email'] = $retreivedData['email'];
-					$_SESSION['password'] = $retreivedData['password'];
-					$_SESSION['phone_number'] = $retreivedData['phone_number'];
-					$_SESSION['account_type'] = "admin";
-					echo "
-						<script>
-							window.location.href = 'admin.php'; 
-						</script>";
-				}
-				else{
-					echo "<script>alert('Incorrect Credentials');</script>";
-				}    
-		}
-		$stmt->close();
-		}
-		else{
-
-		}
-	?>
 
 	
 

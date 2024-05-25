@@ -2,7 +2,20 @@
 <nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="index.php">
-          			<span class="align-middle">FedUp Admin</span>
+          			<span class="align-middle">
+						FedUp
+						<?php
+							if($_SESSION["account_type"] == "admin"){
+								echo "Admin Poral";
+							}
+							elseif($_SESSION["account_type"] == "agent"){
+								echo "Agent Portal";
+							}
+							else{
+								echo "Customer Portal";
+							}
+						?>
+					</span>
         		</a>
 
 				<ul class="sidebar-nav">
