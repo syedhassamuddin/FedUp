@@ -26,7 +26,7 @@
 				$_SESSION['account_type'] = "admin";
 				echo "
 					<script>
-						window.location.href = 'admin.php'; 
+						window.location.href = 'dashboard.php'; 
 					</script>";
 			}
 			
@@ -51,7 +51,7 @@
 						$_SESSION['account_type'] = "agent";
 						echo "
 							<script>
-								window.location.href = 'admin.php'; 
+								window.location.href = 'dashboard.php'; 
 							</script>";
 					}
 					else{
@@ -74,7 +74,7 @@
 								$_SESSION['account_type'] = "customer";
 								echo "
 									<script>
-										window.location.href = 'admin.php'; 
+										window.location.href = 'dashboard.php'; 
 									</script>";
 							}
 							else{

@@ -18,7 +18,7 @@
           <li><a href="contact.php" <?php if($activePage == "contact"){echo "class='active'";}?>>Contact</a></li>
           <?php
             if(isset($_SESSION["account_type"])){
-              echo "<li><a class='get-a-quote' href='admin.php'>Go To Dashboard</a></li>";
+              echo "<li><a class='get-a-quote' href='dashboard.php'>Go To Dashboard</a></li>";
             }
             else{
               echo "

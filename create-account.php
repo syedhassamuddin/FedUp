@@ -72,7 +72,7 @@
 				$fileExt = explode(".",$fileName);
 				$fileActualExt = strtolower(end($fileExt));
 				$allowedExt = array ("jpg","jpeg","png");
-				$fileNewName = $email.".".$png;
+				$fileNewName = $email.".png";
 
 				if($fileError == 0){
 					if ($fileSize < 100 * 1024 * 1024) {

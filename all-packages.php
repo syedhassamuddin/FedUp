@@ -38,7 +38,7 @@
 	<div class="wrapper">
 
 	<?php
-		$activePage = "packages";
+		$activePage = "all-packages";
 		include "assets/page-components/sidebar.php";	
 	?>
 		
