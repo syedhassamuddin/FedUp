@@ -73,56 +73,32 @@
 		<?php
 		if(isset($_GET['Edited_Id'])){
 			$id = $_GET['Edited_Id'];
-			echo $id."point1";
+			$_SESSION['package_id_to_update'] = $id;
 			$editQuery = "SELECT * FROM packages WHERE package_id = '$id'";
 			$res = mysqli_query($conn,$editQuery);
 			$row = mysqli_fetch_array($res);
-			
+		}
+		else{}
+		?>
+
+		<?php
 			if(isset($_POST['update'])){
-				echo $id."point2";
+				$id = $_SESSION['package_id_to_update'];
 				$updated_from_address = $_POST['from'];
 				$updated_to_address = $_POST['to'];
 				$updated_package_weight = $_POST['package_weight'];
 				$updated_special_instructions = $_POST['special_instructions'];
 				$updated_delivery_type = $_POST['delivery_type'];
-	
-				$updateQuery = "UPDATE packages
-								SET from_address = '$updated_from_address',
-									to_address = '$updated_to_address',
-									package_weight_in_KG = '$updated_package_weight',
-									special_instructions = '$updated_special_instructions',
-									delivery_type = '$updated_delivery_type'
-									WHERE package_id = '$id'";
+
+				$updateQuery = "UPDATE packages SET from_address = '$updated_from_address', to_address = '$updated_to_address', package_weight_in_KG = '$updated_package_weight', special_instructions = '$updated_special_instructions', delivery_type = '$updated_delivery_type' WHERE package_id = '$id'";
 				$isUpdate = mysqli_query($conn, $updateQuery);
-				// if ($isUpdate) {
-				// 	echo '<script>
-				// 	// window.location.href = "packages.php";</script>';
-				// } else {
-				// 	echo '<script>alert("Something went wrong")</script>';
-				// }
+				if ($isUpdate) {
+					echo '<script>window.location.href = "packages.php";</script>';
+				} else {
+					echo '<script>alert("Something went wrong")</script>';
+				}
 			}
-		}
-		else{}
-		
-
-							// Absolutely no idea what this is - Hassam will ask Usama until then commenting
-                            // if(move_uploaded_file($_FILES))
-                            // {
-							// }
-							// else{
-							// }
-						// 	$updateQuery = "UPDATE packages SET from_address = '$updated_from_address', to_address = '$updated_to_address', delivery_type = '$updated_delivery_type', special_instructions = '$updated_special_instructions' WHERE package_id = '$id'";
-
-
-						// }
-			
-		
-
-			// edit work
-
-
-
-			?>
+		?>
 
 			<main class="content">
 				<div class="container-fluid p-0">
