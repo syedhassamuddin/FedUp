@@ -31,7 +31,7 @@
 
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/extra.css">
+	<link rel="stylesheet" href="assets/css/extra.css">
 </head>
 
 <body>
@@ -72,7 +72,7 @@
 				$fileExt = explode(".",$fileName);
 				$fileActualExt = strtolower(end($fileExt));
 				$allowedExt = array ("jpg","jpeg","png");
-				$fileNewName = $email.".".$fileActualExt;
+				$fileNewName = $email.".".$png;
 
 				if($fileError == 0){
 					if ($fileSize < 100 * 1024 * 1024) {
@@ -90,7 +90,7 @@
 									echo "<div class='alert-success'>Admin Account Creation Successful</div>";
 								}
 								$stmt->close();
-								move_uploaded_file($fileTmpName,"img/users/admins/".$fileNewName);
+								move_uploaded_file($fileTmpName,"assets/img/users/admins/".$fileNewName);
 							}
 							elseif($account_type == 'agent'){
 								$stmt = $conn->prepare("INSERT INTO agents VALUES(NULL, ?, ?, ?, ?, ?)");
@@ -104,7 +104,7 @@
 									echo "<div class='alert-success'>Agent Account Creation Successful</div>";
 								}
 								$stmt->close();
-								move_uploaded_file($fileTmpName,"img/users/agents/".$fileNewName);
+								move_uploaded_file($fileTmpName,"assets/img/users/agents/".$fileNewName);
 							}
 							elseif($account_type == 'customer'){
 								$stmt = $conn->prepare("INSERT INTO customers VALUES(NULL, ?, ?, ?, ?, ?)");
@@ -118,7 +118,7 @@
 									echo "<div class='alert-success'>Customer Account Creation Successful</div>";
 								}
 								$stmt->close();
-								move_uploaded_file($fileTmpName,"img/users/customers/".$fileNewName);
+								move_uploaded_file($fileTmpName,"assets/img/users/customers/".$fileNewName);
 							}
 							else{
 								echo "<div class='alert-failure'>Account Creation Failure</div>";

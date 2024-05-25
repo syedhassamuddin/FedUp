@@ -98,23 +98,23 @@ Status Counts
     by_customer INT (9)
 );
 CREATE TABLE admins(
-	  admin_id INT PRIMARY KEY AUTO_INCREMENT,
+	  id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
-    phone VARCHAR(50),
+    phone_number VARCHAR(50),
     password VARCHAR(100)
 );
 CREATE TABLE agents(
-	  agent_id INT PRIMARY KEY AUTO_INCREMENT,
+	  id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
-    phone VARCHAR(50),
+    phone_number VARCHAR(50),
     password VARCHAR(100)
 );
 CREATE TABLE customers(
-	  customer_id INT PRIMARY KEY AUTO_INCREMENT,
+	  id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
@@ -145,5 +145,5 @@ INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789
 
 INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer"), (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan"), (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
 
-INSERT INTO locations (name) VALUES ('Gwadar'), ('Karachi'), ('Hyderabad'), ('Sukkur'), ('Multan'), ('Lahore'), ('Faisalabad'), ('Rawalpindi'), ('Islamabad'), ('Kashmir');
+INSERT INTO locations (location_name) VALUES ('Gwadar'), ('Karachi'), ('Hyderabad'), ('Sukkur'), ('Multan'), ('Lahore'), ('Faisalabad'), ('Rawalpindi'), ('Islamabad'), ('Kashmir');
 

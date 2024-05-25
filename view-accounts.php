@@ -35,6 +35,36 @@
 
 <body>
 
+	<!-- PHP to delete an account -->
+	<?php
+		if(isset($_GET['Deleted_Admin_Id'])){
+			$id = $_GET['Deleted_Admin_Id'];
+			mysqli_query($conn, "DELETE FROM admins WHERE id = $id");
+			echo "<script>window.location.href = 'view-accounts.php';</script>";
+		}
+		else{
+			// Do Nothing
+		}
+
+		if(isset($_GET['Deleted_Agent_Id'])){
+			$id = $_GET['Deleted_Agent_Id'];
+			mysqli_query($conn, "DELETE FROM agents WHERE id = $id");
+			echo "<script>window.location.href = 'view-accounts.php';</script>";
+		}
+		else{
+			// Do Nothing
+		}
+
+		if(isset($_GET['Deleted_Customer_Id'])){
+			$id = $_GET['Deleted_Customer_Id'];
+			mysqli_query($conn, "DELETE FROM customers WHERE id = $id");
+			echo "<script>window.location.href = 'view-accounts.php';</script>";
+		}
+		else{
+			// Do Nothing
+		}
+		
+	?>
 	<div class="wrapper">
 
 		<?php
@@ -50,7 +80,7 @@
 		?>
 
 			<main class="content">
-
+				<form action="view-accounts.php" method="get">
 					<h1 class="h1 mb-3"><strong>All Users</strong></h1>
 
 					<div class="main-content">
@@ -85,13 +115,15 @@
 										$adminCount = mysqli_num_rows($resObjectAdmins);
 
 										foreach($resObjectAdmins as $row){
-											echo "<tr>";
-											echo "<td>{$row['admin_id']}</td>";
-											echo "<td>{$row['first_name']}</td>";
-											echo "<td>{$row['last_name']}</td>";
-											echo "<td>{$row['email']}</td>";
-											echo "<td>{$row['phone']}</td>";
-											echo "</tr>";
+											echo "	<tr>
+														<td>{$row['id']}</td>
+														<td>{$row['first_name']}</td>
+														<td>{$row['last_name']}</td>
+														<td>{$row['email']}</td>
+														<td>{$row['phone_number']}</td>
+														<td><a href='create-account.php?Edited_Id={$row['id']}' class='btn btn-success'>Edit</a></td>
+														<td><a href='view-accounts.php?Deleted_Admin_Id={$row['id']}' class='btn btn-danger'>Delete</a></td>
+													</tr>";
 										}
 
 										?>
@@ -136,13 +168,15 @@
 										$agentCount = mysqli_num_rows($resObjectAgents);
 
 										foreach($resObjectAgents as $row){
-											echo "<tr>";
-											echo "<td>{$row['agent_id']}</td>";
-											echo "<td>{$row['first_name']}</td>";
-											echo "<td>{$row['last_name']}</td>";
-											echo "<td>{$row['email']}</td>";
-											echo "<td>{$row['phone']}</td>";
-											echo "</tr>";
+											echo "	<tr>
+														<td>{$row['id']}</td>
+														<td>{$row['first_name']}</td>
+														<td>{$row['last_name']}</td>
+														<td>{$row['email']}</td>
+														<td>{$row['phone_number']}</td>
+														<td><a href='create-account.php?Edited_Id={$row['id']}' class='btn btn-success'>Edit</a></td>
+														<td><a href='view-accounts.php?Deleted_Agent_Id={$row['id']}' class='btn btn-danger'>Delete</a></td>
+													</tr>";
 										}
 
 										?>
@@ -186,13 +220,15 @@
 										$customerCount = mysqli_num_rows($resObjectCustomers);
 
 										foreach($resObjectCustomers as $row){
-											echo "<tr>";
-											echo "<td>{$row['customer_id']}</td>";
-											echo "<td>{$row['first_name']}</td>";
-											echo "<td>{$row['last_name']}</td>";
-											echo "<td>{$row['email']}</td>";
-											echo "<td>{$row['phone_number']}</td>";
-											echo "</tr>";
+											echo "	<tr>
+														<td>{$row['id']}</td>
+														<td>{$row['first_name']}</td>
+														<td>{$row['last_name']}</td>
+														<td>{$row['email']}</td>
+														<td>{$row['phone_number']}</td>
+														<td><a href='create-account.php?Edited_Id={$row['id']}' class='btn btn-success'>Edit</a></td>
+														<td><a href='view-accounts.php?Deleted_Customer_Id={$row['id']}' class='btn btn-danger'>Delete</a></td>
+													</tr>";
 										}
 
 										?>
@@ -206,7 +242,7 @@
                     <!-- customer  -->
                 
 
-                
+				</form>
 			</main>
 
 			<!-- Footer Start -->
