@@ -89,6 +89,8 @@ Status Counts
     to_address VARCHAR(225),
   	delivery_type VARCHAR(225),
     special_instructions VARCHAR(225),
+    package_weight_in_KG INT (9),
+    distance_to_travel_in_KM INT (9),
     current_location varchar(225),
     price int (9),
     cost int (9),
@@ -129,11 +131,11 @@ CREATE table contactus(
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL, NULL), (NULL, "Karachi", "Lahore", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL, NULL), (NULL, "Lahore", "Faisalabad", "Standard Delivery", "No special instructions", NULL, NULL, NULL, NULL, NULL);
-INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin");
-INSERT INTO admins VALUES (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam");
-INSERT INTO admins VALUES (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal");
-INSERT INTO admins VALUES (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
+3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "standard", "No special instructions", 5, NULL, NULL, NULL, NULL, NULL, NULL), (NULL, "Karachi", "Lahore", "express", "No special instructions", 15, NULL, NULL, NULL, NULL, NULL, NULL), (NULL, "Lahore", "Faisalabad", "overnight", "No special instructions", 20, NULL,NULL, NULL, NULL, NULL, NULL);
+
+INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"),
+(NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
+
 INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent");
 INSERT INTO agents VALUES (NULL, "Hammad", "Tariq", "hammad@gmail.com", "123456789","hammad");
 INSERT INTO agents VALUES (NULL, "Noor", "Something", "noor@gmail.com", "123456789","noor");

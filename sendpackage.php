@@ -48,61 +48,73 @@
 			include "assets/page-components/topnavbar.php";	
 		?>
 			
-			<?php
+		<?php
 
-			if(isset($_POST['submit'])){
-				$from_address = $_POST['from'];
-				$to_address = $_POST['to'];
-				$delivery_type = $_POST['special'];
-				$special_instructions = $_POST['spcins'];
+		if(isset($_POST['submit'])){
+			$from_address = $_POST['from'];
+			$to_address = $_POST['to'];
+			$package_weight = $_POST['package_weight'];
+			$special_instructions = $_POST['special_instructions'];
+			$delivery_type = $_POST['delivery_type'];
 
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost, assigned_agent)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL, NULL)";
 
-				$isInsert = mysqli_query($conn, $insertQuery);
+			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight', NULL,NULL,NULL, NULL, NULL, NULL)";
 
-				if($isInsert) {
-					echo '<script>alert("Data inserted successfully")</script>';
-				} else{
-					echo '<script>alert("Something went wrong")</script>';
-				}
+			$isInsert = mysqli_query($conn, $insertQuery);
 
+			if($isInsert) {
+				echo '<script>alert("Data inserted successfully")</script>';
+			} else{
+				echo '<script>alert("Something went wrong")</script>';
 			}
+		}
+		?>
 
-			// edit work
-
-			if(isset($_GET['EditedId']))
-			{
-				$id = $_GET['EditedId'];
-				$editQuery = "SELECT * FROM packages WHERE package_id = '$id'";
-				$res = mysqli_query($conn,$editQuery);
-				$row = mysqli_fetch_array($res);
-
-				if(isset($_POST['update']))
-                        {
-                            $ufrom_address = $_POST['from'];
-				            $uto_address = $_POST['to'];
-				            $udelivery_type = $_POST['special'];
-				            $uspecial_instructions = $_POST['spcins'];
-						}
+		<?php
+		if(isset($_GET['Edited_Id'])){
+			$id = $_GET['Edited_Id'];
+			echo $id."point1";
+			$editQuery = "SELECT * FROM packages WHERE package_id = '$id'";
+			$res = mysqli_query($conn,$editQuery);
+			$row = mysqli_fetch_array($res);
+			
+			if(isset($_POST['update'])){
+				echo $id."point2";
+				$updated_from_address = $_POST['from'];
+				$updated_to_address = $_POST['to'];
+				$updated_package_weight = $_POST['package_weight'];
+				$updated_special_instructions = $_POST['special_instructions'];
+				$updated_delivery_type = $_POST['delivery_type'];
+	
+				$updateQuery = "UPDATE packages
+								SET from_address = '$updated_from_address',
+									to_address = '$updated_to_address',
+									package_weight_in_KG = '$updated_package_weight',
+									special_instructions = '$updated_special_instructions',
+									delivery_type = '$updated_delivery_type'
+									WHERE package_id = '$id'";
+				$isUpdate = mysqli_query($conn, $updateQuery);
+				// if ($isUpdate) {
+				// 	echo '<script>
+				// 	// window.location.href = "packages.php";</script>';
+				// } else {
+				// 	echo '<script>alert("Something went wrong")</script>';
+				// }
+			}
+		}
+		else{}
+		
 
 							// Absolutely no idea what this is - Hassam will ask Usama until then commenting
                             // if(move_uploaded_file($_FILES))
                             // {
-                            //     $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            // }
-                            // else{
-                            //     $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            // }
+							// }
+							// else{
+							// }
+						// 	$updateQuery = "UPDATE packages SET from_address = '$updated_from_address', to_address = '$updated_to_address', delivery_type = '$updated_delivery_type', special_instructions = '$updated_special_instructions' WHERE package_id = '$id'";
 
-                            $isUpdate = mysqli_query($conn, $updateQuery);
 
-                            if ($isUpdate) {
-                                echo '<script>
-                                window.location.href = "packages.php";</script>';
-                            } else {
-                                echo '<script>alert("Something went wrong")</script>';
-                            }
-						}
+						// }
 			
 		
 
@@ -124,7 +136,7 @@
 										<h5 class="card-title mb-0">From</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi" name="from">
+										<input type="text" class="form-control" placeholder="Karachi" name="from" value="<?php echo @$row['from_address']?>">
 									</div>
 								</div>
 							</div>
@@ -136,9 +148,33 @@
 										<h5 class="card-title mb-0">To</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore" name="to">
+										<input type="text" class="form-control" placeholder="Lahore" name="to" value="<?php echo @$row['to_address']?>">
 									</div>
 								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title mb-0">Package Weight (In KGs)</h5>
+									</div>
+									<div class="card-body">
+										<input type="number" class="form-control" placeholder="0.1" name="package_weight" value="<?php echo @$row['package_weight_in_KG']?>">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-6">
+								<div class="card">
+								  <div class="card-header">
+									  <h5 class="card-title mb-0">Special Instructions</h5>
+								  </div>
+								  <div class="card-body">
+									  <textarea class="form-control" rows="2" name="special_instructions" placeholder="Please keep upright"><?php echo @$row['special_instructions']?></textarea>
+								  </div>
+							  </div>
 							</div>
 						</div>
 
@@ -146,30 +182,30 @@
 							<div class="col-12 col-md-6">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">Special</h5>
+										<h5 class="card-title mb-0">Delivery Type</h5>
 									</div>
 									<div class="card-body">
 										<div>
 											<label class="form-check">
-												<input class="form-check-input" type="radio" value="standard" name="special" checked>
+												<input class="form-check-input" type="radio" value="standard" name="delivery_type" <?php if(isset($_GET['Edited_Id'])){if($row['delivery_type'] == 'standard'){echo "checked";}else{}}else{}?>>
 												<span class="form-check-label">
 													Standard Delivery
 												</span>
 											</label>
 											<label class="form-check">
-												<input class="form-check-input" type="radio" value="express" name="special">
+												<input class="form-check-input" type="radio" value="express" name="delivery_type" <?php if(isset($_GET['Edited_Id'])){if($row['delivery_type'] == 'express'){echo "checked";}else{}}else{}?>>
 												<span class="form-check-label">
 													Express Delivery
 												</span>
 											</label>
 											<label class="form-check">
-												<input class="form-check-input" type="radio" value="overnight" name="special">
+												<input class="form-check-input" type="radio" value="overnight" name="delivery_type" <?php if(isset($_GET['Edited_Id'])){if($row['delivery_type'] == 'overnight'){echo "checked";}else{}}else{}?>>
 												<span class="form-check-label">
 												Overnight Delivery
 												</span>
 												</label>
 											  <label class="form-check">
-												<input class="form-check-input" type="radio" value="fragile" name="special">
+												<input class="form-check-input" type="radio" value="fragile" name="delivery_type" <?php if(isset($_GET['Edited_Id'])){if($row['delivery_type'] == 'fragile'){echo "checked";}else{}}else{}?>>
 												<span class="form-check-label">
 													Fragile Delivery
 												</span>
@@ -178,21 +214,18 @@
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-6">
-							  <div class="card">
-								  <div class="card-header">
-									  <h5 class="card-title mb-0">Special Instructions</h5>
-								  </div>
-								  <div class="card-body">
-									  <textarea class="form-control" rows="2" name="spcins" placeholder="Please keep upright"></textarea>
-								  </div>
-							  </div>
-							</div>
 
 						</div>
 
-						<button class="btn btn-primary btn-lg" type="submit" name="submit">Schedule Package Delivery</button>
+						<?php
+							if(isset($_GET['Edited_Id'])){
+								echo "<button class='btn btn-primary btn-lg' type='submit' name='update'>Update Package Details</button>";
+							}
+							else{
+								echo "<button class='btn btn-primary btn-lg' type='submit' name='submit'>Schedule Package Delivery</button>";
+							}
+						?>
+						
 					</form>
 
 				</div>

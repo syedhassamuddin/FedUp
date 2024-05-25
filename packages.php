@@ -66,75 +66,83 @@
                         <div class="row mt-5">
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
-                                 <table class="table table-borderless table-striped table-earning">
-                                        <thead>
-                                            <tr>
-                                                <th>Package Id</th>
-                                                <th>From</th>
-                                                <th>To</th>
-                                                <th>Delivery Type</th>
-                                                <th>Special Instructions</th>
-                                                <th>Current Location</th>
-                                                <th>Price</th>
-                                                <th>Cost</th>
+								<form action="packages.php" method="get">
+									<table class="table table-borderless table-striped table-earning">
+										<thead>
+											<tr>
+												<th>Package Id</th>
+												<th>From</th>
+												<th>To</th>
+												<th>Delivery Type</th>
+												<th>Special Instructions</th>
+												<th>Weight In KGs</th>
+												<th>Distance to Travel In KM</th>
+												<th>Current Location</th>
+												<th>Price</th>
+												<th>Cost</th>
 												<th>Agent Assigned</th>
-                                                <th></th>
+												<th>By Customer</th>
 												<th></th>
 												<th></th>
-                                            </tr>
-                                        </thead>
-                                        
-										<?php
+												<th></th>
+											</tr>
+										</thead>
+											
+											<?php
 
-										$selectQuery= "SELECT * FROM packages";
-										$res= mysqli_query($conn,$selectQuery);
+											$selectQuery= "SELECT * FROM packages";
+											$res= mysqli_query($conn,$selectQuery);
 
-										while ($row=mysqli_fetch_array($res)){
+											while ($row=mysqli_fetch_array($res)){
+												?>
+
+											<tr>
+												<td><?php echo $row['package_id']; ?></td>
+												<td><?php echo $row['from_address']; ?></td>
+												<td><?php echo $row['to_address']; ?></td>
+												<td><?php echo $row['delivery_type']; ?></td>
+												<td><?php echo $row['special_instructions']; ?></td>
+												<td><?php echo $row['package_weight_in_KG']; ?></td>
+												<td><?php echo $row['distance_to_travel_in_KM']; ?></td>
+												<td><?php echo $row['current_location']; ?></td>
+												<td><?php echo $row['price']; ?></td>
+												<td><?php echo $row['cost']; ?></td>
+												<td><?php echo $row['assigned_agent']; ?></td>
+												<td><?php echo $row['by_customer']; ?></td>
+												<td><a href="sendpackage.php?Edited_Id=<?php echo $row['package_id']?>" class="btn btn-success">Edit</a></td>
+												<td><a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
+												<td><a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
+											</tr>
+
+												<?php
+											}
 											?>
 
-										<tr>
-											<td><?php echo $row['package_id']; ?></td>
-											<td><?php echo $row['from_address']; ?></td>
-											<td><?php echo $row['to_address']; ?></td>
-											<td><?php echo $row['delivery_type']; ?></td>
-											<td><?php echo $row['special_instructions']; ?></td>
-											<td><?php echo $row['current_location']; ?></td>
-											<td><?php echo $row['price']; ?></td>
-											<td><?php echo $row['cost']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a></td>
-                                            <td><a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
-											<td><a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
-										</tr>
+											<!-- Delete -->
 
 											<?php
-										}
-										?>
-
-										<!-- Delete -->
-
-										<?php
-										
-										if(isset($_GET['DeletedId'])){
-											$id= $_GET['DeletedId'];
-											$deleteQuery= "DELETE FROM packages WHERE package_id= $id ";
-											$res= mysqli_query($conn,$deleteQuery);
-											if($res){
-												echo '<script>
-												alert("Record deleted successfully");
-												window.location.href = "packages.php";
-												</script>';
-											}else{
-												echo '<script>alert("Something went wrong")</script>';
+											
+											if(isset($_GET['DeletedId'])){
+												$id= $_GET['DeletedId'];
+												$deleteQuery= "DELETE FROM packages WHERE package_id= $id ";
+												$res= mysqli_query($conn,$deleteQuery);
+												if($res){
+													echo '<script>
+													alert("Record deleted successfully");
+													window.location.href = "packages.php";
+													</script>';
+												}else{
+													echo '<script>alert("Something went wrong")</script>';
+												}
 											}
-										}
 
-										?>
+											?>
 
-										<!-- Delete -->
+											<!-- Delete -->
 
 
-                                    </table>
+									</table>
+								</form>
                                 </div>
                         </div>
                     </div>
