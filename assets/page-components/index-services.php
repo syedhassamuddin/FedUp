@@ -75,11 +75,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
               <div class="card-img">
-<<<<<<< HEAD
-                <img src="img/images fedup,,," alt="" class="img-fluid">
-=======
                 <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
->>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
               </div>
               <h3><a href="service-details.php" class="stretched-link">Packaging</a></h3>
               <p>Discover our cutting-edge packaging solutions designed to elevate your brand. From custom designs to eco-friendly materials, we ensure your products stand out with style and sustainability. Trust our expertise to enhance your packaging strategy and leave a lasting impression on your customers.
