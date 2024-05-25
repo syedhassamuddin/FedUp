@@ -59,7 +59,8 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Pricing</h2>
-              <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p>"Explore our flexible pricing plans designed to meet your shipping needs efficiently and affordably. Whether you're looking for basic shipping services or premium options with expedited delivery, FedUp Courier offers transparent pricing that ensures value and reliability. Choose the plan that fits your business requirements and experience seamless shipping solutions today."
+</p>
             </div>
           </div>
         </div>
@@ -85,11 +86,11 @@
               <h3>Free Plan</h3>
               <h4><sup>$</sup>0<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <li><i class="bi bi-check"></i> Global shipping to major destinations</li>
+                <li><i class="bi bi-check"></i> Basic tracking and updates</li>
+                <li><i class="bi bi-check"></i> Standard packaging materials included</li>
+                <li class="na"><i class="bi bi-x"></i> <span>Expedited delivery options</span></li>
+                <li class="na"><i class="bi bi-x"></i> <span>Dedicated customer support</span></li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -100,11 +101,11 @@
               <h3>Business Plan</h3>
               <h4><sup>$</sup>29<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i>Global shipping to major destinations</li>
+                <li><i class="bi bi-check"></i>Basic tracking and updates</li>
+                <li><i class="bi bi-check"></i>Expedited delivery options</li>
+                <li><i class="bi bi-check"></i>Enhanced packaging materials included</li>
+                <li><i class="bi bi-check"></i> Dedicated customer support</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -115,11 +116,11 @@
               <h3>Developer Plan</h3>
               <h4><sup>$</sup>49<span> / month</span></h4>
               <ul>
-                <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bi bi-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bi bi-check"></i> Massa ultricies mi quis hendrerit</li>
+                <li><i class="bi bi-check"></i> Global shipping to major destinations</li>
+                <li><i class="bi bi-check"></i>Advanced tracking and updates</li>
+                <li><i class="bi bi-check"></i>Expedited delivery options</li>
+                <li><i class="bi bi-check"></i>Enhanced packaging materials included</li>
+                <li><i class="bi bi-check"></i>Priority customer support</li>
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
@@ -130,77 +131,7 @@
       </div>
     </section><!-- End Pricing Section -->
 
-    <!-- ======= Horizontal Pricing Section ======= -->
-    <section id="horizontal-pricing" class="horizontal-pricing pt-0">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <span>Horizontal Pricing</span>
-          <h2>Horizontal Pricing</h2>
-
-        </div>
-
-        <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Free Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>0<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-              <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Business Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>29<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> <strong>Nec feugiat nisl pretium</strong></li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item mt-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>Developer Plan</h3>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>49<span> / month</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> Quam adipiscing vitae proin</li>
-              <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
-              <li><i class="bi bi-check"></i> Nulla at volutpat diam uteera</li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-      </div>
-    </section><!-- End Horizontal Pricing Section -->
-
-  </main><!-- End #main -->
+   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -209,9 +140,9 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span>Logis</span>
+            <span>FEDUP</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>© 2024 FedUp Courier. All rights reserved. | Address: [Your Address] | Phone: [Your Phone Number] | Email: [Your Email Address]"</p>
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -234,11 +165,11 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Tracking</a></li>
+            <li><a href="#">Packaging</a></li>
+            <li><a href="#">Warehousing</a></li>
+            <li><a href="#">Logistics</a></li>
           </ul>
         </div>
 

@@ -316,7 +316,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
               <div class="card-img">
-                <img src="img/packaging-service.jpg" alt="" class="img-fluid">
+                <img src="img/images fedup,,," alt="" class="img-fluid">
               </div>
               <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
               <p>Discover our cutting-edge packaging solutions designed to elevate your brand. From custom designs to eco-friendly materials, we ensure your products stand out with style and sustainability. Trust our expertise to enhance your packaging strategy and leave a lasting impression on your customers.
@@ -749,11 +749,11 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Tracking</a></li>
+            <li><a href="#">Packaging</a></li>
+            <li><a href="#">Warehousing</a></li>
+            <li><a href="#">Logistics</a></li>
           </ul>
         </div>
 

@@ -59,7 +59,9 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Contact</h2>
-              <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p>For any inquiries or assistance, please don't hesitate to contact us. You can reach us by phone at [Your Phone Number] or email us at [Your Email Address]. Our team is committed to providing prompt and helpful responses to ensure your experience with FedUp Courier is seamless and satisfactory.
+
+</p>
             </div>
           </div>
         </div>
@@ -151,9 +153,9 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span>Logis</span>
+            <span>FEDUP</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>© 2024 FedUp Courier. All rights reserved. | Address: [Your Address] | Phone: [Your Phone Number] | Email: [Your Email Address]"</p>
           <div class="social-links d-flex mt-4">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -176,11 +178,11 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Tracking</a></li>
+            <li><a href="#">Packaging</a></li>
+            <li><a href="#">Warehousing</a></li>
+            <li><a href="#">Logistics</a></li>
           </ul>
         </div>
 
