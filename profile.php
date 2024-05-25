@@ -2,6 +2,7 @@
 	session_start();
 
 	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
+		$userEmail = $_SESSION["email"];
 
 	}
 	else{
@@ -27,7 +28,7 @@
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-profile.html" />
 
-	<title>Profile | AdminKit Demo</title>
+	<title>Profile | FedUp</title>
 
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -63,7 +64,7 @@
 									<h5 class="card-title mb-0">Profile Details</h5>
 								</div>
 								<div class="card-body text-center">
-									<img src="img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+									<img src="<?php if($_SESSION['account_type'] == 'admin'){echo 'assets/img/users/admins/'.$userEmail.'.png';}?>" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
 									<h5 class="card-title mb-0">
 										<?php
                                          echo $_SESSION['first_name'];

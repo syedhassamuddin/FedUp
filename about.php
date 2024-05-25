@@ -46,6 +46,7 @@
 
   <!-- ======= Header ======= -->
   <?php
+    $activePage = "about";
     include "assets/page-components/index-navbar.php";
   ?>
   <!-- End Header -->
@@ -461,6 +462,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+<<<<<<< HEAD
   <footer id="footer" class="footer">
 
     <div class="container">
@@ -529,6 +531,11 @@
     </div>
 
   </footer><!-- End Footer -->
+=======
+  <?php
+    include "assets/page-components/index-footer.php";
+  ?>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

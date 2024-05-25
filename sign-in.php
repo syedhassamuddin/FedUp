@@ -18,7 +18,7 @@
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
 
-	<title>Sign In | AdminKit Demo</title>
+	<title>Sign In | FedUp</title>
 
 	<link href="assets/css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
 			$stmt->bind_param("ss", $email, $password);
 			$result = $stmt->execute();
 			if($stmt->errno){
-				echo "Error";
+				echo "<script>alert('Contact Site Administrator');</script>";
 			}
 			else{
 				$result = $stmt->get_result();
@@ -48,14 +48,14 @@
 					$_SESSION['email'] = $retreivedData['email'];
 					$_SESSION['password'] = $retreivedData['password'];
 					$_SESSION['phone_number'] = $retreivedData['phone_number'];
-					// $_SESSION['account_type'] = "admin";
+					$_SESSION['account_type'] = "admin";
 					echo "
 						<script>
 							window.location.href = 'admin.php'; 
 						</script>";
 				}
 				else{
-					echo "Something happened";
+					echo "<script>alert('Incorrect Credentials');</script>";
 				}    
 		}
 		$stmt->close();
@@ -64,6 +64,8 @@
 
 		}
 	?>
+
+	
 
 	<main class="d-flex w-100">
 		<div class="container d-flex flex-column">
@@ -84,11 +86,11 @@
 									<form action="sign-in.php" method="post">
 										<div class="mb-3">
 											<label class="form-label">Email</label>
-											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
+											<input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" required />
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Password</label>
-											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
+											<input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" required />
 										</div>
 										<div>
 											<div class="form-check align-items-center">

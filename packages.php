@@ -59,14 +59,14 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">View Student</h2>
+                                    <h2 class="title-1">View Packages</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-borderless table-striped table-earning">
+                                 <table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
                                                 <th>Package Id</th>
@@ -77,7 +77,10 @@
                                                 <th>Current Location</th>
                                                 <th>Price</th>
                                                 <th>Cost</th>
-                                                <th>Actions</th>
+												<th>Agent Assigned</th>
+                                                <th></th>
+												<th></th>
+												<th></th>
                                             </tr>
                                         </thead>
                                         
@@ -90,35 +93,18 @@
 											?>
 
 										<tr>
-											<td>
-											<?php echo $row['package_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['from_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['to_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['delivery_type'] ?>
-											</td>
-											<td>
-											<?php echo $row['special_instructions'] ?>
-											</td>
-											<td>
-											<?php echo "Lahore" ?>
-											</td>
-											<td>
-											<?php echo "Rs.100" ?>
-											</td>
-											<td>
-											<?php echo "Rs.50" ?>
-											</td>
-											<td>
-                                                <a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a>
-                                                <a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a> 
-												<a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a>
-                                            </td>
+											<td><?php echo $row['package_id']; ?></td>
+											<td><?php echo $row['from_address']; ?></td>
+											<td><?php echo $row['to_address']; ?></td>
+											<td><?php echo $row['delivery_type']; ?></td>
+											<td><?php echo $row['special_instructions']; ?></td>
+											<td><?php echo $row['current_location']; ?></td>
+											<td><?php echo $row['price']; ?></td>
+											<td><?php echo $row['cost']; ?></td>
+											<td><?php echo $row['assigned_agent']; ?></td>
+											<td><a href="sendpackage.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a></td>
+                                            <td><a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
+											<td><a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
 										</tr>
 
 											<?php

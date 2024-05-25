@@ -38,162 +38,126 @@
 	<div class="wrapper">
 
 	<?php
-		$activePage = "sendpackage";
+		$activePage = "custmpkg";
 		include "assets/page-components/sidebar.php";	
 	?>
-
+		
 		<div class="main">
 
 		<?php
 			include "assets/page-components/topnavbar.php";	
 		?>
-			
-			<?php
-
-			if(isset($_POST['submit'])){
-				$from_address = $_POST['from'];
-				$to_address = $_POST['to'];
-				$delivery_type = $_POST['special'];
-				$special_instructions = $_POST['spcins'];
-
-				$insertQuery= "INSERT INTO packages (from_address,to_address,delivery_type,special_instructions,current_location,price,cost, assigned_agent)VALUES('$from_address','$to_address','$delivery_type','$special_instructions',NULL,NULL,NULL, NULL)";
-
-				$isInsert = mysqli_query($conn, $insertQuery);
-
-				if($isInsert) {
-					echo '<script>alert("Data inserted successfully")</script>';
-				} else{
-					echo '<script>alert("Something went wrong")</script>';
-				}
-
-			}
-
-			// edit work
-
-			if(isset($_GET['EditedId']))
-			{
-				$id = $_GET['EditedId'];
-				$editQuery = "SELECT * FROM packages WHERE package_id = '$id'";
-				$res = mysqli_query($conn,$editQuery);
-				$row = mysqli_fetch_array($res);
-
-				if(isset($_POST['update']))
-                        {
-                            $ufrom_address = $_POST['from'];
-				            $uto_address = $_POST['to'];
-				            $udelivery_type = $_POST['special'];
-				            $uspecial_instructions = $_POST['spcins'];
-						}
-
-							// Absolutely no idea what this is - Hassam will ask Usama until then commenting
-                            // if(move_uploaded_file($_FILES))
-                            // {
-                            //     $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            // }
-                            // else{
-                            //     $updateQuery = "UPDATE packages SET ufrom_address = '$ufrom_address',uto_address = '$uto_address',udelivery_type = '$udelivery_type',uspecial_instructions = '$uspecial_instructions',ucurrent_location = '$ucurrent_location',up_price = '$up_price', WHERE package_id = '$id'";
-                            // }
-
-                            $isUpdate = mysqli_query($conn, $updateQuery);
-
-                            if ($isUpdate) {
-                                echo '<script>
-                                window.location.href = "packages.php";</script>';
-                            } else {
-                                echo '<script>alert("Something went wrong")</script>';
-                            }
-						}
-			
-		
-
-			// edit work
-
-
-
-			?>
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h1 class="h3 mb-3"><strong>Send</strong> Package</h1>
-					<form action="sendpackage.php" method="post">
 
-						<div class="row">
-							<div class="col-6">
-								<div class="card">
-									<div class="card-header">
-										<h5 class="card-title mb-0">From</h5>
-									</div>
-									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi" name="from">
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-6">
+					<h1 class="h3 mb-3"><strong>Customer Packages</strong> Dashboard</h1>
 
-								<div class="card">
-									<div class="card-header">
-										<h5 class="card-title mb-0">To</h5>
-									</div>
-									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore" name="to">
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="overview-wrap">
+                                    <h2 class="title-1">View Packages</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-md-12">
+                            <div class="table-responsive table--no-card m-b-30">
+                                 <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Package Id</th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th>Delivery Type</th>
+                                                <th>Special Instructions</th>
+                                                <th>Current Location</th>
+                                                <th>Price</th>
+                                                <th>Cost</th>
+                                                <th>By Customer</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        
+										<?php
 
-						<div class="row">
-							<div class="col-12 col-md-6">
-								<div class="card">
-									<div class="card-header">
-										<h5 class="card-title mb-0">Special</h5>
-									</div>
-									<div class="card-body">
-										<div>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="standard" name="special" checked>
-												<span class="form-check-label">
-													Standard Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="express" name="special">
-												<span class="form-check-label">
-													Express Delivery
-												</span>
-											</label>
-											<label class="form-check">
-												<input class="form-check-input" type="radio" value="overnight" name="special">
-												<span class="form-check-label">
-												Overnight Delivery
-												</span>
-												</label>
-											  <label class="form-check">
-												<input class="form-check-input" type="radio" value="fragile" name="special">
-												<span class="form-check-label">
-													Fragile Delivery
-												</span>
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="col-6">
-							  <div class="card">
-								  <div class="card-header">
-									  <h5 class="card-title mb-0">Special Instructions</h5>
-								  </div>
-								  <div class="card-body">
-									  <textarea class="form-control" rows="2" name="spcins" placeholder="Please keep upright"></textarea>
-								  </div>
-							  </div>
-							</div>
+										$selectQuery= "SELECT * FROM packages";
+										$res= mysqli_query($conn,$selectQuery);
 
-						</div>
+										while ($row=mysqli_fetch_array($res)){
+											?>
 
-						<button class="btn btn-primary btn-lg" type="submit" name="submit">Schedule Package Delivery</button>
-					</form>
+										<tr>
+											<td>
+											<?php echo $row['package_id'] ?>
+											</td>
+											<td>
+											<?php echo $row['from_address'] ?>
+											</td>
+											<td>
+											<?php echo $row['to_address'] ?>
+											</td>
+											<td>
+											<?php echo $row['delivery_type'] ?>
+											</td>
+											<td>
+											<?php echo $row['special_instructions'] ?>
+											</td>
+											<td>
+											<?php echo "Lahore" ?>
+											</td>
+											<td>
+											<?php echo "Rs.100" ?>
+											</td>
+											<td>
+											<?php echo "Rs.50" ?>
+											</td>
+											<td>
+											<?php echo "Customer123" ?>
+                                            </td>
+											<td>
+                                                <a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Cancel</a> 
+                                            </td>
+										</tr>
+
+											<?php
+										}
+										?>
+
+										<!-- Delete -->
+
+										<?php
+										
+										if(isset($_GET['DeletedId'])){
+											$id= $_GET['DeletedId'];
+											$deleteQuery= "DELETE FROM packages WHERE package_id= $id ";
+											$res= mysqli_query($conn,$deleteQuery);
+											if($res){
+												echo '<script>
+												alert("Record deleted successfully");
+												window.location.href = "packages.php";
+												</script>';
+											}else{
+												echo '<script>alert("Something went wrong")</script>';
+											}
+										}
+
+										?>
+
+										<!-- Delete -->
+
+
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+					
 
 				</div>
 			</main>

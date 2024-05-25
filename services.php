@@ -46,6 +46,7 @@
 
   <!-- ======= Header ======= -->
   <?php
+    $activePage = "services";
     include "assets/page-components/index-navbar.php";
   ?>
   <!-- End Header -->
@@ -90,10 +91,16 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
             <div>
+<<<<<<< HEAD
               <h4 class="title">Delivering Services</h4>
               <p class="description">Discover our commitment to delivering exceptional courier services with reliability and efficiency at every step.
 </p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+=======
+              <h4 class="title">Lorem Ipsum</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <a href="service-details.php" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div>
           <!-- End Service Item -->
@@ -101,18 +108,30 @@
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
             <div>
+<<<<<<< HEAD
               <h4 class="title">Truck Services</h4>
               <p class="description">Our truck services ensure swift and secure deliveries, supported by a fleet of reliable vehicles.</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+=======
+              <h4 class="title">Dolor Sitema</h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <a href="service-details.php" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
             <div>
+<<<<<<< HEAD
               <h4 class="title">At Your Doorstep</h4>
               <p class="description">Convenient doorstep delivery services ensuring your packages arrive safely and on time, every time.</p>
               <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+=======
+              <h4 class="title">Sed ut perspiciatis</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="service-details.php" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Service Item -->
 
@@ -138,9 +157,14 @@
               <div class="card-img">
                 <img src="assets/img/storage-service.jpg" alt="" class="img-fluid">
               </div>
+<<<<<<< HEAD
               <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
               <p>
 Secure and flexible storage solutions tailored to your needs. From short-term warehousing to long-term storage, trust us to safeguard your belongings with care. Our state-of-the-art facilities and efficient management ensure your items are stored and managed effectively.</p>
+=======
+              <h3><a href="service-details.php" class="stretched-link">Storage</a></h3>
+              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Card Item -->
 
@@ -149,9 +173,14 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
               <div class="card-img">
                 <img src="assets/img/logistics-service.jpg" alt="" class="img-fluid">
               </div>
+<<<<<<< HEAD
               <h3><a href="service-details.html" class="stretched-link">Logistics</a></h3>
               <p>Streamline your supply chain with our comprehensive logistics services. From warehousing to distribution, we ensure efficient management and timely delivery of your goods. Trust our expertise to optimize your logistics operations and support your business growth.
 </p>
+=======
+              <h3><a href="service-details.php" class="stretched-link">Logistics</a></h3>
+              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Card Item -->
 
@@ -160,9 +189,14 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
               <div class="card-img">
                 <img src="assets/img/cargo-service.jpg" alt="" class="img-fluid">
               </div>
+<<<<<<< HEAD
               <h3><a href="service-details.html" class="stretched-link">Cargo</a></h3>
               <p>Dependable cargo services ensuring safe and efficient transportation of goods. Whether local or international, trust our robust network and experienced team for secure deliveries.
 </p>
+=======
+              <h3><a href="service-details.php" class="stretched-link">Cargo</a></h3>
+              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Card Item -->
 
@@ -171,8 +205,13 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
               <div class="card-img">
                 <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
               </div>
+<<<<<<< HEAD
               <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
               <p>Efficient and reliable trucking services for swift and secure transportation of goods. Our dedicated fleet and experienced drivers ensure your shipments reach their destination on time, every time.</p>
+=======
+              <h3><a href="service-details.php" class="stretched-link">Trucking</a></h3>
+              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Card Item -->
 
@@ -181,8 +220,13 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
               <div class="card-img">
                 <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
               </div>
+<<<<<<< HEAD
               <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
               <p>Customized packaging solutions designed to enhance your brand's presentation and ensure product safety during transit.</p>
+=======
+              <h3><a href="service-details.php" class="stretched-link">Packaging</a></h3>
+              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Card Item -->
 
@@ -191,8 +235,13 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
               <div class="card-img">
                 <img src="assets/img/warehousing-service.jpg" alt="" class="img-fluid">
               </div>
+<<<<<<< HEAD
               <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
               <p>Flexible warehousing solutions tailored to your storage needs, featuring secure facilities and advanced inventory management for efficient logistics management.</p>
+=======
+              <h3><a href="service-details.php" class="stretched-link">Warehousing</a></h3>
+              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
             </div>
           </div><!-- End Card Item -->
 
@@ -465,6 +514,7 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+<<<<<<< HEAD
   <footer id="footer" class="footer">
 
     <div class="container">
@@ -533,6 +583,11 @@ Secure and flexible storage solutions tailored to your needs. From short-term wa
     </div>
 
   </footer><!-- End Footer -->
+=======
+  <?php
+    include "assets/page-components/index-footer.php";
+  ?>
+>>>>>>> 1661d31bfe588beaba1b3483e3b2c4464dacb195
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

@@ -11,11 +11,11 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.php" class="active">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="services.php">Services</a></li>
-          <li><a href="pricing.php">Pricing</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="index.php" <?php if($activePage == "index"){echo "class='active'";}?>>Home</a></li>
+          <li><a href="about.php" <?php if($activePage == "about"){echo "class='active'";}?>>About</a></li>
+          <li><a href="services.php" <?php if($activePage == "services"){echo "class='active'";}?>>Services</a></li>
+          <li><a href="pricing.php" <?php if($activePage == "pricing"){echo "class='active'";}?>>Pricing</a></li>
+          <li><a href="contact.php" <?php if($activePage == "contact"){echo "class='active'";}?>>Contact</a></li>
           <?php
             if(isset($_SESSION["account_type"])){
               echo "<li><a class='get-a-quote' href='admin.php'>Go To Dashboard</a></li>";
