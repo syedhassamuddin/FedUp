@@ -61,6 +61,12 @@
               				<i class="align-middle" data-feather="bar-chart"></i> <span class="align-middle">Reports</span>
             			</a>
 					</li>
+
+					<li class="sidebar-item <?php if($activePage == 'contact-us-submissions'){echo'active';}?>">
+						<a class="sidebar-link" href="contact-us-submissions.php">
+              				<i class="align-middle" data-feather="bar-chart"></i> <span class="align-middle">Reports</span>
+            			</a>
+					</li>
 				</ul>
 			</div>
 		</nav>

@@ -144,9 +144,9 @@
               				</a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                				<img src="assets/img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">
+                				<img src="assets/img/users/admins/<?php echo $_SESSION['email'].'.png'?>" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">
 									<?php
-                                         echo $_SESSION['first_name'];
+                                         echo $_SESSION['first_name']." ".$_SESSION['last_name'];
 										?></span>
               				</a>
 

@@ -36,7 +36,7 @@
 <body>
 	<div class="wrapper">
     <?php
-		$activePage = "reports";
+		$activePage = "contact-us-submissions";
 		include "assets/page-components/sidebar.php";	
 	?>
 
