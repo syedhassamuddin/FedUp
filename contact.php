@@ -46,6 +46,7 @@
 
   <!-- ======= Header ======= -->
   <?php
+    $activePage = "contact";
     include "assets/page-components/index-navbar.php";
   ?>
   <!-- End Header -->
