@@ -128,6 +128,11 @@ CREATE table contactus(
     subject VARCHAR(65535),
     message VARCHAR(65535)
 );
+CREATE TABLE locations (
+    location_id INT AUTO_INCREMENT PRIMARY KEY,
+    location_name VARCHAR(225)
+);
+
 
 ## Creation of table Entries
 
@@ -136,10 +141,9 @@ CREATE table contactus(
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"),
 (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
 
-INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent");
-INSERT INTO agents VALUES (NULL, "Hammad", "Tariq", "hammad@gmail.com", "123456789","hammad");
-INSERT INTO agents VALUES (NULL, "Noor", "Something", "noor@gmail.com", "123456789","noor");
-INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer");
-INSERT INTO customers VALUES (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan");
-INSERT INTO customers VALUES (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
+INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789","agent"), (NULL, "Hammad", "Tariq", "hammad@gmail.com", "123456789","hammad"), (NULL, "Noor", "Something", "noor@gmail.com", "123456789","noor");
+
+INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer"), (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan"), (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
+
+INSERT INTO locations (name) VALUES ('Gwadar'), ('Karachi'), ('Hyderabad'), ('Sukkur'), ('Multan'), ('Lahore'), ('Faisalabad'), ('Rawalpindi'), ('Islamabad'), ('Kashmir');
 
