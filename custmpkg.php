@@ -2,7 +2,12 @@
 	session_start();
 
 	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
+		if($_SESSION["account_type"] == "customer"){
 
+		}
+		else{
+			header("location:dashboard.php");
+		}
 	}
 	else{
 		header("location:sign-in.php");
@@ -74,53 +79,31 @@
                                                 <th>To</th>
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
+												<th>Package Weight (KGs)</th>
                                                 <th>Current Location</th>
                                                 <th>Price</th>
-                                                <th>Cost</th>
-                                                <th>By Customer</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages";
+										$selectQuery= "SELECT * FROM packages WHERE by_customer = {$_SESSION['id']}";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){
 											?>
 
 										<tr>
-											<td>
-											<?php echo $row['package_id'] ?>
-											</td>
-											<td>
-											<?php echo $row['from_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['to_address'] ?>
-											</td>
-											<td>
-											<?php echo $row['delivery_type'] ?>
-											</td>
-											<td>
-											<?php echo $row['special_instructions'] ?>
-											</td>
-											<td>
-											<?php echo "Lahore" ?>
-											</td>
-											<td>
-											<?php echo "Rs.100" ?>
-											</td>
-											<td>
-											<?php echo "Rs.50" ?>
-											</td>
-											<td>
-											<?php echo "Customer123" ?>
-                                            </td>
-											<td>
-                                                <a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Cancel</a> 
-                                            </td>
+											<td><?php echo $row['package_id']; ?></td>
+											<td><?php echo $row['from_address']; ?></td>
+											<td><?php echo $row['to_address']; ?></td>
+											<td><?php echo $row['delivery_type']; ?></td>
+											<td><?php echo $row['special_instructions']; ?></td>
+											<td><?php echo $row['package_weight_in_KG']; ?></td>
+											<td><?php echo $row['current_location']; ?></td>
+											<td><?php echo $row['price']; ?></td>
+											<td><a href="packages.php" class="btn btn-danger">Cancel</a> </td>
 										</tr>
 
 											<?php
