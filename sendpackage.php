@@ -56,13 +56,43 @@
 			
 		<?php
 
-		if(isset($_POST['submit'])){
+		if(isset($_POST["submit"])){
+			$from_address = $_POST['from'];
+			$to_address = $_POST['to'];
+
+			// Fetch all locations from the database
+			$allLocationsObject = mysqli_query($conn, "SELECT * FROM locations");
+			$locations = mysqli_fetch_all($allLocationsObject);
+
+			// Initialize variables to hold indices
+			$from_distance = false;
+			$to_distance = false;
+
+			// Iterate through the locations to find indices
+			foreach ($locations as $index => $location) {
+				if ($location[0] === $from_address) {
+					$from_distance = $index;
+				}
+				if ($location[0] === $to_address) {
+					$to_distance = $index;
+				}
+			}
+
+			$distance_to_travel = intval($to_distance) - intval($from_distance);
+			var_dump($from_distance);
+			var_dump($to_distance);
+			var_dump($distance_to_travel);
+
+		}
+
+		if(isset($_POST['update'])){
 			$from_address = $_POST['from'];
 			$to_address = $_POST['to'];
 			$package_weight = $_POST['package_weight'];
 			$special_instructions = $_POST['special_instructions'];
 			$delivery_type = $_POST['delivery_type'];
 			$package_owner = $_SESSION['id'];
+
 
 
 			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight', NULL,NULL,NULL, NULL, NULL, $package_owner)";
@@ -199,6 +229,8 @@
 							</div>
 
 						</div>
+
+						<button class='btn btn-primary btn-lg' type='submit' name='test'>test</button>
 
 						<?php
 							if(isset($_GET['Edited_Id'])){
