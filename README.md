@@ -135,7 +135,8 @@ CREATE TABLE locations (
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "standard", "No special instructions", 5, NULL, NULL, NULL, NULL, "1", "1"), (NULL, "Karachi", "Lahore", "express", "No special instructions", 15, NULL, NULL, NULL, NULL, "2", "2"), (NULL, "Lahore", "Faisalabad", "overnight", "No special instructions", 20, NULL,NULL, NULL, NULL, "3" "3"), (NULL, "Karachi", "Islamabad", "standard", "No special instructions", 5, NULL, NULL, NULL, NULL, NULL, NULL);
+3. INSERT INTO packages VALUES (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1), (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1),
+(NULL, 'Multan', 'Karachi', 'express', 'Nothing', 5, 225, 'origin', 2388, 348, 1, 1);
 
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"),
 (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
