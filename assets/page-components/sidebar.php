@@ -148,7 +148,6 @@
               				<i class='align-middle' data-feather=''></i> <span class='align-middle'></span>
             			</a>
 					</li>
-					
 				</ul>
 			</div>
 		</nav>
