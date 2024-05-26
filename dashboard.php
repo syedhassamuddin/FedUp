@@ -345,6 +345,11 @@
 		</div>
 	</div>
 
+
+</body>
+
+
+</html>
 	<script src="assets/js/app.js"></script>
 
 	<script>
@@ -568,7 +573,3 @@
 			});
 		});
 	</script>
-
-</body>
-
-</html>
