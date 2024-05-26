@@ -81,11 +81,18 @@
 					$to_distance = $index;
 				}
 			}
-	
-			$distance_to_travel = intval($to_distance) - intval($from_distance);
+			
+			// Calculate distance to travel
+			$distance_to_travel = (intval($to_distance) - intval($from_distance))*75;
+
+			// Calculate Cost
+			$cost = ($distance_to_travel*4)+($package_weight*25);
+
+			// Calculate Price
+			$price = ($distance_to_travel*8)+($package_weight*50);
 
 			// Insert Into Database
-			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight','$distance_to_travel',NULL,NULL, NULL, NULL, $package_owner)";
+			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight','$distance_to_travel', 'origin','$price', '$cost', NULL, $package_owner)";
 
 			$isInsert = mysqli_query($conn, $insertQuery);
 
