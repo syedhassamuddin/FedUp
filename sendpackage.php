@@ -86,10 +86,23 @@
 			$distance_to_travel = (intval($to_distance) - intval($from_distance))*75;
 
 			// Calculate Cost
-			$cost = ($distance_to_travel*4)+($package_weight*25);
+			$cost = ($distance_to_travel*1.5)+($package_weight*2);
 
 			// Calculate Price
 			$price = ($distance_to_travel*8)+($package_weight*50);
+			if($delivery_type == "standard"){
+				$price = $price + ($distance_to_travel*1);
+			}
+			elseif($delivery_type == "express"){
+				$price = $price + ($distance_to_travel*1.5);
+			}
+			elseif($delivery_type == "overnight"){
+				$price = $price + ($distance_to_travel*2);
+			}
+			else{
+				$price = $price + 500;
+			}
+
 
 			// Insert Into Database
 			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight','$distance_to_travel', 'origin','$price', '$cost', NULL, $package_owner)";
@@ -171,7 +184,7 @@
 										<h5 class="card-title mb-0">Package Weight (In KGs)</h5>
 									</div>
 									<div class="card-body">
-										<input type="number" class="form-control" placeholder="0.1" name="package_weight" value="<?php echo @$row['package_weight_in_KG']?>">
+										<input type="number" class="form-control" placeholder="10" name="package_weight" value="<?php echo @$row['package_weight_in_KG']?>">
 									</div>
 								</div>
 							</div>
