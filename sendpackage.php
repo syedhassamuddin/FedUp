@@ -56,9 +56,10 @@
 			$package_weight = $_POST['package_weight'];
 			$special_instructions = $_POST['special_instructions'];
 			$delivery_type = $_POST['delivery_type'];
+			$package_owner = $_SESSION['id'];
 
 
-			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight', NULL,NULL,NULL, NULL, NULL, NULL)";
+			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight', NULL,NULL,NULL, NULL, NULL, $package_owner)";
 
 			$isInsert = mysqli_query($conn, $insertQuery);
 

@@ -67,6 +67,7 @@
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
                                  <table class="table table-borderless table-striped table-earning">
+									<form action="agentpkg.php" method="get">
                                         <thead>
                                             <tr>
                                                 <th>Package Id</th>
@@ -75,16 +76,14 @@
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
                                                 <th>Current Location</th>
-												<th>Assigned Agent</th>
-                                                <th>Price</th>
-                                                <th>Cost</th>
+												<th>Package Weight (KGs)</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages";
+										$selectQuery= "SELECT * FROM packages WHERE assigned_agent = '{$_SESSION['id']}'";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){
@@ -97,12 +96,8 @@
 											<td><?php echo $row['delivery_type']; ?></td>
 											<td><?php echo $row['special_instructions']; ?></td>
 											<td><?php echo $row['current_location']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><a href="agentpkg.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Edit</a></td>
-                                            <td><a href="agentpkg.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
-											<td><a href="agentpkg.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
+											<td><?php echo $row['package_weight_in_KG']; ?></td>
+											<td><a href="agentpkg.php?<?php echo $row['package_id']?>" class="btn btn-primary">Location Update</a></td>
 										</tr>
 
 											<?php
@@ -123,16 +118,14 @@
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
                                                 <th>Current Location</th>
-												<th>Assigned Agent</th>
-                                                <th>Price</th>
-                                                <th>Cost</th>
+												<th>Package Weight (KGs)</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages";
+										$selectQuery= "SELECT * FROM packages WHERE assigned_agent IS NULL";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){
@@ -145,43 +138,24 @@
 											<td><?php echo $row['delivery_type']; ?></td>
 											<td><?php echo $row['special_instructions']; ?></td>
 											<td><?php echo $row['current_location']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><?php echo $row['assigned_agent']; ?></td>
-											<td><a href="agentpkg.php?EditedId=<?php echo $row['package_id'] ?>" class="btn btn-success">Accept</a></td>
-                                            <td><a href="agentpkg.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Ignore</a></td>
-											<td><a href="agentpkg.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
+											<td><?php echo $row['package_weight_in_KG']; ?></td>
+											<td><a href="agentpkg.php?Accepted_Id=<?php echo $row['package_id']?>" class="btn btn-success">Accept</a></td>
 										</tr>
 
 											<?php
 										}
 										?>
-										
 
-										<!-- Delete -->
-
-										<?php
-										
-										if(isset($_GET['DeletedId'])){
-											$id= $_GET['DeletedId'];
-											$deleteQuery= "DELETE FROM packages WHERE package_id= $id ";
-											$res= mysqli_query($conn,$deleteQuery);
-											if($res){
-												echo '<script>
-												alert("Record deleted successfully");
-												window.location.href = "packages.php";
-												</script>';
-											}else{
-												echo '<script>alert("Something went wrong")</script>';
+										<?php 
+											if(isset($_GET["Accepted_Id"])){
+												mysqli_query($conn, "UPDATE packages SET assigned_agent = {$_SESSION['id']} WHERE package_id = {$_GET['Accepted_Id']}");
+												echo "<script>window.location.href = 'agentpkg.php'</script>";
 											}
-										}
-
 										?>
-
-										<!-- Delete -->
-
-
+										</form>
                                     </table>
+									
+
                                 </div>
                         </div>
                     </div>

@@ -64,10 +64,10 @@
 									<h5 class="card-title mb-0">Profile Details</h5>
 								</div>
 								<div class="card-body text-center">
-									<img src="<?php if($_SESSION['account_type'] == 'admin'){echo 'assets/img/users/admins/'.$userEmail.'.png';}?>" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+									<img src="assets/img/users/<?php echo $_SESSION['account_type'].'s/'.$_SESSION['email'].'.png'?>" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
 									<h5 class="card-title mb-0">
 										<?php
-                                         echo $_SESSION['first_name'];
+                                         echo $_SESSION['first_name']." ".$_SESSION['last_name'];
 										?>
 
 
