@@ -83,7 +83,7 @@
 			}
 			
 			// Calculate distance to travel
-			$distance_to_travel = (intval($to_distance) - intval($from_distance))*75;
+			$distance_to_travel = abs((intval($to_distance) - intval($from_distance))*90);
 
 			// Calculate Cost
 			$cost = ($distance_to_travel*1.5)+($package_weight*2);
@@ -159,7 +159,18 @@
 										<h5 class="card-title mb-0">From</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi" name="from" value="<?php echo @$row['from_address']?>">
+									<select class="form-select mb-3" name="from">
+											<option selected value="Gwadar">Gwadar</option>
+											<option value="Karachi">Karachi</option>
+											<option value="Hyderabad">Hyderabad</option>
+											<option value="Sukkur">Sukkur</option>
+											<option value="Multan">Multan</option>
+											<option value="Lahore">Lahore</option>
+											<option value="Faisalabad">Faisalabad</option>
+											<option value="Rawalpindi">Rawalpindi</option>
+											<option value="Islamabad">Islamabad</option>
+											<option value="Kashmir">Kashmir</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -171,7 +182,18 @@
 										<h5 class="card-title mb-0">To</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore" name="to" value="<?php echo @$row['to_address']?>">
+										<select class="form-select mb-3" name="to">
+											<option selected value="Gwadar">Gwadar</option>
+											<option value="Karachi">Karachi</option>
+											<option value="Hyderabad">Hyderabad</option>
+											<option value="Sukkur">Sukkur</option>
+											<option value="Multan">Multan</option>
+											<option value="Lahore">Lahore</option>
+											<option value="Faisalabad">Faisalabad</option>
+											<option value="Rawalpindi">Rawalpindi</option>
+											<option value="Islamabad">Islamabad</option>
+											<option value="Kashmir">Kashmir</option>
+										</select>
 									</div>
 								</div>
 							</div>
