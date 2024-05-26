@@ -346,7 +346,7 @@
 	</div>
 </body>
 
-<script src="assets/js/app.js"></script>
+<script src="assets/js/hassam-feather.js"></script>
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
@@ -569,6 +569,8 @@
 		});
 	});
 </script>
+
+<script src="assets/js/app.js"></script>
 
 
 </html>
