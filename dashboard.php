@@ -39,34 +39,15 @@
 
 		<?php
 			$activePage = "dashboard";
-			include "assets/page-components/sidebar.php";
-			// if($_SESSION['account_type'] == "admin"){
-			// 	include "page-components/admin-sidebar.php";	
-			// }
-			// else if($_SESSION['account_type'] == "agent"){
-			// 	include "page-components/agent-sidebar.php";
-			// }
-			// else{
-			// 	include "page-components/customersidebar.php";
-			// }
-			
+			include "assets/page-components/sidebar.php";	
 		?>
-		
+
 		<div class="main">
-
-		<?php
-		include "assets/page-components/topnavbar.php";
-		// 	if($_SESSION['account_type'] == "admin"){
-		// 		include "page-components/admin-navbar.php";	
-		// 	}
-		// 	else if($_SESSION['account_type'] == "agent"){
-		// 		include "page-components/agent-navbar.php";
-		// 	}
-		// 	else{
-		// 		include "page-components/customer-navbar.php";
-		// 	}	
-		// ?>
-
+	
+			<?php
+				include "assets/page-components/topnavbar.php";
+			?>
+			
 			<main class="content">
 				<div class="container-fluid p-0">
 
