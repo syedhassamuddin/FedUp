@@ -2,7 +2,12 @@
 	session_start();
 
 	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
+		if($_SESSION["account_type"] == "agent"){
 
+		}
+		else{
+			header("location:dashboard.php");
+		}
 	}
 	else{
 		header("location:sign-in.php");

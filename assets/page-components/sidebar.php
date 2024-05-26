@@ -70,6 +70,16 @@
 								<a class='sidebar-link' href='contact-us-submissions.php'>
 									<i class='align-middle' data-feather='inbox'></i> <span class='align-middle'>Contact Request</span>
 								</a>
+								</li>
+								
+								<li class='sidebar-item'";
+								if($activePage == 'reports'){
+									echo' active';
+								}
+								echo ">
+								<a class='sidebar-link' href='reports.php'>
+									<i class='align-middle' data-feather='bar-chart'></i> <span class='align-middle'>Reports</span>
+								</a>
 								</li>";
 						}
 						elseif($_SESSION['account_type'] == "agent"){
@@ -80,24 +90,52 @@
 						}
 					?>
 
-					<li class='sidebar-item <?php if($activePage == 'sendpackage'){echo'active';}?>'>
-						<a class='sidebar-link' href='sendpackage.php'>
-							<i class='align-middle' data-feather='truck'></i> <span class='align-middle'>Send Package</span>
-            			</a>
-					</li>
+					<?php 
+						if($_SESSION['account_type'] == "agent"){
+							echo "
+								<li class='sidebar-item'";
+								if($activePage == 'agentpkg'){
+									echo' active';
+								}
+								echo ">
+								<a class='sidebar-link' href='agentpkg.php'>
+									<i class='align-middle' data-feather='layers'></i> <span class='align-middle'>View Packages</span>
+								</a>
+								</li>
+							";
+						}
+						else{
 
-					<li class='sidebar-item <?php if($activePage == 'agentpkg'){echo'active';}?>'>
-						<a class='sidebar-link' href='agentpkg.php'>
-							  <i class='align-middle' data-feather='layers'></i> <span class='align-middle'>Agent Package</span>
-						</a>
-					</li>
-					<li class='sidebar-item <?php if($activePage == 'custmpkg'){echo'active';}?>'>
-						<a class='sidebar-link' href='custmpkg.php'>
-							  <i class='align-middle' data-feather='layers'></i> <span class='align-middle'>Customer Package</span>
-						</a>
-					</li>
-					
+						}
+					?>
+<?php 
+						if($_SESSION['account_type'] == "customer"){
+							echo "
+								<li class='sidebar-item'";
+								if($activePage == 'sendpackage'){
+									echo' active';
+								}
+								echo ">
+								<a class='sidebar-link' href='sendpackage.php'>
+									<i class='align-middle' data-feather='truck'></i> <span class='align-middle'>Send Package</span>
+								</a>
+								</li>
 
+								<li class='sidebar-item'";
+								if($activePage == 'custmpkg'){
+									echo' active';
+								}
+								echo ">
+								<a class='sidebar-link' href='custmpkg.php'>
+									<i class='align-middle' data-feather='layers'></i> <span class='align-middle'>View Packages</span>
+								</a>
+								</li>
+							";
+						}
+						else{
+
+						}	
+					?>
 
 					<li class='sidebar-item <?php if($activePage == 'profile'){echo'active';}?>'>
 						<a class='sidebar-link' href='profile.php'>
@@ -105,9 +143,9 @@
             			</a>
 					</li>
 
-					<li class='sidebar-item <?php if($activePage == 'reports'){echo'active';}?>'>
-						<a class='sidebar-link' href='reports.php'>
-              				<i class='align-middle' data-feather='bar-chart'></i> <span class='align-middle'>Reports</span>
+					<li class='d-none sidebar-item <?php if($activePage == ''){echo'active';}?>'>
+						<a class='sidebar-link' href='dashboard.php'>
+              				<i class='align-middle' data-feather=''></i> <span class='align-middle'></span>
             			</a>
 					</li>
 					
