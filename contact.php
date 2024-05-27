@@ -60,9 +60,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Contact</h2>
-              <p>For any inquiries or assistance, please don't hesitate to contact us. You can reach us by phone at [Your Phone Number] or email us at [Your Email Address]. Our team is committed to providing prompt and helpful responses to ensure your experience with FedUp Courier is seamless and satisfactory.
-
-</p>
+              <p>For any inquiries or assistance, please don't hesitate to contact us. You can reach us by phone at [Your Phone Number] or email us at [Your Email Address]. Our team is committed to providing prompt and helpful responses to ensure your experience with FedUp Courier is seamless and satisfactory.</p>
             </div>
           </div>
         </div>
@@ -116,7 +114,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="http://localhost/fedup/db_connect.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
