@@ -55,17 +55,57 @@
 		?>
 			
 		<?php
-
+		
 		if(isset($_POST['submit'])){
+
+			// Prepare variable
 			$from_address = $_POST['from'];
 			$to_address = $_POST['to'];
+			$from_distance = false;
+			$to_distance = false;
 			$package_weight = $_POST['package_weight'];
 			$special_instructions = $_POST['special_instructions'];
 			$delivery_type = $_POST['delivery_type'];
 			$package_owner = $_SESSION['id'];
+			
+			// Fetch all locations from the database
+			$allLocationsObject = mysqli_query($conn, "SELECT * FROM locations");
+			$locations = mysqli_fetch_all($allLocationsObject);
+	
+			// Iterate through the locations to find indices
+			foreach ($locations as $index => $location) {
+				if ($location[0] === $from_address) {
+					$from_distance = $index;
+				}
+				if ($location[0] === $to_address) {
+					$to_distance = $index;
+				}
+			}
+			
+			// Calculate distance to travel
+			$distance_to_travel = abs((intval($to_distance) - intval($from_distance))*90);
+
+			// Calculate Cost
+			$cost = ($distance_to_travel*1.5)+($package_weight*2);
+
+			// Calculate Price
+			$price = ($distance_to_travel*8)+($package_weight*50);
+			if($delivery_type == "standard"){
+				$price = $price + ($distance_to_travel*1);
+			}
+			elseif($delivery_type == "express"){
+				$price = $price + ($distance_to_travel*1.5);
+			}
+			elseif($delivery_type == "overnight"){
+				$price = $price + ($distance_to_travel*2);
+			}
+			else{
+				$price = $price + 500;
+			}
 
 
-			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight', NULL,NULL,NULL, NULL, NULL, $package_owner)";
+			// Insert Into Database
+			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight','$distance_to_travel', 'origin','$price', '$cost', NULL, $package_owner)";
 
 			$isInsert = mysqli_query($conn, $insertQuery);
 
@@ -119,7 +159,18 @@
 										<h5 class="card-title mb-0">From</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Karachi" name="from" value="<?php echo @$row['from_address']?>">
+									<select class="form-select mb-3" name="from">
+											<option selected value="Gwadar">Gwadar</option>
+											<option value="Karachi">Karachi</option>
+											<option value="Hyderabad">Hyderabad</option>
+											<option value="Sukkur">Sukkur</option>
+											<option value="Multan">Multan</option>
+											<option value="Lahore">Lahore</option>
+											<option value="Faisalabad">Faisalabad</option>
+											<option value="Rawalpindi">Rawalpindi</option>
+											<option value="Islamabad">Islamabad</option>
+											<option value="Kashmir">Kashmir</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -131,7 +182,18 @@
 										<h5 class="card-title mb-0">To</h5>
 									</div>
 									<div class="card-body">
-										<input type="text" class="form-control" placeholder="Lahore" name="to" value="<?php echo @$row['to_address']?>">
+										<select class="form-select mb-3" name="to">
+											<option selected value="Gwadar">Gwadar</option>
+											<option value="Karachi">Karachi</option>
+											<option value="Hyderabad">Hyderabad</option>
+											<option value="Sukkur">Sukkur</option>
+											<option value="Multan">Multan</option>
+											<option value="Lahore">Lahore</option>
+											<option value="Faisalabad">Faisalabad</option>
+											<option value="Rawalpindi">Rawalpindi</option>
+											<option value="Islamabad">Islamabad</option>
+											<option value="Kashmir">Kashmir</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -144,7 +206,7 @@
 										<h5 class="card-title mb-0">Package Weight (In KGs)</h5>
 									</div>
 									<div class="card-body">
-										<input type="number" class="form-control" placeholder="0.1" name="package_weight" value="<?php echo @$row['package_weight_in_KG']?>">
+										<input type="number" class="form-control" placeholder="10" name="package_weight" value="<?php echo @$row['package_weight_in_KG']?>">
 									</div>
 								</div>
 							</div>

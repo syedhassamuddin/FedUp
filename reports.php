@@ -49,13 +49,13 @@
 <?php
 include "conn.php";
 
-?>
+?>	
 
 			<main class="content">
 				<div class="container-fluid p-0">
 
 					<h1 class="h3 mb-3">Reports</h1>
-
+  
 					<div class="row">
 						<div class="col-12">
 							<div class="card">
@@ -63,13 +63,7 @@ include "conn.php";
 									<h5 class=" card-title mb-0">Download Here</h5>
 								</div>
 								<div class="card-body">
-								<button class="btn btn-primary" onclick="downloadTable()">Download Table</button>
-
-                          <script>
-	                             function downloadTable() {
-		                                            window.location.href = 'reports.php';
-	                                                      }
-                          </script>
+								<button class="btn btn-primary">Download Table</button>	
 							</div>
 							</div>
 						</div>

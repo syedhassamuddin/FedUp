@@ -129,17 +129,14 @@ CREATE table contactus(
     message VARCHAR(65535)
 );
 CREATE TABLE locations (
-    location_id INT AUTO_INCREMENT PRIMARY KEY,
     location_name VARCHAR(225)
 );
 
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, "Karachi", "Islamabad", "standard", "No special instructions", 5, NULL, NULL, NULL, NULL, "1", "1"), 
-(NULL, "Karachi", "Lahore", "express", "No special instructions", 15, NULL, NULL, NULL, NULL, "2", "2"), 
-(NULL, "Lahore", "Faisalabad", "overnight", "No special instructions", 20, NULL,NULL, NULL, NULL, "3" "3"), 
-(NULL, "Karachi", "Islamabad", "standard", "No special instructions", 5, NULL, NULL, NULL, NULL, NULL, NULL);
+3. INSERT INTO packages VALUES (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1), (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1),
+(NULL, 'Multan', 'Karachi', 'express', 'Nothing', 5, 225, 'origin', 2388, 348, 1, 1);
 
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"),
 (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
@@ -148,5 +145,5 @@ INSERT INTO agents VALUES (NULL, "agent", "agent", "agent@agent.com", "123456789
 
 INSERT INTO customers VALUES (NULL, "customer", "customer", "customer@customer.com", "123456789","customer"), (NULL, "Rehan", "Something", "rehan@gmail.com", "123456789","rehan"), (NULL, "Aman", "Ullah", "aman@gmail.com", "123456789","aman");
 
-INSERT INTO locations (location_name) VALUES ('Gwadar'), ('Karachi'), ('Hyderabad'), ('Sukkur'), ('Multan'), ('Lahore'), ('Faisalabad'), ('Rawalpindi'), ('Islamabad'), ('Kashmir');
+INSERT INTO locations VALUES ('Gwadar'), ('Karachi'), ('Hyderabad'), ('Sukkur'), ('Multan'), ('Lahore'), ('Faisalabad'), ('Rawalpindi'), ('Islamabad'), ('Kashmir');
 
