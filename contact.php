@@ -1,6 +1,22 @@
 <?php
   session_start();
+  include "conn.php";
 ?>
+
+<?php
+$Yourname = $_POST['name'];       // Correct variable names to match form input names
+$Youremail = $_POST['email'];
+$Subject = $_POST['subject'];    // Correct variable name to match form input name
+$Message = $_POST['message'];    // Correct variable name to match form input name
+
+    $stmt = $conn->prepare("INSERT INTO contactus (name, email, subject, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $Yourname, $Youremail, $Subject, $Message); // Corrected "bind_param" types and variables
+    $stmt->execute();
+    echo "Contact successfully added."; // Corrected success message
+    $stmt->close();
+    $conn->close();
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +130,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="http://localhost/fedup/db_connect.php" method="post" role="form" class="php-email-form">
+            <form action="contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -147,7 +163,6 @@
 
   <!-- ======= Footer ======= -->
   <?php
-    $activePage = "contact";
     include "assets/page-components/index-footer.php";
   ?>
   <!-- End Footer -->
