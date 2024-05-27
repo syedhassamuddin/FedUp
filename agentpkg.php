@@ -51,7 +51,7 @@
 			$newLocation = $locations[$currentLocation+1][0];
 		}
 		elseif($currentLocation == $finalLocation){
-			$newLocation = $locations[$finalLocation][0];
+			$newLocation = "Delivered"	;
 		}
 		else{
 			$newLocation = $locations[$currentLocation+1][0];
@@ -136,7 +136,7 @@
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages WHERE assigned_agent = '{$_SESSION['id']}' AND status != 'Cancelled'";
+										$selectQuery= "SELECT * FROM packages WHERE assigned_agent = '{$_SESSION['id']}' AND status != 'Cancelled' AND status != 'Delivered'";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){
