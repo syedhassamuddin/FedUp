@@ -102,8 +102,8 @@ CREATE TABLE admins(
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
-    phone_number VARCHAR(50),
-    password VARCHAR(100)
+    phone_number VAR0CHAR(50),
+    password VARCHAR(10)
 );
 CREATE TABLE agents(
 	  id INT PRIMARY KEY AUTO_INCREMENT,
@@ -135,8 +135,8 @@ CREATE TABLE locations (
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1), (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1),
-(NULL, 'Multan', 'Karachi', 'express', 'Nothing', 5, 225, 'origin', 2388, 348, 1, 1);
+3. INSERT INTO packages VALUES (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1), (NULL, 'Multan', 'Karachi', 'express', 'Nothing', 5, 225, 'origin', 2388, 348, 1, 1),
+(NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1);
 
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"),
 (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");
