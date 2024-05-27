@@ -1,10 +1,17 @@
 <?php
 session_start();
 
-// Ensure the user is logged in
-if (!isset($_SESSION["email"]) || !isset($_SESSION["password"])) {
+if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
+    if($_SESSION["account_type"] == "admin"){
+
+    }
+    else{
+        header("location:dashboard.php");
+    }
+
+}
+else{
     header("location:sign-in.php");
-    exit();
 }
 
 // Include the database connection file

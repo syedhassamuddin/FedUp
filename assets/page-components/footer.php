@@ -7,7 +7,9 @@
 				</p>
 			</div>
 			<div class="col-6 text-end">
-				<ul class="list-inline">
+
+			<!-- Will use this if we have more links/pages -->
+				<!-- <ul class="list-inline">
 					<li class="list-inline-item">
 						<a class="text-muted" href="#" target="_blank">Support</a>
 					</li>
@@ -20,7 +22,7 @@
 					<li class="list-inline-item">
 						<a class="text-muted" href="#" target="_blank">Terms</a>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</div>
