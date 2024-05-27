@@ -3,7 +3,7 @@
 		<div class="row text-muted">
 			<div class="col-6 text-start">
 				<p class="mb-0">
-					<strong>FedUp</strong></a> - <strong>Because why not meri jan</strong>
+					<strong>FedUp</strong></a> - <strong>Beyond Expectations, Every Time</strong>
 				</p>
 			</div>
 			<div class="col-6 text-end">
