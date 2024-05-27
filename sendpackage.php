@@ -105,7 +105,7 @@
 
 
 			// Insert Into Database
-			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight','$distance_to_travel', 'origin','$price', '$cost', NULL, $package_owner)";
+			$insertQuery= "INSERT INTO packages VALUES(NULL, '$from_address','$to_address','$delivery_type','$special_instructions','$package_weight','$distance_to_travel', '$from_address','$price', '$cost', NULL, $package_owner)";
 
 			$isInsert = mysqli_query($conn, $insertQuery);
 

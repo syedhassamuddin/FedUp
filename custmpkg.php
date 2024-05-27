@@ -16,6 +16,26 @@
 	include "conn.php";
 ?>
 
+<!-- Code For Cancellation Of Package -->
+
+<?php
+										
+	if(isset($_GET['Cancel_Id'])){
+		$id= $_GET['Cancel_Id'];
+		$updateQuery= "UPDATE packages SET status = 'Cancelled' WHERE package_id= $id ";
+		$res= mysqli_query($conn,$updateQuery);
+		if($res){
+			echo '<script>
+			alert("Package Cancelled successfully");
+			window.location.href = "custmpkg.php";
+			</script>';
+		}else{
+			echo '<script>alert("Something went wrong")</script>';
+		}
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +91,8 @@
                         <div class="row mt-5">
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
-                                 <table class="table table-borderless table-striped table-earning">
+								<form action="custmpkg.php" method="get"></form>
+                                	<table class="table table-borderless table-striped table-earning">
                                         <thead>
                                             <tr>
                                                 <th>Package Id</th>
@@ -80,7 +101,7 @@
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
 												<th>Package Weight (KGs)</th>
-                                                <th>Current Location</th>
+                                                <th>Status</th>
                                                 <th>Price</th>
                                                 <th>Actions</th>
                                             </tr>
@@ -88,7 +109,7 @@
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages WHERE by_customer = {$_SESSION['id']}";
+										$selectQuery= "SELECT * FROM packages WHERE by_customer = {$_SESSION['id']} AND status != 'Cancelled'";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){
@@ -101,37 +122,14 @@
 											<td><?php echo $row['delivery_type']; ?></td>
 											<td><?php echo $row['special_instructions']; ?></td>
 											<td><?php echo $row['package_weight_in_KG']; ?></td>
-											<td><?php echo $row['current_location']; ?></td>
+											<td><?php echo $row['status']; ?></td>
 											<td><?php echo $row['price']; ?></td>
-											<td><a href="packages.php" class="btn btn-danger">Cancel</a> </td>
+											<td><a href="custmpkg.php?Cancel_Id=<?php echo $row['package_id'];?>" class="btn btn-danger">Cancel</a></td>
 										</tr>
 
 											<?php
 										}
 										?>
-
-										<!-- Delete -->
-
-										<?php
-										
-										if(isset($_GET['DeletedId'])){
-											$id= $_GET['DeletedId'];
-											$deleteQuery= "DELETE FROM packages WHERE package_id= $id ";
-											$res= mysqli_query($conn,$deleteQuery);
-											if($res){
-												echo '<script>
-												alert("Record deleted successfully");
-												window.location.href = "packages.php";
-												</script>';
-											}else{
-												echo '<script>alert("Something went wrong")</script>';
-											}
-										}
-
-										?>
-
-										<!-- Delete -->
-
 
                                     </table>
                                 </div>

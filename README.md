@@ -91,7 +91,7 @@ Status Counts
     special_instructions VARCHAR(225),
     package_weight_in_KG INT (9),
     distance_to_travel_in_KM INT (9),
-    current_location varchar(225),
+    status varchar(225),
     price int (9),
     cost int (9),
     assigned_agent INT (9),
@@ -135,8 +135,8 @@ CREATE TABLE locations (
 
 ## Creation of table Entries
 
-3. INSERT INTO packages VALUES (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1), (NULL, 'Multan', 'Karachi', 'express', 'Nothing', 5, 225, 'origin', 2388, 348, 1, 1),
-(NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'origin', 2550, 1275, 1, 1);
+3. INSERT INTO packages VALUES (NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'Karachi', 2550, 1275, 1, 1), (NULL, 'Multan', 'Karachi', 'express', 'Nothing', 5, 225, 'Multan', 2388, 348, 1, 1),
+(NULL, 'Karachi', 'Lahore', 'standard', 'Hi there', 3, 300, 'Karachi', 2550, 1275, 1, 1);
 
 INSERT INTO admins VALUES (NULL, "admin", "admin", "admin@admin.com", "123456789","admin"), (NULL, "Syed Muhammad", "Hassam Uddin", "hassam@gmail.com", "123456789","hassam"), (NULL, "Fariyal", "Something", "fariyal@gmail.com", "123456789","fariyal"),
 (NULL, "Usama", "Alam", "Usama@gmail.com", "123456789","Usama");

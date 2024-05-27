@@ -77,7 +77,7 @@
 												<th>Special Instructions</th>
 												<th>Weight In KGs</th>
 												<th>Distance to Travel In KM</th>
-												<th>Current Location</th>
+												<th>Status</th>
 												<th>Price</th>
 												<th>Cost</th>
 												<th>Agent Assigned</th>
@@ -104,7 +104,7 @@
 												<td><?php echo $row['special_instructions']; ?></td>
 												<td><?php echo $row['package_weight_in_KG']; ?></td>
 												<td><?php echo $row['distance_to_travel_in_KM']; ?></td>
-												<td><?php echo $row['current_location']; ?></td>
+												<td><?php echo $row['status']; ?></td>
 												<td><?php echo $row['price']; ?></td>
 												<td><?php echo $row['cost']; ?></td>
 												<td><?php echo $row['assigned_agent']; ?></td>
