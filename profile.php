@@ -50,7 +50,7 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-
+ 
 					<div class="mb-3">
 						<h1 class="h3 d-inline align-middle">Profile</h1>
 						<a class="badge bg-dark text-white ms-2" href="upgrade-to-pro.html">
@@ -115,12 +115,12 @@
 								</div>
 							</div>
 						</div>
-
+<!-- start  -->
 						<div class="col-md-8 col-xl-9">
 							<div class="card">
 								<div class="card-header">
 
-									<h5 class="card-title mb-0">Activities</h5>
+									<h5 class="card-title mb-0">Personal Information</h5>
 								</div>
 								<div class="card-body h-100">
 
