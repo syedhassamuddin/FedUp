@@ -96,17 +96,16 @@
 								<div class="card-body">
 									<h5 class="h6 card-title">About</h5>
 									<ul class="list-unstyled mb-0">
-										<li class="mb-1"><span data-feather="home" class="feather-sm me-1"></span> Lives in <a href="#">San Francisco, SA</a></li>
+										<li class="mb-1"><span data-feather="home" class="feather-sm me-1"></span> Lives in <a href="#">Karachi, Pakistan</a></li>
 
-										<li class="mb-1"><span data-feather="briefcase" class="feather-sm me-1"></span> Works at <a href="#">GitHub</a></li>
-										<li class="mb-1"><span data-feather="map-pin" class="feather-sm me-1"></span> From <a href="#">Boston</a></li>
+										<li class="mb-1"><span data-feather="briefcase" class="feather-sm me-1"></span> Works at <a href="#">FedUp</a></li>
+										<li class="mb-1"><span data-feather="map-pin" class="feather-sm me-1"></span> From <a href="#">Karachi</a></li>
 									</ul>
 								</div>
 								<hr class="my-0" />
 								<div class="card-body">
 									<h5 class="h6 card-title">Elsewhere</h5>
 									<ul class="list-unstyled mb-0">
-										<li class="mb-1"><a href="#">staciehall.co</a></li>
 										<li class="mb-1"><a href="#">Twitter</a></li>
 										<li class="mb-1"><a href="#">Facebook</a></li>
 										<li class="mb-1"><a href="#">Instagram</a></li>

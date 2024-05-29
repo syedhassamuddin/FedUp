@@ -6,7 +6,7 @@
 				FedUp
 				<?php
 					if($_SESSION["account_type"] == "admin"){
-						echo "Admin Poral";
+						echo "Admin Portal";
 					}
 					elseif($_SESSION["account_type"] == "agent"){
 						echo "Agent Portal";
