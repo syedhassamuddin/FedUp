@@ -57,14 +57,13 @@
       <div class="row gy-4 d-flex justify-content-between">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Welcome to FedUp, your trusted partner in delivering packages swiftly and safely. Our commitment to excellence ensures your parcels reach their destination on time, every time. Experience unparalleled courier services designed to meet all your shipping needs.
+          <p data-aos="fade-up" data-aos-delay="100">Welcome to FedUp, your trusted partner in delivering packages swiftly and safely. Our commitment to excellence ensures your parcels reach their destination on time, every time. Experience unparalleled courier services designed to meet all your shipping needs.</p>
 
-</p>
-
-          <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-            <input type="text" class="form-control" placeholder="ZIP code or CitY">
+          <!-- Maybe useful some other day -->
+          <!-- <form action="index-search.php" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
+            <input type="text" class="form-control" placeholder="Search If We Deliver To Your City">
             <button type="submit" class="btn btn-primary">Search</button>
-          </form>
+          </form> -->
 
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
 

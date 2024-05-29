@@ -16,6 +16,54 @@
 	include "conn.php";
 ?>
 
+<!-- Locatoin Update Button PHP -->
+<?php
+	if(isset($_GET['location_update'])){
+
+		$id = $_GET['location_update'];
+		
+		$packageDetailsObject = mysqli_query($conn, "SELECT * FROM packages WHERE package_id = $id");
+		$packageDetails = mysqli_fetch_array($packageDetailsObject);
+
+		$locationsObject = mysqli_query($conn, "SELECT * FROM locations");
+		$locations = mysqli_fetch_all($locationsObject);
+
+		$initialLocation = FALSE;
+		$currentLocation = FALSE;
+		$finalLocation = FALSE;
+		$newLocation = FALSE;
+		
+		foreach($locations as $index => $location){
+			if($packageDetails['from_address'] == $location[0]){
+				$initialLocation = $index;
+			}
+
+			if($packageDetails['status'] == $location[0]){
+				$currentLocation = $index;
+			}
+
+			if($packageDetails['to_address'] == $location[0]){
+				$finalLocation = $index;
+			}
+		}
+
+		if($initialLocation == $currentLocation){
+			$newLocation = $locations[$currentLocation+1][0];
+		}
+		elseif($currentLocation == $finalLocation){
+			$newLocation = "Delivered"	;
+		}
+		else{
+			$newLocation = $locations[$currentLocation+1][0];
+		}
+
+		mysqli_query($conn, "UPDATE packages SET status = '$newLocation' WHERE package_id = $id");
+
+		echo "<script>window.location.href = 'agentpkg.php'</script>";
+
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +128,7 @@
                                                 <th>To</th>
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
-                                                <th>Current Location</th>
+                                                <th>Status</th>
 												<th>Package Weight (KGs)</th>
                                                 <th>Actions</th>
                                             </tr>
@@ -88,7 +136,7 @@
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages WHERE assigned_agent = '{$_SESSION['id']}'";
+										$selectQuery= "SELECT * FROM packages WHERE assigned_agent = '{$_SESSION['id']}' AND status != 'Cancelled' AND status != 'Delivered'";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){
@@ -100,9 +148,9 @@
 											<td><?php echo $row['to_address']; ?></td>
 											<td><?php echo $row['delivery_type']; ?></td>
 											<td><?php echo $row['special_instructions']; ?></td>
-											<td><?php echo $row['current_location']; ?></td>
+											<td><?php echo $row['status']; ?></td>
 											<td><?php echo $row['package_weight_in_KG']; ?></td>
-											<td><a href="agentpkg.php?<?php echo $row['package_id']?>" class="btn btn-primary">Location Update</a></td>
+											<td><a href="agentpkg.php?location_update=<?php echo $row['package_id']?>" class="btn btn-primary">Location Update</a></td>
 										</tr>
 
 											<?php
@@ -134,7 +182,7 @@ echo array_search("red",$a);
                                         
 										<?php
 
-										$selectQuery= "SELECT * FROM packages WHERE assigned_agent IS NULL";
+										$selectQuery= "SELECT * FROM packages WHERE assigned_agent IS NULL AND status != 'Cancelled' ";
 										$res= mysqli_query($conn,$selectQuery);
 
 										while ($row=mysqli_fetch_array($res)){

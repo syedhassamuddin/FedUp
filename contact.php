@@ -1,6 +1,22 @@
 <?php
   session_start();
+  include "conn.php";
 ?>
+
+<?php
+$Yourname = $_POST['name'];       // Correct variable names to match form input names
+$Youremail = $_POST['email'];
+$Subject = $_POST['subject'];    // Correct variable name to match form input name
+$Message = $_POST['message'];    // Correct variable name to match form input name
+
+    $stmt = $conn->prepare("INSERT INTO contactus (name, email, subject, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $Yourname, $Youremail, $Subject, $Message); // Corrected "bind_param" types and variables
+    $stmt->execute();
+    echo "Contact successfully added."; // Corrected success message
+    $stmt->close();
+    $conn->close();
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,9 +76,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
               <h2>Contact</h2>
-              <p>For any inquiries or assistance, please don't hesitate to contact us. You can reach us by phone at [Your Phone Number] or email us at [Your Email Address]. Our team is committed to providing prompt and helpful responses to ensure your experience with FedUp Courier is seamless and satisfactory.
-
-</p>
+              <p>For any inquiries or assistance, please don't hesitate to contact us. You can reach us by phone at [Your Phone Number] or email us at [Your Email Address]. Our team is committed to providing prompt and helpful responses to ensure your experience with FedUp Courier is seamless and satisfactory.</p>
             </div>
           </div>
         </div>
@@ -116,7 +130,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -149,7 +163,6 @@
 
   <!-- ======= Footer ======= -->
   <?php
-    $activePage = "contact";
     include "assets/page-components/index-footer.php";
   ?>
   <!-- End Footer -->

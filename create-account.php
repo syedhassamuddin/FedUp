@@ -2,6 +2,12 @@
 	session_start();
 
 	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
+		if($_SESSION["account_type"] == "admin"){
+
+		}
+		else{
+			header("location:dashboard.php");
+		}
 
 	}
 	else{
