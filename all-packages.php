@@ -72,7 +72,7 @@
                         <div class="row mt-5">
                             <div class="col-md-12">
                             <div class="table-responsive table--no-card m-b-30">
-								<form action="packages.php" method="get">
+								<form action="all-packages.php" method="get">
 									<table class="table table-borderless table-striped table-earning">
 										<thead>
 											<tr>
@@ -116,8 +116,7 @@
 												<td><?php echo $row['assigned_agent']; ?></td>
 												<td><?php echo $row['by_customer']; ?></td>
 												<td><a href="sendpackage.php?Edited_Id=<?php echo $row['package_id']?>" class="btn btn-success">Edit</a></td>
-												<td><a href="packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
-												<td><a href="packages.php?<?php echo $row['package_id'] ?>" class="btn btn-primary">Location Update</a></td>
+												<td><a href="all-packages.php?DeletedId=<?php echo $row['package_id'] ?>" class="btn btn-danger">Delete</a></td>
 											</tr>
 
 												<?php
@@ -135,7 +134,7 @@
 												if($res){
 													echo '<script>
 													alert("Record deleted successfully");
-													window.location.href = "packages.php";
+													window.location.href = "all-packages.php";
 													</script>';
 												}else{
 													echo '<script>alert("Something went wrong")</script>';

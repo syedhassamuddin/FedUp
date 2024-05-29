@@ -29,7 +29,7 @@
 		$locations = mysqli_fetch_all($locationsObject);
 
 		$initialLocation = FALSE;
-		$currentLocation = FALSE;
+		$status = FALSE;
 		$finalLocation = FALSE;
 		$newLocation = FALSE;
 		
@@ -39,7 +39,7 @@
 			}
 
 			if($packageDetails['status'] == $location[0]){
-				$currentLocation = $index;
+				$status = $index;
 			}
 
 			if($packageDetails['to_address'] == $location[0]){
@@ -47,14 +47,14 @@
 			}
 		}
 
-		if($initialLocation == $currentLocation){
-			$newLocation = $locations[$currentLocation+1][0];
+		if($initialLocation == $status){
+			$newLocation = $locations[$status+1][0];
 		}
-		elseif($currentLocation == $finalLocation){
+		elseif($status == $finalLocation){
 			$newLocation = "Delivered"	;
 		}
 		else{
-			$newLocation = $locations[$currentLocation+1][0];
+			$newLocation = $locations[$status+1][0];
 		}
 
 		mysqli_query($conn, "UPDATE packages SET status = '$newLocation' WHERE package_id = $id");
@@ -128,7 +128,7 @@
                                                 <th>To</th>
                                                 <th>Delivery Type</th>
                                                 <th>Special Instructions</th>
-                                                <th>Status</th>
+                                                <th>Current Location</th>
 												<th>Package Weight (KGs)</th>
                                                 <th>Actions</th>
                                             </tr>
@@ -155,9 +155,6 @@
 
 											<?php
 										}
-
-$a=array("a"=>"red","b"=>"green","c"=>"blue");
-echo array_search("red",$a); 
 
 										?>
 										
@@ -194,7 +191,7 @@ echo array_search("red",$a);
 											<td><?php echo $row['to_address']; ?></td>
 											<td><?php echo $row['delivery_type']; ?></td>
 											<td><?php echo $row['special_instructions']; ?></td>
-											<td><?php echo $row['current_location']; ?></td>
+											<td><?php echo $row['status']; ?></td>
 											<td><?php echo $row['package_weight_in_KG']; ?></td>
 											<td><a href="agentpkg.php?Accepted_Id=<?php echo $row['package_id']?>" class="btn btn-success">Accept</a></td>
 										</tr>

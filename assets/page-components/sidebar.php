@@ -71,16 +71,7 @@
 							<i class='align-middle' data-feather='inbox'></i> <span class='align-middle'>Contact Request</span>
 						</a>
 						</li>
-						
-						<li class='sidebar-item'";
-						if($activePage == 'reports'){
-							echo' active';
-						}
-						echo ">
-						<a class='sidebar-link' href='reports.php'>
-							<i class='align-middle' data-feather='bar-chart'></i> <span class='align-middle'>Reports</span>
-						</a>
-						</li>";
+						";
 				}
 				elseif($_SESSION['account_type'] == "agent"){
 

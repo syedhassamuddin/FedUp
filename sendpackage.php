@@ -2,7 +2,7 @@
 	session_start();
 
 	if (isset($_SESSION["email"]) && isset($_SESSION["password"])){
-		if($_SESSION["account_type"] == "customer"){
+		if($_SESSION["account_type"] == "customer" || $_SESSION["account_type"] == "admin"){
 
 		}
 		else{
@@ -117,6 +117,7 @@
 		}
 		?>
 
+		<!-- Edit Package -->
 		<?php
 		if(isset($_GET['Edited_Id'])){
 			$id = $_GET['Edited_Id'];
@@ -140,7 +141,7 @@
 				$updateQuery = "UPDATE packages SET from_address = '$updated_from_address', to_address = '$updated_to_address', package_weight_in_KG = '$updated_package_weight', special_instructions = '$updated_special_instructions', delivery_type = '$updated_delivery_type' WHERE package_id = '$id'";
 				$isUpdate = mysqli_query($conn, $updateQuery);
 				if ($isUpdate) {
-					echo '<script>window.location.href = "packages.php";</script>';
+					echo '<script>window.location.href = "all-packages.php";</script>';
 				} else {
 					echo '<script>alert("Something went wrong")</script>';
 				}

@@ -17,6 +17,7 @@
 	<title>Sign Up | FedUp</title>
 
 	<link href="assets/css/app.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/extra.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -65,7 +66,7 @@
 						<div class="card">
 							<div class="card-body">
 								<div class="m-sm-3">
-									<form action="pages-sign-up.php" method="post">
+									<form action="sign-up.php" method="post">
 										<div class="mb-3">
 											<label class="form-label">First name</label>
 											<input class="form-control form-control-lg" type="text" name="first_name" placeholder="Enter your first name" />

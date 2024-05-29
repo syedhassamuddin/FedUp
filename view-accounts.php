@@ -127,7 +127,6 @@
 														<td>{$row['last_name']}</td>
 														<td>{$row['email']}</td>
 														<td>{$row['phone_number']}</td>
-														<td><a href='create-account.php?Edited_Id={$row['id']}' class='btn btn-success'>Edit</a></td>
 														<td><a href='view-accounts.php?Deleted_Admin_Id={$row['id']}' class='btn btn-danger'>Delete</a></td>
 													</tr>";
 										}
@@ -180,7 +179,6 @@
 														<td>{$row['last_name']}</td>
 														<td>{$row['email']}</td>
 														<td>{$row['phone_number']}</td>
-														<td><a href='create-account.php?Edited_Id={$row['id']}' class='btn btn-success'>Edit</a></td>
 														<td><a href='view-accounts.php?Deleted_Agent_Id={$row['id']}' class='btn btn-danger'>Delete</a></td>
 													</tr>";
 										}
@@ -232,7 +230,6 @@
 														<td>{$row['last_name']}</td>
 														<td>{$row['email']}</td>
 														<td>{$row['phone_number']}</td>
-														<td><a href='create-account.php?Edited_Id={$row['id']}' class='btn btn-success'>Edit</a></td>
 														<td><a href='view-accounts.php?Deleted_Customer_Id={$row['id']}' class='btn btn-danger'>Delete</a></td>
 													</tr>";
 										}
