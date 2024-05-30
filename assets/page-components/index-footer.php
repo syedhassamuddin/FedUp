@@ -33,7 +33,7 @@
             <li><a href="#">Web Development</a></li>
             <li><a href="#">Product Management</a></li>
             <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="extras/documentation.pdf" download="">Download Documentation</a></li>
           </ul>
         </div>
 
@@ -61,7 +61,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-        Designed by <a href="documentation.pdf">Batch FN 319</a>
+        Designed by <a href="extras/documentation.pdf">Batch FN 319</a>
       </div>
     </div>
 
