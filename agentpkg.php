@@ -134,7 +134,7 @@
                                             </tr>
                                         </thead>
                                         
-										<?php
+				 						<?php
 
 										$selectQuery= "SELECT * FROM packages WHERE assigned_agent = '{$_SESSION['id']}' AND status != 'Cancelled' AND status != 'Delivered'";
 										$res= mysqli_query($conn,$selectQuery);
