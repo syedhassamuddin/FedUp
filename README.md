@@ -195,35 +195,21 @@ Post-Deployment Updates
 
 ## Creation of tables
 
-2. CREATE TABLE packages(
-	  package_id INT PRIMARY KEY AUTO_INCREMENT,
-    from_address VARCHAR(225),
-    to_address VARCHAR(225),
-  	delivery_type VARCHAR(225),
-    special_instructions VARCHAR(225),
-    package_weight_in_KG INT (9),
-    distance_to_travel_in_KM INT (9),
-    status varchar(225),
-    price int (9),
-    cost int (9),
-    assigned_agent INT (9),
-    by_customer INT (9)
-);
-CREATE TABLE admins(
+2. CREATE TABLE admins(
 	  id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
-    phone_number VAR0CHAR(50),
-    password VARCHAR(10)
+    phone_number VARCHAR(225),
+    password VARCHAR(225)
 );
 CREATE TABLE agents(
 	  id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(225),
     last_name VARCHAR(225),
   	email VARCHAR(225),
-    phone_number VARCHAR(50),
-    password VARCHAR(100)
+    phone_number VARCHAR(225),
+    password VARCHAR(225)
 );
 CREATE TABLE customers(
 	  id INT PRIMARY KEY AUTO_INCREMENT,
@@ -242,6 +228,22 @@ CREATE table contactus(
 );
 CREATE TABLE locations (
     location_name VARCHAR(225)
+);
+CREATE TABLE packages(
+	  package_id INT PRIMARY KEY AUTO_INCREMENT,
+    from_address VARCHAR(225),
+    to_address VARCHAR(225),
+  	delivery_type VARCHAR(225),
+    special_instructions VARCHAR(225),
+    package_weight_in_KG INT (9),
+    distance_to_travel_in_KM INT (9),
+    status varchar(225),
+    price int (9),
+    cost int (9),
+    assigned_agent INT (9),
+    by_customer INT (9),
+	FOREIGN KEY (assigned_agent) REFERENCES agents(id),
+	FOREIGN KEY (by_customer) REFERENCES customers(id)
 );
 
 
